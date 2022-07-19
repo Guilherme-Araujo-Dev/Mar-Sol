@@ -49,7 +49,7 @@ BACKGROUND-IMAGE: url(imagens/ai.jpg)
 
     <div class="card-footer">
         <input type="submit" value="login" class="submit">
-        <a href="logarse.php" class="recuperar_senha">Não possui uma conta?<u> Clique aqui!</u></a>
+        <a href="logarse.php">Não possui uma conta?<u> Clique aqui!</u></a>
     </div>
 
 </form>

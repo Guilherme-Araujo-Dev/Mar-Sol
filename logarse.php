@@ -41,55 +41,62 @@
     </ul>
 </header>
 <body>
-    <div class="forms">
-        <div class="form">
-            <label for="nome">Seu Primeiro nome:</label>
-            <input id="nome" name="nome" type="text" placeholder="" class="campo">
-        </div>
+<br><br><br><br><br><br><br><br><br>
+    <div class="corpo">
+        <div class="forms">
+            <div class="form">
+                <label for="nome">Seu Primeiro nome:</label>
+                <input id="nome" name="nome" type="text" placeholder="" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Seu segundo nome:</label>
-            <input id="nome" name="nome" type="text" placeholder="" class="campo">
-        </div>
-        
-        <div class="form">
-            <label for="nome">Empresa:</label>
-            <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">Seu segundo nome:</label>
+                <input id="nome" name="nome" type="text" placeholder="" class="campo">
+            </div>
+            
+            <div class="form">
+                <label for="nome">Empresa:</label>
+                <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Email:</label>
-            <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">Email:</label>
+                <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Senha:</label>
-            <input id="nome" name="nome" type="text" placeholder="*Requisitos para a senha*" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">Senha:</label>
+                <input id="nome" name="nome" type="text" placeholder="*Requisitos para a senha*" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Fone:</label>
-            <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">Fone:</label>
+                <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">CNPJ:</label>
-            <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">CNPJ:</label>
+                <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Estado:</label>
-            <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">Estado:</label>
+                <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Cidade:</label>
-            <input id="nome" name="nome" type="text" placeholder="" class="campo">
-        </div>
+            <div class="form">
+                <label for="nome">Cidade:</label>
+                <input id="nome" name="nome" type="text" placeholder="" class="campo">
+            </div>
 
-        <div class="form">
-            <label for="nome">Endereço:</label>
-            <input id="nome" name="nome" type="text" placeholder="" class="campo">
+            <div class="form">
+                <label for="nome">Endereço:</label>
+                <input id="nome" name="nome" type="text" placeholder="" class="campo">
+            </div>
+
+            <div class="card-footer">
+            <input type="submit" value="login" class="submit">
+            <a href="Login.php" class="recuperar_senha">Já possui uma conta?<u> Clique aqui!</u></a>
         </div>
     </div>
 </body>

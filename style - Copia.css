@@ -227,10 +227,8 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 }
 
 .card-header::after {
-    content: "";
     width: 70px;
     height: 1px;
-    background-color: rgb(94, 71, 71);
     display: block;
     margin-top: -17px;
     margin-left: -5px;
@@ -282,5 +280,34 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 
 
 /*PAGINA LOGARSE*/
+.corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+.forms{
+    background-color: rgb(252, 152, 59);
+    padding: 40px;
+    border-radius: 2px;
+    width:280px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding:10px 0;
+}
+
+.form input{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #c74d4d;
+    outline: none;
+    color: rgb(51, 69, 233);
+}
 
