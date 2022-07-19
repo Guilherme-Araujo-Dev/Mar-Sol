@@ -1,0 +1,9 @@
+/* Cor do Cabeçalho */
+.color-header {
+    background-color: rgb(255, 194, 50);
+}
+
+/* Colocando uma Sombra no cabeçalho*/
+nav {
+    box-shadow: 0px 0px 5px #00000074;
+}

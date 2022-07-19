@@ -1,0 +1,28 @@
+/* Ajustando o Banner em Tela Cheia*/
+.banner {
+    padding-top: 35px;
+    width: 100%;
+}
+
+#image {
+    width: 100%;
+}
+
+.text-banner {
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
+    text-align: center;
+    top: 130px;
+    width: 100%;
+}
+
+/* Ajustando o Banner em Telas Menores e Celulares*/
+@media screen and (max-width: 750px) {
+    .banner {
+        padding-top: 9%;
+        width: 100%;
+    }
+    .text-banner {
+        width: 50%;
+    }
+}
