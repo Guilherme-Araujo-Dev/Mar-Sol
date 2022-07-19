@@ -47,37 +47,24 @@
 <form class="card">
 
     <div class="card-header">
-
         <h1>Login</h1>
-
     </div>
 
     <div class="card-content">
-
         <div class="card-content-area">
-
             <label for="usuario">Usuário</label>
-
             <input type="text" id="usuario" autocomplete="off">
-
         </div>
 
         <div class="card-content-area">
-
             <label for="password">Senha</label>
-
             <input type="password" id="password" autocomplete="off">
-
         </div>
-
     </div>
 
     <div class="card-footer">
-
         <input type="submit" value="login" class="submit">
-
         <a href="logarse.php" class="recuperar_senha">Não possui uma conta?<u> Clique aqui!</u></a>
-
     </div>
 
 </form>
