@@ -236,9 +236,9 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 
     padding-bottom: 50px;
 
-    opacity: 0.8;
+    
 
-    color: #fff;
+    color: black;
 
 }
 
@@ -250,7 +250,7 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 
     height: 1px;
 
-    background-color: #fff;
+    background-color: rgb(94, 71, 71);
 
     display: block;
 
@@ -262,7 +262,7 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 
 .card-content label {
 
-    color: #fff;
+    color: black;
 
     font-size: 12px;
 

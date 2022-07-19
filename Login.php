@@ -48,7 +48,7 @@
 
     <div class="card-header">
 
-        <h2>Login</h2>
+        <h1>Login</h1>
 
     </div>
 
@@ -76,7 +76,7 @@
 
         <input type="submit" value="login" class="submit">
 
-        <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+        <a href="logarse.php" class="recuperar_senha">Não possui uma conta?<u> Clique aqui!</u></a>
 
     </div>
 
