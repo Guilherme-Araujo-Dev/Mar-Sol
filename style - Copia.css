@@ -210,7 +210,7 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -279,4 +279,8 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
     color: rgb(66, 61, 61);
     text-decoration: none;
 }
+
+
+/*PAGINA LOGARSE*/
+
 

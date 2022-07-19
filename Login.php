@@ -12,18 +12,21 @@
 
 </head>
 <header>
+
     <div class="logozinho">
         <a href="index.php"><img src="imagens/nnovologo.png" alt="logo"></a>
     </div>
-        
+
 
 </header>
+<!-- ideia descartada 😞 
 <body>
 <STYLE type=text/css>BODY {
 
 BACKGROUND-IMAGE: url(imagens/ai.jpg)
 
 }</STYLE>
+-->
 <div id="login">
 
 <form class="card">
