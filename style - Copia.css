@@ -301,6 +301,11 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
     padding:10px 0;
 }
 
+.forms-header{
+    padding-bottom: 50px;
+    color: black;
+}
+
 .form input{
     margin-top: 10px;
     padding:0 5px;

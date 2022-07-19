@@ -50,31 +50,30 @@ BACKGROUND-IMAGE: url(imagens/ai.jpg)
 }</STYLE>
 -->
 <div id="login">
+    <form class="card">
 
-<form class="card">
-
-    <div class="card-header">
-        <h1>Login</h1>
-    </div>
-
-    <div class="card-content">
-        <div class="card-content-area">
-            <label for="usuario">Usuário</label>
-            <input type="text" id="usuario" autocomplete="off">
+        <div class="card-header">
+            <h1>Login</h1>
         </div>
 
-        <div class="card-content-area">
-            <label for="password">Senha</label>
-            <input type="password" id="password" autocomplete="off">
+        <div class="card-content">
+            <div class="card-content-area">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" autocomplete="off">
+            </div>
+
+            <div class="card-content-area">
+                <label for="password">Senha</label>
+                <input type="password" id="password" autocomplete="off">
+            </div>
         </div>
-    </div>
 
-    <div class="card-footer">
-        <input type="submit" value="login" class="submit">
-        <p>Não possui uma conta?<u> <a href="logarse.php"> Clique aqui!</u></a></p>
-    </div>
+        <div class="card-footer">
+            <input type="submit" value="login" class="submit">
+            <p>Não possui uma conta?<u> <a href="logarse.php"> Clique aqui!</u></a></p>
+        </div>
 
-</form>
+    </form>
 
 </div>
     

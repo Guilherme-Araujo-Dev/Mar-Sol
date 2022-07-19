@@ -43,13 +43,12 @@
 -->
 </header>
 <body>
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="corpo">
-        <div class="card-header">
-            <h1>Cadastro</h1>
-        </div>
-
         <div class="forms">
+            <div class="forms-header">
+                <h1>Cadastro</h1>
+            </div>
             <div class="form">
                 <label for="nome">Seu Primeiro nome:</label>
                 <input id="nome" name="nome" type="text" placeholder="" class="campo">
