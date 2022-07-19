@@ -270,7 +270,7 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
     margin: 10px 0;
 }
 
-.card-footer a {
+.card-footer, p a {
     text-align: center;
     font-size: 12px;
     opacity: 0.8;
