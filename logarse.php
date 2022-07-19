@@ -103,9 +103,13 @@
             </div>
 
             <div class="card-footer">
-            <input type="submit" value="login" class="submit">
+            <input type="submit" value="Cadastrar" class="submit">
             <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
+            </div>
+
         </div>
     </div>
+    
+
 </body>
 </html>
