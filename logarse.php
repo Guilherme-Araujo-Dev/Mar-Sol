@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style - Copia.css">
+
     <title>TCC</title>
     <style>
         
@@ -16,7 +17,7 @@
         <a href="index.php"><img src="imagens/nnovologo.png" alt="logo"></a>
     </div>
         
-
+<!--
     <ul>
             <a href="index.php"><li>Início</li></a>
             <a href="Produto.php"><li>Produtos</li></a>
@@ -39,10 +40,15 @@
             </div>
 
     </ul>
+-->
 </header>
 <body>
 <br><br><br><br><br><br><br><br><br>
     <div class="corpo">
+        <div class="card-header">
+            <h1>Cadastro</h1>
+        </div>
+
         <div class="forms">
             <div class="form">
                 <label for="nome">Seu Primeiro nome:</label>
@@ -68,6 +74,8 @@
                 <label for="nome">Senha:</label>
                 <input id="nome" name="nome" type="text" placeholder="*Requisitos para a senha*" class="campo">
             </div>
+
+            <!-- QUEBRA DE 5 DE CADA LADO-->
 
             <div class="form">
                 <label for="nome">Fone:</label>
