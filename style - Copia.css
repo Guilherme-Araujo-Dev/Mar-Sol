@@ -215,7 +215,7 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 }
 
 .card {
-    background-color: rgba(19, 19, 19, 0.3);
+    background-color: rgb(252, 152, 59);
     padding: 40px;
     border-radius: 2px;
     width:280px;
@@ -253,9 +253,9 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
     padding:0 5px;
     background-color: transparent;
     border:none;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid #c74d4d;
     outline: none;
-    color: #fff;
+    color: rgb(51, 69, 233);
 }
 
 .card-footer {
@@ -266,9 +266,9 @@ IMAGENS LOCALIZADAS NA PÁGINA INDEX (PRIMEIRA IMAGEM DAS 3)👇👇👇👇
 .card-footer .submit{
     width: 100%;
     height: 40px;
-    background-color: #a13854;
+    background-color: #ffbb00;
     border:none;
-    color:#e1e1e1;
+    color:black;
     margin: 10px 0;
 }
 
