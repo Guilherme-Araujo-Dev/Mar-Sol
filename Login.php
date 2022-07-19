@@ -53,17 +53,17 @@ BACKGROUND-IMAGE: url(imagens/ai.jpg)
     <form class="card">
 
         <div class="card-header">
-            <h1>Login</h1>
+            <u><h1>Login</h1></u>
         </div>
 
         <div class="card-content">
             <div class="card-content-area">
-                <label for="usuario">Usuário</label>
+                <label for="nome">Usuário</label>
                 <input type="text" id="usuario" autocomplete="off">
             </div>
 
             <div class="card-content-area">
-                <label for="password">Senha</label>
+                <label for="nome">Senha</label>
                 <input type="password" id="password" autocomplete="off">
             </div>
         </div>

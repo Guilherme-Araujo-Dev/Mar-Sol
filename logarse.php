@@ -48,7 +48,7 @@
     <div class="corpo">
         <div class="forms">
             <div class="forms-header">
-                <h1>Cadastro</h1>
+                <u><h1>Cadastro</h1></u>
             </div>
             <div class="form">
                 <label for="nome">Seu Primeiro nome:</label>

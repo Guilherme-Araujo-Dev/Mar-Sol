@@ -84,6 +84,7 @@ li{
     display: flex;
     flex-direction: column;
     padding:10px 0;
+    font-weight: bold;
 }
 
 .card-content-area input {
@@ -91,7 +92,7 @@ li{
     padding:0 5px;
     background-color: transparent;
     border:none;
-    border-bottom: 1px solid #c74d4d;
+    border-bottom: 1px solid #ff0000;
     outline: none;
     color: rgb(51, 69, 233);
 }
