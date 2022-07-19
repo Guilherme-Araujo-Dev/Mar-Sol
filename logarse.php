@@ -96,7 +96,7 @@
 
             <div class="card-footer">
             <input type="submit" value="login" class="submit">
-            <a href="Login.php" class="recuperar_senha">Já possui uma conta?<u> Clique aqui!</u></a>
+            <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
         </div>
     </div>
 </body>

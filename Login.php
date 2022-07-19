@@ -49,7 +49,7 @@ BACKGROUND-IMAGE: url(imagens/ai.jpg)
 
     <div class="card-footer">
         <input type="submit" value="login" class="submit">
-        <p>Não possui uma conta?<u> <a href="logarse.php">Clique aqui!</u></a></p>
+        <p>Não possui uma conta?<u> <a href="logarse.php"> Clique aqui!</u></a></p>
     </div>
 
 </form>
