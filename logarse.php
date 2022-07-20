@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="style - Copia.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="logarse.css">
-
     <title>TCC</title>
-    <style>
-        
-    </style>
-
+    <style>    </style>
 </head>
-<header>
+<body>
     <div class="logozinho">
         <a href="index.php"><img src="imagens/nnovologo.png" alt="logo"></a>
     </div>
@@ -42,74 +39,72 @@
 
     </ul>
 -->
-</header>
-<body>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="corpo">
-        <div class="forms">
-            <div class="forms-header">
-                <u><h1>Cadastro</h1></u>
-            </div>
-            <div class="form">
-                <label for="nome">Seu Primeiro nome:</label>
-                <input id="nome" name="nome" type="text" placeholder="" class="campo">
-            </div>
 
-            <div class="form">
-                <label for="nome">Seu segundo nome:</label>
-                <input id="nome" name="nome" type="text" placeholder="" class="campo">
-            </div>
-            
-            <div class="form">
-                <label for="nome">Empresa:</label>
-                <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="campo">
-            </div>
 
-            <div class="form">
-                <label for="nome">Email:</label>
-                <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="campo">
+        <div class="corpo horizontal-center"> 
+            <div class="container bg-warning ">
+                <div class="forms-header">
+                    
+                    <u><h1>Cadastro</h1></u>
+                </div>
+                <form method="post">
+                    <div class="form-row">
+                        <div class="form-group col-5">
+                            <label for="nome">Seu Primeiro nome:</label>
+                            <input id="nome" name="nome" type="text" placeholder="" class="form-control">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="nome">Fone:</label>
+                            <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-5">
+                            <label for="nome">Seu segundo nome:</label>
+                            <input id="sobrenome" name="sobrenome" type="text" placeholder="" class="form-control">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="nome">CNPJ:</label>
+                            <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-5">
+                            <label for="nome">Empresa:</label>
+                            <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="form-control">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="nome">Estado:</label>
+                            <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-5">
+                            <label for="nome">Email:</label>
+                            <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="form-control">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="nome">Cidade:</label>
+                            <input id="nome" name="nome" type="text" placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-5">
+                            <label for="nome">Senha:</label>
+                            <input id="nome" name="nome" type="password" placeholder="*Requisitos para a senha*" class="form-control">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="nome">Endereço:</label>
+                            <input id="nome" name="nome" type="text" placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="card-footer col-12 centered">
+                        <button type="submit" class="btn btn-primary col-5">Cadastrar</button>
+                            <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
+                    </div>
+                </form>
             </div>
-
-            <div class="form">
-                <label for="nome">Senha:</label>
-                <input id="nome" name="nome" type="text" placeholder="*Requisitos para a senha*" class="campo">
-            </div>
-
-            <!-- QUEBRA DE 5 DE CADA LADO-->
-
-            <div class="form">
-                <label for="nome">Fone:</label>
-                <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="campo">
-            </div>
-
-            <div class="form">
-                <label for="nome">CNPJ:</label>
-                <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="campo">
-            </div>
-
-            <div class="form">
-                <label for="nome">Estado:</label>
-                <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="campo">
-            </div>
-
-            <div class="form">
-                <label for="nome">Cidade:</label>
-                <input id="nome" name="nome" type="text" placeholder="" class="campo">
-            </div>
-
-            <div class="form">
-                <label for="nome">Endereço:</label>
-                <input id="nome" name="nome" type="text" placeholder="" class="campo">
-            </div>
-
-            <div class="card-footer">
-            <input type="submit" value="Cadastrar" class="submit">
-            <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
-            </div>
-
         </div>
-    </div>
-    
 
 </body>
 </html>
