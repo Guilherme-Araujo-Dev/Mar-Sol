@@ -51,55 +51,55 @@
                     <div class="form-row">
                         <div class="form-group col-5">
                             <label for="nome">Seu Primeiro nome:</label>
-                            <input id="nome" name="nome" type="text" placeholder="" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="" class="">
                         </div>
                         <div class="form-group col-5">
                             <label for="nome">Fone:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-5">
                             <label for="nome">Seu segundo nome:</label>
-                            <input id="sobrenome" name="sobrenome" type="text" placeholder="" class="form-control">
+                            <input id="sobrenome" name="sobrenome" type="text" placeholder="" class="">
                         </div>
                         <div class="form-group col-5">
                             <label for="nome">CNPJ:</label>
-                            <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-5">
                             <label for="nome">Empresa:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="">
                         </div>
                         <div class="form-group col-5">
                             <label for="nome">Estado:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-5">
                             <label for="nome">Email:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="">
                         </div>
                         <div class="form-group col-5">
                             <label for="nome">Cidade:</label>
-                            <input id="nome" name="nome" type="text" placeholder="" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="" class="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-5">
                             <label for="nome">Senha:</label>
-                            <input id="nome" name="nome" type="password" placeholder="*Requisitos para a senha*" class="form-control">
+                            <input id="nome" name="nome" type="password" placeholder="*Requisitos para a senha*" class="">
                         </div>
                         <div class="form-group col-5">
                             <label for="nome">Endereço:</label>
-                            <input id="nome" name="nome" type="text" placeholder="" class="form-control">
+                            <input id="nome" name="nome" type="text" placeholder="" class=""><!--Para deixar redondinho, colocar: form-control no class=""-->
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn col-5">Cadastrar</button>
+                        <input type="submit" value="Cadastrar" class="submit">
                         <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
                     </div>
                 </form>

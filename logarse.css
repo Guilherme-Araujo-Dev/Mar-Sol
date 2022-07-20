@@ -6,6 +6,13 @@
     font-family: Arial, Helvetica, sans-serif;
     
 }
+
+/*mudar a cor do background da pagina LOGARSE
+body{
+    background-image: linear-gradient(rgb(224, 194, 61), rgb(230, 125, 84));
+}
+*/
+
 a:hover, li:hover{
     color: red; /*MUDA A COR PRA VERMLEHO QUANDO PASSA O MOUSE POR CIMA*/
 }
@@ -110,7 +117,7 @@ li{
     color: rgb(51, 69, 233);
 }
 .card-footer .submit{
-    width: 100%;
+    width: 50%;
     height: 40px;
     background-color: #ffbb00;
     border:none;
@@ -119,8 +126,8 @@ li{
 }
 
 .container{
-    
-    background-color: rgb(252, 152, 59);
+
+    background-color: rgb(194, 194, 194);
 }
 
 .card-footer, p a{
