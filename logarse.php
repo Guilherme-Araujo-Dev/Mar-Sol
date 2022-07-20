@@ -40,9 +40,9 @@
     </ul>
 -->
 
-
+<body>
         <div class="corpo horizontal-center"> 
-            <div class="container bg-warning ">
+            <div class="container ">
                 <div class="forms-header">
                     
                     <u><h1>Cadastro</h1></u>
@@ -98,9 +98,9 @@
                             <input id="nome" name="nome" type="text" placeholder="" class="form-control">
                         </div>
                     </div>
-                    <div class="card-footer col-12 centered">
-                        <button type="submit" class="btn btn-primary col-5">Cadastrar</button>
-                            <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
+                    <div class="card-footer">
+                        <button type="submit" class="btn col-5">Cadastrar</button>
+                        <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
                     </div>
                 </form>
             </div>
