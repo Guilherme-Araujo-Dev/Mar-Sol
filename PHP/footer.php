@@ -4,7 +4,7 @@
         <div class="container-footer">
             <div class="row pt-3">
                 <div class="col-sm-2">
-                    <a class="navbar-brand logo-f" href="#">
+                    <a class="navbar-brand logo-f" href="index.php">
                         <img src="../IMG/logo.png" alt="Logo">
                     </a>
                 </div>
