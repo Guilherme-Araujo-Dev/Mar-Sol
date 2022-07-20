@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.limite-carousel {
+    max-height: 600px;
+}
+
 /* Ajustando o Banner em Telas Menores e Celulares*/
 @media screen and (max-width: 750px) {
     .banner {
