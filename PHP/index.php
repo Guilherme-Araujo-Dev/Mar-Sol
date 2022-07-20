@@ -14,7 +14,7 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
 
-    <!-- Importando a Fonte Pacifico -->
+    <!-- Importando a Fonte "Pacifico" -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- Importando o CSS -->
@@ -22,14 +22,14 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-home.css">
     <link rel="stylesheet" type="text/css" href="../CSS/style-footer.css">
 
-    <!-- Definindo o Icone da Página-->
+    <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
 </head>
 
 <body>
 
-    <!-- Importando o Navbar -->
+    <!-- Importando a Navbar -->
     <header>
         <nav class="navbar navbar-expand-lg color-header fixed-top p-2">
             <a class="navbar-brand" href="#">
@@ -63,21 +63,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active limit-carousel" data-bs-interval="5000">
-                    <img src="../IMG/banner-home1.jpg" class="d-block w-100" alt="...">
+                    <img src="../IMG/banner-home1.jpg" class="d-block w-100" alt="Salgados">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="text-carousel">Salgados Deliciosos</h1>
                         <p class="fs-5">Mar & Sol Salgados - O Momento do Sabor.</p>
                     </div>
                 </div>
                 <div class="carousel-item limit-carousel" data-bs-interval="5000">
-                    <img src="../IMG/banner-home2.jpg" class="d-block w-100" alt="...">
+                    <img src="../IMG/banner-home2.jpg" class="d-block w-100" alt="Serviço">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="text-carousel">Qualidade e Higiene</h1>
-                        <p class="fs-5">Sempre presando pela qualidade e a higiene dos nossos produtos.</p>
+                        <p class="fs-5">Sempre prezando pela qualidade e a higiene dos nossos produtos.</p>
                     </div>
                 </div>
                 <div class="carousel-item limit-carousel" data-bs-interval="5000">
-                    <img src="../IMG/banner-home3.jpg" class="d-block w-100" alt="...">
+                    <img src="../IMG/banner-home3.jpg" class="d-block w-100" alt="Transporte">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="text-carousel">Transporte e Segurança</h1>
                         <p class="fs-5">Transporte para toda a Região Oeste do Paraná</p>
