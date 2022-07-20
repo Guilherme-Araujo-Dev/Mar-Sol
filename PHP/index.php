@@ -51,7 +51,7 @@
 
     <main>
 
-        <!-- Importando o Carrosel -->
+        <!-- Importando o Carrossel -->
         <div id="carouselExampleWhite" class="carousel carousel-white slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleWhite" data-bs-slide-to="0" class="active"
