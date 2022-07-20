@@ -18,11 +18,19 @@
 
 /* Ajustando o Banner em Telas Menores e Celulares*/
 @media screen and (max-width: 750px) {
+    .limit-carousel {
+        max-height: 200px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    main {
+        margin-top: 10%;
+    }
     .banner {
         padding-top: 9%;
         width: 100%;
-    }
-    .text-banner {
-        width: 50%;
     }
 }

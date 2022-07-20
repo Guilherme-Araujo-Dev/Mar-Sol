@@ -16,6 +16,22 @@
     height: 50px;
 }
 
-.logo-f {
+.logo-f > img {
+    width: 160px;
+    height: 120px;
     padding-left: 20px;
+}
+
+@media screen and (max-width: 950px) and (min-width: 580px) {
+    .logo-f > img {
+        padding-left: 1px;
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .logo-f {
+        padding-left: 30%;
+    }
 }

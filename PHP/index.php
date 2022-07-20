@@ -50,7 +50,6 @@
     </header>
 
     <main>
-
         <!-- Importando o Carrosel -->
         <div id="carouselExampleWhite" class="carousel carousel-white slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -113,7 +112,7 @@
             <div class="row pt-3">
                 <div class="col-sm-2">
                     <a class="navbar-brand logo-f" href="#">
-                        <img src="../IMG/logo.png" alt="Logo" width="160" height="120">
+                        <img src="../IMG/logo.png" alt="Logo">
                     </a>
                 </div>
                 <div class="col-sm-3 font-f">
