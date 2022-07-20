@@ -10,6 +10,12 @@
     max-height: 600px;
 }
 
+.mapa {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    text-align: center;
+}
+
 /* Ajustando o Banner em Telas Menores e Celulares*/
 @media screen and (max-width: 750px) {
     .banner {
