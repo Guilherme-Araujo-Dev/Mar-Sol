@@ -1,2 +1,5 @@
 {
+    "dataworkspace.excludedProjects": [
+        "PHP/marESol/marESol.sqlproj"
+    ]
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,17 +16,39 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
-    
+
+    <!-- Importando o CSS -->
+    <link rel="stylesheet" type="text/css" href="../CSS/style-product.css">
+
+    <!-- Importando a Conexão com o Banco de Dados -->
+    <?php include_once '../PHP/class/connection.php'; 
+    conectar();
+    ?>
+
     <title>Mar & Sol Salgados - Produtos</title>
 </head>
 
 <body>
 
-<!-- Importando o Cabeçalho -->
-<?php include("header.php"); ?>
+    <!-- Importando o Cabeçalho -->
+    <?php include("header.php"); ?>
 
+    <main>
+        <ul class="produtos">
+            <li>
+                <img src="..">
+            </li>
+            <li>
+                <img src="..">
+            </li>
+            <li>
+                <img src="..">
+            </li>
+        </ul>
+    </main>
 
     <!-- Importando o Rodaré -->
     <?php include("footer.php"); ?>
 </body>
+
 </html>
