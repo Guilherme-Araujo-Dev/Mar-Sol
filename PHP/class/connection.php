@@ -1,3 +1,7 @@
 <?php
 
-$pdo = new PDO('mysql:host=;dbname=marESol', 'root', '');
+$conectar = function()  {
+    $pdo = new PDO('mysql:host=;dbname=marESol', 'root', '');
+    return $pdo;
+}
+
