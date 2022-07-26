@@ -24,7 +24,7 @@
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include("class/connection.php");
+    <?php include_once("class/connection.php");
     conectar(); 
     ?>
 

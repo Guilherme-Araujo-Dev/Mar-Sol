@@ -21,8 +21,8 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once '../PHP/class/connection.php'; 
-    conectar();
+    <?php include_once("class/connection.php");
+    conectar(); 
     ?>
 
     <title>Mar & Sol Salgados - Produtos</title>
