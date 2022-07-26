@@ -93,7 +93,7 @@
 
 
     <!-- Importando o rodapé-->
-    <?php include("footer.php"); ?>
+    <?php include("class/footer.php"); ?>
 
 </body>
 

@@ -31,24 +31,25 @@
 <body>
 
     <!-- Importando o Cabeçalho -->
-    <?php include("header.php"); ?>
+    <?php include("class/header.php"); ?>
 
     <main>
         <ul class="produtos">
             <li>
-                <img src="..">
+                <h1> Bolinho de Carne Grande</h1>
+                <img class="produto" src="../IMG/food/bcg.jpg">
             </li>
             <li>
-                <img src="..">
+                <img class="produto" src="../IMG/food/cfm.jpg">
             </li>
             <li>
-                <img src="..">
+                <img class="produto" src="../IMG/food/esm.jpg">
             </li>
         </ul>
     </main>
 
     <!-- Importando o Rodaré -->
-    <?php include("footer.php"); ?>
+    <?php include("class/footer.php"); ?>
 </body>
 
 </html>
