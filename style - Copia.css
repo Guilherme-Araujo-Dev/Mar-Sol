@@ -169,6 +169,10 @@ IMAGEM DE ALGÚEM FAZENDO ALGUMA COMIDA PARA COLOCAR EM CIMA DA PALAVRA PRODUTO 
     
 }
 
+.texto{
+    padding: 10px;
+}
+
 hr{
     border: 10px solid gray;           /*ESSE É O <hr> NA PAGINA - |INDEX|*/
     

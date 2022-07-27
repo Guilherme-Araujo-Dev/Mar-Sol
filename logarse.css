@@ -137,4 +137,8 @@ li{
     color: rgb(66, 61, 61);
     text-decoration: none;
 }
-
+/*
+input::placeholder{
+    color: red;           <------MUDAR A CORD DO PLACEHOLDER SE QUISER
+}
+*/

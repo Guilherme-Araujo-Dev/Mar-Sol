@@ -55,7 +55,7 @@ li{
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(194, 194, 194);
     padding: 40px;
     border-radius: 2px;
     width:280px;
