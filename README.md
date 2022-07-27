@@ -35,7 +35,7 @@
 - `PHP 8.1.5`
 - `CSS3`
 - `MySQL 8.0.21`
-- `Bootstrap 4.3.1` 
+- `Bootstrap 5.2.0` 
 
 <h3> Desenvolvedores: </h3>
 

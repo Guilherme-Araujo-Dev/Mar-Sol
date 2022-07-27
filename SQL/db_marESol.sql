@@ -1,8 +1,6 @@
 --DROP DATABASE marESol;
---CREATE DATABASE marESol;
---USE marESol;
-
-DROP TABLE Categoria in CASCADE ;
+CREATE DATABASE marESol;
+USE marESol;
 
 CREATE TABLE Categoria (
     idCategoria INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -64,7 +62,7 @@ CREATE TABLE Movimento (                                         -- Um 'Pacote' 
 CREATE TABLE Movimento_Item (                                    -- Cada item de uma Movimento
     Produto_idProduto INT NOT NULL,
     Movimento_idMovimento INT NOT NULL,
-3    quantidade INT NOT NULL,
+    quantidade INT NOT NULL,
     FOREIGN KEY (Produto_idProduto) REFERENCES Produto(idProduto),
     FOREIGN KEY (Movimento_idMovimento) REFERENCES Movimento(idMovimento)
 );
@@ -77,10 +75,10 @@ INSERT INTO Empresa (nomeEmpresa, emailCliente, nomeCliente, senha, fone, CNPJ, 
 
 INSERT INTO Categoria (nomeCategoria) VALUES ('Pastel Grande');
 
-INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Carne G', 0.5, 2.50, 'pastel_carne_g.jpg', 1);
-INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Frango G', 0.5, 2.50, 'pastel_frango_g.jpg', 1);
-INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Pizza G', 0.5, 2.50, 'pastel_pizza_g.jpg', 1);
-INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Queijo G', 0.5, 2.50, 'pastel_queijo_g.jpg', 1);
+INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Carne G', 0.5, 2.50, 'pcg.jpg', 1);
+INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Frango G', 0.5, 2.50, 'pfg.jpg', 1);
+INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Pizza G', 0.5, 2.50, 'ppg.jpg', 1);
+INSERT INTO Produto (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Queijo G', 0.5, 2.50, 'pqg.jpg', 1);
 
 INSERT INTO Funcionario (nomeFuncionario, email, fone, cpf, estado, cidade, endereco) VALUES ('Rodrigo dos Santos', 'rodrigo.santos@maresolsalgados.com', '(45) 93167-5817', '144.657.251-08','PR', 'Cascavel', 'Rua General Alincar, 498');
 
