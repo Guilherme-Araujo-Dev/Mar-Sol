@@ -71,18 +71,14 @@ li{
 
 }
 
-#sobree{
-    display: inline-block;
+#sobree, .textosobre{
+    
     color: rgb(73, 69, 69);
     font-size: larger;
     font-size: 30px;
     padding: 30px;
-    text-align: justify;
-    justify-content: space-between;
     
-}
-.pessoa{
-    text-align: right;
+    
 }
 
 /*rodapé*/
