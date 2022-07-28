@@ -1,0 +1,152 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border-radius: 0%;
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+
+.body{
+    background-color: red;
+}
+
+a:hover, li:hover{
+    color: red; /*MUDA A COR PRA VERMLEHO QUANDO PASSA O MOUSE POR CIMA*/
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    height: 10;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+}
+
+ul{
+    display: flex;
+    margin: 23px;
+    color: black;
+    font-size: 20px;
+    
+}
+
+li{
+    color: black;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+/*
+---------------------LOGO DO SITE (aquele que fica no topo do site)
+*/
+.logozinho{
+    padding-left: 150px;
+}
+
+.logotipo{
+    text-align: center;
+    padding: 60px 60px;
+}
+
+.imagens{
+    
+    display: inline-block; 
+    
+	padding: 70px;
+    
+}
+
+#tituloproduto{
+    padding: 60px 60px;
+    text-align: center;
+    
+}
+
+
+/*IMAGENS DA PÁGINA PRODUTO*/
+
+.pp .imagenss{
+    padding: 30px 30px 30px 160px;
+    margin-top: 15px;
+    display: inline-block;
+    width: 420px;
+    height: 300px;
+    justify-content: space-between;
+    
+    
+}
+
+.pp{
+    padding: 30px;
+    background-color: rgb(202, 202, 202);
+    color: black;
+    font-size: 30px;
+    justify-content: space-between;  
+}
+
+hr{
+    border: 10px solid gray;           /*ESSE É O <hr> NA PAGINA - |INDEX|*/
+    
+    
+    
+}
+
+#titulo{
+    text-align: center;
+}
+
+/*RODAPÉ*/
+#pe{
+    
+    font-size: 20px;
+    background-color: DarkSalmon;
+    
+}
+
+/*CSS DA BARRA DE PESQUISA👇*/
+
+#divBusca{
+    background-color:#E0EEEE;
+    border:solid 2px #5F9EA0;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+}
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:225px;
+}
+  
+#btnBusca{
+    border:none;
+    float:right;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#5F9EA0;
+}
+  
+  #divBusca img{
+    float:left;
+}
+
+#corpo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
