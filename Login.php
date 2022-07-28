@@ -14,7 +14,11 @@
 <header>
 
     <div class="logozinho">
+    
         <a href="index.php"><img src="imagens/nnovologo.png" alt="logo"></a>
+        
+        <h2>👈 Clique aqui para voltar </h2>
+        
     </div>
 <!--
     <ul>
