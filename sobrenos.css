@@ -55,6 +55,11 @@ li{
     list-style-type: none;
 }
 
+.perfil_carrinho{
+    padding-left: 30px;
+    
+}
+
 .logotipo{
     text-align: center;
     padding: 60px 60px;
@@ -71,7 +76,19 @@ li{
 
 }
 
-#sobree, .textosobre{
+.card{
+    padding-top: 30px;
+    display: flex;
+    margin: 20px;
+    
+}
+
+#pessoa{
+    width: 450px;
+    padding-left: 200px;
+}
+
+.p{
     
     color: rgb(73, 69, 69);
     font-size: larger;

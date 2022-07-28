@@ -52,24 +52,27 @@ BACKGROUND-IMAGE: url(imagens/fundo.jpg)
    
     <h1 id="sobre">+ DE 10 ANOS ATENDENDO TODA REGIÃO OESTE DO PARANÁ.</h1>
     
-    <p id="sobree">
-        <img id="pessoa" src="Imagens/pessoa.png" alt="pessoa">
-        <br>
-        <div class="textosobre">
-            Situada em Cascavel/PR, nós somos<br> uma fábrica de alimentos industriais<br> que
-            a mais de 10 anos atendemos<br> toda região Oeste do Paraná, com<br> muito amor,
-            cuidado e dedicação.<br><br>
-            Com produtos de qualidade,<br> excelência em atendimento
-            e<br> responsabilidade para atender<br> as maiores redes de padarias e<br> supermercados
-            da cidade.<br><br>
-            <u>Segue abaixo nossa localização!👇</u>
     
+        <div class="card">
+            
+            <div class="p">
+                Situada em Cascavel/PR, nós somos<br> uma fábrica de alimentos industriais<br> que
+                a mais de 10 anos atendemos<br> toda região Oeste do Paraná, com<br> muito amor,
+                cuidado e dedicação.<br><br>
+                Com produtos de qualidade,<br> excelência em atendimento
+                e<br> responsabilidade para atender<br> as maiores redes de padarias e<br> supermercados
+                da cidade.<br><br>
+                <u>Segue abaixo nossa localização!👇</u>
+        
+            </div>
+
+            <img id="pessoa" src="Imagens/pessoa.png" alt="pessoa">
         </div>
-    </p>
+    
     <div class="mapa">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.092903759942!2d-53.47620168499512!3d-24.96295358400564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3d423c85d58c7%3A0xb28698b3771103c9!2sMar%20%26%20Sol%20Salgados!5e0!3m2!1spt-BR!2sbr!4v1651599650908!5m2!1spt-BR!2sbr" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    
+    <br><br><br>
     <!--RODAPÉ-->
     <footer id="pe">
 
