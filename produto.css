@@ -39,7 +39,7 @@ ul{
 
 li{
     color: black;
-    padding-left: 20px;
+    padding-right: 20px;
     list-style-type: none;
 }
 
@@ -72,19 +72,21 @@ li{
 
 /*IMAGENS DA PÁGINA PRODUTO*/
 
-.pp .imagenss{
-    padding: 30px 30px 30px 160px;
-    margin-top: 15px;
-    display: inline-block;
-    width: 420px;
-    height: 300px;
-    justify-content: space-between;
+.imagenss{
+    
+    padding: 30px 30px 30px 300px;
+    display: flex;
+    
     
     
 }
+.p{
+    padding-top: 30px;
+}
 
 .pp{
-    padding: 30px;
+    padding-top: 30px;
+    padding: 40px;
     background-color: rgb(202, 202, 202);
     color: black;
     font-size: 30px;
