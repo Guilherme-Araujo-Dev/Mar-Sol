@@ -1,14 +1,19 @@
 .produtos {
 	width: 940px;
 	margin: 0 auto;
-	padding: 50px 0;
-	margin-top: 10%;
+	background-color: #eeeeee;
+	margin-bottom: 2%;
 }
 
 .produto {
-	padding: 20px;
-    padding-left: 225px;
+	padding-left: 225px;
     display: flex;
+	width: 100%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
 }
 
 .produto img {
@@ -20,32 +25,17 @@
 	width: 250px;
 }
 
-.produtos li {
-	width: 100%;
-	vertical-align: top;
-	margin: 0 1.5%;
-	padding: 30px 20px;
-	box-sizing: border-box;
-	border-radius: 10px;
-}
-
-
-
-
-
-
-
 /*CSS DA BARRA DE PESQUISA👇*/
 
-#divBusca{
+.divBusca{
     background-color:#E0EEEE;
     border:solid 2px #db8742;
     border-radius:10px;
     width:500px;
     height:36px;
 }
-  
-#txtBusca{
+
+.txtBusca{
     float:left;
     background-color:transparent;
     padding-left:5px;
@@ -54,8 +44,8 @@
     height:32px;
     width:425px;
 }
-  
-#btnBusca{
+
+.btnBusca{
     border:none;
     float:right;
     height:32px;
@@ -64,18 +54,11 @@
     font-weight:bold;
     background:#eec81f;
 }
-  
-  #divBusca img{
+
+.divBusca img{
     float:left;
 }
 
-#corpo{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
-
-.imagenss{
-	display: flex;
+.corpo{
+	margin: 10% 0 -70px 30%;
 }
