@@ -50,17 +50,17 @@
         <ul class="produtos">
             <div class="imagenss">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
-                <p>Bolinho de batata com carne</p>
+                <h1>Bolinho de batata com carne</h1>
             </div>
                 
             <div class="imagenss">
-                <img src="comidas/Meu projeto (1).jpg"alt="salgado1" width="300px">
-                <p>Bolinho de Batata com Frango</p>
+                <img src="../IMG/food/bcg.jpg"alt="salgado1" width="300px">
+                <h1>Bolinho de Batata com Frango</h1>
             </div>
                 <br>
             <div class="imagenss">
-                <img src="comidas/Meu projeto (2).jpg" alt="salgado2" width="300px">
-                <p>Bolinho de Carne</p>
+                <img src="../IMG/food/bcg.jpg" alt="salgado2" width="300px">
+                <h1>Bolinho de Carne</h1>
             </div>
                 
            
