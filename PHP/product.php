@@ -48,19 +48,19 @@
         <ul class="produtos">
             <li class="produto">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
-                <h1>Bolinho de Carne Grande</h1>
-                
+                <h1 class="product-text">Bolinho de Carne Grande</h1>
+                <p class="product-text">Informações Nutricionais:</p>
             </li>
 
             <li class="produto">
                 <img src="../IMG/food/esm.jpg" alt="salgado1" width="300px">
-                <h1>Enrolado de Salsicha Mini</h1>
-                
+                <h1 class="product-text">Enrolado de Salsicha Mini</h1>
+                <p class="product-text">Informações Nutricionais:</p>
             </li>
             <li class="produto">
                 <img src="../IMG/food/cfm.jpg" alt="salgado2" width="300px">
-                <h1>Coxinha de Frango Mini</h1>
-                
+                <h1 class="product-text">Coxinha de Frango Mini</h1>
+                <p class="product-text">Informações Nutricionais:</p>
             </li>
 
 

@@ -25,6 +25,23 @@
 	width: 250px;
 }
 
+.produto p {
+	display: block;
+	margin: 50px 272px;
+	position:absolute;
+	height: 50px;
+	font-size: 20px;
+}
+
+.produto h1 {
+	position: absolute;
+	margin-left: 272px;
+	display: block;
+	height: 50px;
+	font-size: 30px;
+}
+
+
 /*CSS DA BARRA DE PESQUISA👇*/
 
 .divBusca{
