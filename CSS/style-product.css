@@ -8,7 +8,7 @@
 .produto {
 	width: 100%;
 	height: 250px;
-	display: inline-block;
+	display: flex;
 }
 
 .produto img {
@@ -29,4 +29,56 @@
 	padding: 30px 20px;
 	box-sizing: border-box;
 	border-radius: 10px;
+}
+
+
+
+
+
+
+
+/*CSS DA BARRA DE PESQUISA👇*/
+
+#divBusca{
+    background-color:#E0EEEE;
+    border:solid 2px #db8742;
+    border-radius:10px;
+    width:500px;
+    height:36px;
+}
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:425px;
+}
+  
+#btnBusca{
+    border:none;
+    float:right;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#eec81f;
+}
+  
+  #divBusca img{
+    float:left;
+}
+
+#corpo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.imagenss{
+	display: flex;
+	
 }

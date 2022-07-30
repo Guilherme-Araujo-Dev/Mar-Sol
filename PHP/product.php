@@ -34,17 +34,36 @@
     <?php include("class/header.php"); ?>
 
     <main>
+        <!--BARRA DE PESQUISA-->
+        <div id="corpo">
+            <div id="divBusca">
+            
+                <img src="search3.png" alt=""/>
+                
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                
+                <button id="btnBusca">Buscar</button>
+            </div>
+        </div>
+        <br><br><br><br>
+        <!--BARRA DE PESQUISA-->
         <ul class="produtos">
-            <li>
-                <h1> Bolinho de Carne Grande</h1>
-                <img class="produto" src="../IMG/food/bcg.jpg">
-            </li>
-            <li>
-                <img class="produto" src="../IMG/food/cfm.jpg">
-            </li>
-            <li>
-                <img class="produto" src="../IMG/food/esm.jpg">
-            </li>
+            <div class="imagenss">
+                <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
+                <p>Bolinho de batata com carne</p>
+            </div>
+                
+            <div class="imagenss">
+                <img src="comidas/Meu projeto (1).jpg"alt="salgado1" width="300px">
+                <p>Bolinho de Batata com Frango</p>
+            </div>
+                <br>
+            <div class="imagenss">
+                <img src="comidas/Meu projeto (2).jpg" alt="salgado2" width="300px">
+                <p>Bolinho de Carne</p>
+            </div>
+                
+           
         </ul>
     </main>
 
