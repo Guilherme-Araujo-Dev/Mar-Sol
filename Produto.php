@@ -52,8 +52,11 @@ BACKGROUND-IMAGE: url(imagens/fundo.jpg)
         <!--BARRA DE PESQUISA-->
         <div id="corpo">
             <div id="divBusca">
+            
                 <img src="search3.png" alt=""/>
+                
                 <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                
                 <button id="btnBusca">Buscar</button>
             </div>
         </div>
