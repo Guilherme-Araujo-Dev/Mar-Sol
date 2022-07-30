@@ -33,14 +33,14 @@
 
     <main>
         <!--BARRA DE PESQUISA-->
-        <div id="corpo">
-            <div id="divBusca">
+        <div class="corpo">
+            <div class="divBusca">
 
                 <img src="search3.png" alt="" />
 
-                <input type="text" id="txtBusca" placeholder="Buscar..." />
+                <input type="text" class="txtBusca" placeholder="Buscar..." />
 
-                <button id="btnBusca">Buscar</button>
+                <button class="btnBusca">Buscar</button>
             </div>
         </div>
         <br><br><br><br>
@@ -48,16 +48,19 @@
         <ul class="produtos">
             <li class="produto">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
-                <h1>Bolinho de Carne Grande</p>
+                <h1>Bolinho de Carne Grande</h1>
+                
             </li>
 
             <li class="produto">
                 <img src="../IMG/food/esm.jpg" alt="salgado1" width="300px">
-                <h1>Enrolado de Salsicha Mini</p>
+                <h1>Enrolado de Salsicha Mini</h1>
+                
             </li>
             <li class="produto">
                 <img src="../IMG/food/cfm.jpg" alt="salgado2" width="300px">
-                <h1>Coxinha de Frango Mini</p>
+                <h1>Coxinha de Frango Mini</h1>
+                
             </li>
 
 
