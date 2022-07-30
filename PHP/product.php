@@ -48,20 +48,19 @@
         <br><br><br><br>
         <!--BARRA DE PESQUISA-->
         <ul class="produtos">
-            <div class="imagenss">
+            <li class="produto">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
-                <p>Bolinho de batata com carne</p>
-            </div>
+                <h1>Bolinho de batata com carne</p>
+            </li>
                 
-            <div class="imagenss">
-                <img src="comidas/Meu projeto (1).jpg"alt="salgado1" width="300px">
-                <p>Bolinho de Batata com Frango</p>
-            </div>
-                <br>
-            <div class="imagenss">
-                <img src="comidas/Meu projeto (2).jpg" alt="salgado2" width="300px">
-                <p>Bolinho de Carne</p>
-            </div>
+            <li class="produto">
+                <img src="../IMG/food/esm.jpg"alt="salgado1" width="300px">
+                <h1>Bolinho de Batata com Frango</p>
+            </li>
+            <li  class="produto">
+                <img src="../IMG/food/cfm.jpg" alt="salgado2" width="300px">
+                <h1>Bolinho de Carne</p>
+            </li>
                 
            
         </ul>
