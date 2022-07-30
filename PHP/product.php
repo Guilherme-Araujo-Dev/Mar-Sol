@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Importando o BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
 
     <!-- Definindo o Ícone da Página -->
@@ -22,7 +20,7 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
-    conectar(); 
+    conectar();
     ?>
 
     <title>Mar & Sol Salgados - Produtos</title>
@@ -37,11 +35,11 @@
         <!--BARRA DE PESQUISA-->
         <div id="corpo">
             <div id="divBusca">
-            
-                <img src="search3.png" alt=""/>
-                
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                
+
+                <img src="search3.png" alt="" />
+
+                <input type="text" id="txtBusca" placeholder="Buscar..." />
+
                 <button id="btnBusca">Buscar</button>
             </div>
         </div>
@@ -50,19 +48,19 @@
         <ul class="produtos">
             <li class="produto">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
-                <h1>Bolinho de batata com carne</p>
+                <h1>Bolinho de Carne Grande</p>
             </li>
-                
+
             <li class="produto">
-                <img src="../IMG/food/esm.jpg"alt="salgado1" width="300px">
-                <h1>Bolinho de Batata com Frango</p>
+                <img src="../IMG/food/esm.jpg" alt="salgado1" width="300px">
+                <h1>Enrolado de Salsicha Mini</p>
             </li>
-            <li  class="produto">
+            <li class="produto">
                 <img src="../IMG/food/cfm.jpg" alt="salgado2" width="300px">
-                <h1>Bolinho de Carne</p>
+                <h1>Coxinha de Frango Mini</p>
             </li>
-                
-           
+
+
         </ul>
     </main>
 
