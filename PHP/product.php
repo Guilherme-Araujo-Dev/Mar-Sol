@@ -21,6 +21,8 @@
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
     conectar();
+
+    $rdProdutos = "SELECT * FROM Produto";
     ?>
 
     <title>Mar & Sol Salgados - Produtos</title>
