@@ -21,6 +21,16 @@
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
     conectar();
+
+    // Fazendo Select no Banco de Dados
+    $rdProdutos = "SELECT * FROM Produto TOP 10";
+
+    // preparando o sql para não aceitar sql injection
+    $stmtcat = $pdo->prepare($rdProdutos);
+    $stmtcat->execute();
+
+    // pegando todos os dados da tabela
+    $categorias = $stmtcat->fetchAll();
     ?>
 
     <title>Mar & Sol Salgados - Produtos</title>
@@ -46,8 +56,9 @@
         <br><br><br><br>
         <!--BARRA DE PESQUISA-->
         <ul class="produtos">
-            <li class="produto">
+        <li class="produto">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
+
                 <h1 class="product-text">Bolinho de Carne Grande</h1>
                 <p class="product-text">Informações Nutricionais:</p>
             </li>
@@ -63,7 +74,77 @@
                 <p class="product-text">Informações Nutricionais:</p>
             </li>
 
+            <li class="produto">
+                <img src="../IMG/food/bbc.jpg" alt="salgado3" width="300px">
+                <h1 class="product-text">Bolinho de batata com carne</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
 
+            <li class="produto">
+                <img src="../IMG/food/bbf.jpg" alt="salgado4" width="300px">
+                <h1 class="product-text">Bolinho de batata com Frango</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/bc.jpg" alt="salgado5" width="300px">
+                <h1 class="product-text">Bolinho de carne</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/bqm.jpg" alt="salgado6" width="300px">
+                <h1 class="product-text">Bolinho de Queijo Mini</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/ccm.jpg" alt="salgado7" width="300px">
+                <h1 class="product-text">Coxinha de Carne Mini</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/cf.jpg" alt="salgado8" width="300px">
+                <h1 class="product-text">Coxinha de Frango</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/cfm2.jpg" alt="salgado9" width="300px">
+                <h1 class="product-text">Coxinha de Frango Mini</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/cv.jpg" alt="salgado10" width="300px">
+                <h1 class="product-text">Coxinha Variados</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/pc.jpg" alt="salgado11" width="300px">
+                <h1 class="product-text">Pastel de Carne</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/ppg.jpg" alt="salgado12" width="300px">
+                <h1 class="product-text">Pastel de Pizza Mini</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+
+            <li class="produto">
+                <img src="../IMG/food/rc.jpg" alt="salgado13" width="300px">
+                <h1 class="product-text">Risolis de Carne</h1>
+                <p class="product-text">Informações Nutricionais:</p>
+            </li>
+        </ul>
+
+
+
+
+            
         </ul>
     </main>
 
