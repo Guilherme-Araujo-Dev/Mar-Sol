@@ -22,7 +22,15 @@
     <?php include_once("class/connection.php");
     conectar();
 
-    $rdProdutos = "SELECT * FROM Produto";
+    // Fazendo Select no Banco de Dados
+    $rdProdutos = "SELECT * FROM Produto TOP 10";
+
+    // preparando o sql para não aceitar sql injection
+    $stmtcat = $pdo->prepare($rdProdutos);
+    $stmtcat->execute();
+
+    // pegando todos os dados da tabela
+    $categorias = $stmtcat->fetchAll();
     ?>
 
     <title>Mar & Sol Salgados - Produtos</title>
