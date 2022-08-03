@@ -1,3 +1,14 @@
+/*TODO LINK VAI FICAR VERMELHO*/
+a:hover{
+    color: red;
+}
+
+a{
+    color: black;
+    text-decoration: none;  
+}
+
+
 .container-footer {
     background-color: rgb(255, 194, 50);
 }
