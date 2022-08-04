@@ -10,7 +10,7 @@ CREATE TABLE Categorias (
 CREATE TABLE Produtos (
     idProduto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeProduto VARCHAR(100) NOT NULL,
-    peso FLOAT(4,2),
+    peso FLOAT(4,2) NOT NULL,
     preco FLOAT(5,2) NOT NULL,
     imagem VARCHAR(200),                                           -- Passa local onde a imagem se hospeda
     Categoria_idCategoria INT NOT NULL,
@@ -66,40 +66,3 @@ CREATE TABLE Movimento_Item (                                    -- Cada item de
     FOREIGN KEY (Produto_idProduto) REFERENCES Produtos(idProduto),
     FOREIGN KEY (Movimento_idMovimento) REFERENCES Movimentos(idMovimento)
 );
-
-
--- Includes para testar
-
-
-
-INSERT INTO Categorias (nomeCategoria) VALUES ('Pastel Grande');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Pastel Mini');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Bolinho Grande');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Bolinho Mini');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Coxinha Grande');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Coxinha Mini');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Risolis Grande');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Risolis Mini');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Salgados Grande');
-INSERT INTO Categorias (nomeCategoria) VALUES ('Salgados Mini');
-
-
-INSERT INTO Produtos (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Carne G', 0.5, 2.50, 'pcg.jpg', 1);
-INSERT INTO Produtos (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Frango G', 0.5, 2.50, 'pfg.jpg', 1);
-INSERT INTO Produtos (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Pizza G', 0.5, 2.50, 'ppg.jpg', 1);
-INSERT INTO Produtos (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES ('Pastel de Queijo G', 0.5, 2.50, 'pqg.jpg', 1);
-
-INSERT INTO Funcionarios (nomeFuncionario, email, fone, cpf, estado, cidade, endereco) VALUES ('Rodrigo dos Santos', 'rodrigo.santos@maresolsalgados.com', '(45) 93167-5817', '144.657.251-08','PR', 'Cascavel', 'Rua General Alincar, 498');
-
-INSERT INTO Movimentos (data, Funcionario_idFuncionario, Empresa_idEmpresa) VALUES ('2018-01-01', 1, 1);
-
-INSERT INTO Movimento_Item (Produto_idProduto, Movimento_idMovimento, quantidade) VALUES (1, 1, 20);
-INSERT INTO Movimento_Item (Produto_idProduto, Movimento_idMovimento, quantidade) VALUES (2, 1, 10);
-INSERT INTO Movimento_Item (Produto_idProduto, Movimento_idMovimento, quantidade) VALUES (3, 1, 5);
-
-
--- Funciona só no phpMyAdmin
--- SELECT M.idMovimento, M.data AS Data, M.observacao AS Observação, M.aprovado AS Aprovado, M.entregue AS Entregue, F.nomeFuncionario AS Funcionário FROM Movimentos AS M INNER JOIN Funcionario AS F ON M.Funcionario_idFuncionario = F.idFuncionario; 
--- SELECT M.data AS Data, M.tipo AS Tipo, I.quantidade AS Quantidade, M.aprovado AS Aprovado, M.entregue AS Entregue, M.observacao AS Observação FROM Movimento_Item AS I INNER JOIN Movimentos AS M ON I.Movimento_idMovimento = M.idMovimento;
-
-INSERT INTO Produtos (nomeProduto, peso, preco, imagem, Categoria_idCategoria) VALUES (	'Pastel de Carne Mini',	'1',	'22',	'../IMG/pcm.jpg',	'1'	)
