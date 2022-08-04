@@ -98,9 +98,9 @@ h2{
     padding:0 5px;
     background-color: transparent;
     border:none;
-    border-bottom: 1px solid #ff0000;
+    border-bottom: 1px solid black;
     outline: none;
-    color: rgb(51, 69, 233);
+    color: black;
 }
 .card-footer .submit{
     width: 50%;
@@ -113,7 +113,7 @@ h2{
 
 .container{
 
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(228, 228, 228);
 }
 
 .card-footer, p a{

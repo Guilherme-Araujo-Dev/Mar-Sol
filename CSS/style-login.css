@@ -63,7 +63,7 @@ h2{
 }
 
 .card {
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(228, 228, 228);
     padding: 40px;
     border-radius: 2px;
     width:350px;
@@ -100,9 +100,9 @@ h2{
     padding:0 5px;
     background-color: transparent;
     border:none;
-    border-bottom: 1px solid #ff0000;
+    border-bottom: 1px solid black;
     outline: none;
-    color: rgb(51, 69, 233);
+    color: gray;
 }
 
 .card-footer {
