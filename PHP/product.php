@@ -23,7 +23,7 @@
     conectar();
 
     // Fazendo Select no Banco de Dados
-    $rdProdutos = "SELECT * FROM Produto TOP 10";
+    $rdProdutos = "SELECT * FROM Produto";
 
     // preparando o sql para não aceitar sql injection
     $stmtcat = $pdo->prepare($rdProdutos);
@@ -48,15 +48,17 @@
 
                 <img src="search3.png" alt="" />
 
-                <input type="text" class="txtBusca" placeholder="Buscar..." />
+                <input type="text" class="txtBusca" placeholder="Buscar..."/>
 
                 <button class="btnBusca">Buscar</button>
             </div>
         </div>
+
         <br><br><br><br>
-        <!--BARRA DE PESQUISA-->
+
+        <!-- Produtos -->
         <ul class="produtos">
-        <li class="produto">
+            <li class="produto">
                 <img src="../IMG/food/bcg.jpg" alt="salgado" width="300px">
 
                 <h1 class="product-text">Bolinho de Carne Grande</h1>
@@ -139,12 +141,6 @@
                 <h1 class="product-text">Risolis de Carne</h1>
                 <p class="product-text">Informações Nutricionais:</p>
             </li>
-        </ul>
-
-
-
-
-            
         </ul>
     </main>
 
