@@ -10,7 +10,7 @@ CREATE TABLE Categorias (
 CREATE TABLE Produtos (
     idProduto INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeProduto VARCHAR(100) NOT NULL,
-    peso FLOAT(4,2) NOT NULL,
+    peso FLOAT(4,2),
     preco FLOAT(5,2) NOT NULL,
     imagem VARCHAR(200),                                           -- Passa local onde a imagem se hospeda
     Categoria_idCategoria INT NOT NULL,
