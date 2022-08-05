@@ -38,7 +38,7 @@ $pdo = conectar();
         <div class="corpo">
             <div class="divBusca">
             <form method="POST">
-                <input type="text" class="txtBusca" placeholder="Buscar..." />
+                <input type="text" class="txtBusca" id="busca" name="busca" placeholder="Buscar..." />
                 <button class="btnBusca" name="btnBusca" type="submit">Buscar</button>
             </form>
             </div>
@@ -46,19 +46,20 @@ $pdo = conectar();
 
         <?php
         if (isset($_POST['btnBusca'])) {
-            $busca    = isset($_POST['btnBusca']) ? $_POST['btnBusca'] : null;
-            $sqlcat = "SELECT * FROM Produtos WHERE nomeProduto LIKE ':b%' LIMIT 10";
-            $stmtcat = $pdo->prepare($sqlcat);
-            $stmtcat->bindParam(':b', $busca);
+            $busca    = isset($_POST['busca']) ? $_POST['busca'] : ' ';
+            $sql = "SELECT * FROM Produtos WHERE nomeProduto LIKE ?";
+            $stmt = $pdo->prepare($sql);
+            $buscaGeral = $busca . '%';
+            $stmt->bindParam(1, $buscaGeral);
         } else {
-            $sqlcat = "SELECT * FROM Produtos LIMIT 10";
-            $stmtcat = $pdo->prepare($sqlcat);
+            $sql = "SELECT * FROM Produtos LIMIT 10";
+            $stmt = $pdo->prepare($sql);
         }
         // preparando o sql para não aceitar sql injection
-        $stmtcat->execute();
+        $stmt->execute();
 
         // pegando todos os dados da tabela
-        $produtos = $stmtcat->fetchAll();
+        $produtos = $stmt->fetchAll();
         ?>
         <br><br><br><br>
         <!--BARRA DE PESQUISA-->

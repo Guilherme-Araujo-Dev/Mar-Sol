@@ -78,7 +78,7 @@ if (isset($_POST['btnLogin'])) {
 
     if($stmt->rowCount()> 0){
         header("Refresh: 0;url=index.php");
-        
+        exit();
     }else{
         echo "Usuário ou senha invalidos ";
         exit();
