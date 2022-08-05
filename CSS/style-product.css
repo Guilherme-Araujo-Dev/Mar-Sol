@@ -33,6 +33,13 @@
 	font-size: 20px;
 }
 
+.produto h2 {
+	display: block;
+	margin: 140px 272px;
+	position:absolute;
+	font-size: 20px;
+}
+
 .produto h1 {
 	position: absolute;
 	margin-left: 272px;
