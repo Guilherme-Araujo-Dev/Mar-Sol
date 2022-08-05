@@ -33,7 +33,7 @@
 <body>
 
     <!-- Importando o Cabeçalho -->
-    <?php include("class/header-file.php"); ?>
+    <?php include("class/header.php"); ?>
 
     <main>
         <!-- Importando o Carrossel -->
@@ -93,7 +93,7 @@
 
 
     <!-- Importando o rodapé-->
-    <?php include("class/footer-file.php"); ?>
+    <?php include("class/footer.php"); ?>
 
 </body>
 
