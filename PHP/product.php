@@ -2,16 +2,6 @@
 require_once "class/connection.php";
 
 $pdo = conectar();
-
-$sqlcat = "SELECT * FROM Produtos LIMIT 10";
-
-// preparando o sql para não aceitar sql injection
-$stmtcat = $pdo->prepare($sqlcat);
-$stmtcat->execute();
-
-// pegando todos os dados da tabela
-$produtos = $stmtcat->fetchAll();
-
 ?>
 
 <!DOCTYPE html>
@@ -47,33 +37,33 @@ $produtos = $stmtcat->fetchAll();
         <!--BARRA DE PESQUISA-->
         <div class="corpo">
             <div class="divBusca">
+            <form method="POST">
                 <input type="text" class="txtBusca" placeholder="Buscar..." />
-                <button class="btnBusca">Buscar</button>
+                <button class="btnBusca" name="btnBusca" type="submit">Buscar</button>
+            </form>
             </div>
         </div>
 
         <?php
-        if (isset($_POST['btnLogin'])) {
-            $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : null;
-        
-            if(empty($usuario) && empty($senha)){
-                echo "Necessário informar usuario e senha";
-                exit();
-            }
-            
-            $sql = "SELECT emailCliente FROM Empresas WHERE emailCliente = :u AND senha = :s";
-            
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':u', $usuario);
-            $stmt->bindParam(':s', $senha);
-            $stmt->execute();
-            $user = $stmt->fetch();
+        if (isset($_POST['btnBusca'])) {
+            $busca    = isset($_POST['btnBusca']) ? $_POST['btnBusca'] : null;
+            $sqlcat = "SELECT * FROM Produtos WHERE nomeProduto LIKE ':b%' LIMIT 10";
+            $stmtcat = $pdo->prepare($sqlcat);
+            $stmtcat->bindParam(':b', $busca);
+        } else {
+            $sqlcat = "SELECT * FROM Produtos LIMIT 10";
+            $stmtcat = $pdo->prepare($sqlcat);
         }
+        // preparando o sql para não aceitar sql injection
+        $stmtcat->execute();
+
+        // pegando todos os dados da tabela
+        $produtos = $stmtcat->fetchAll();
         ?>
         <br><br><br><br>
         <!--BARRA DE PESQUISA-->
         <ul class="produtos">
-            <?php foreach ($produtos as $p) { ?>
+        <?php foreach ($produtos as $p) { ?>
                 <li class="produto">
                     <img src="../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeProduto']; ?>" width="300px" height="167px">
 
