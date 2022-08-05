@@ -28,8 +28,6 @@
 </head>
 
 <body>
-    <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
 
     <div id="login">
         <form class="card" method="POST">
@@ -58,7 +56,6 @@
         </form>
     </div>
 </body>
-
 </html>
 
 <?php
@@ -81,8 +78,7 @@ if (isset($_POST['btnLogin'])) {
     $user = $stmt->fetch();
 
     if($stmt->rowCount()> 0){
-        header('Location: https://www.homehost.com.br/');
-        var_dump($user);
+        header("Refresh: 0;url=index.php");
         
     }else{
         echo "Usuário " . $usuario . " ou senha invalidos " . $senha;
