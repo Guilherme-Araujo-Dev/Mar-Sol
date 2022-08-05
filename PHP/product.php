@@ -47,12 +47,29 @@ $produtos = $stmtcat->fetchAll();
         <!--BARRA DE PESQUISA-->
         <div class="corpo">
             <div class="divBusca">
-
                 <input type="text" class="txtBusca" placeholder="Buscar..." />
-
                 <button class="btnBusca">Buscar</button>
             </div>
         </div>
+
+        <?php
+        if (isset($_POST['btnLogin'])) {
+            $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : null;
+        
+            if(empty($usuario) && empty($senha)){
+                echo "Necessário informar usuario e senha";
+                exit();
+            }
+            
+            $sql = "SELECT emailCliente FROM Empresas WHERE emailCliente = :u AND senha = :s";
+            
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':u', $usuario);
+            $stmt->bindParam(':s', $senha);
+            $stmt->execute();
+            $user = $stmt->fetch();
+        }
+        ?>
         <br><br><br><br>
         <!--BARRA DE PESQUISA-->
         <ul class="produtos">
