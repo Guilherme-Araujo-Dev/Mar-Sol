@@ -18,8 +18,10 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-login.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
-    conectar();
+    <?php 
+    session_start();
+    include_once "class/connection.php";
+    $pdo = conectar();
     ?>
 
     <title>Mar & Sol Salgados - Login</title>
@@ -30,7 +32,7 @@
     <?php include("class/header.php"); ?>
 
     <div id="login">
-        <form class="card">
+        <form class="card" method="POST">
             <div class="">
                 <u>
                     <h1>Login</h1>
@@ -40,12 +42,12 @@
             <div class="card-content">
                 <div class="card-content-area">
                     <label for="nome">Usuário</label>
-                    <input type="text" id="usuario" autocomplete="off">
+                    <input type="text" id="usuario" name="user" autocomplete="off">
                 </div>
 
                 <div class="card-content-area">
                     <label for="nome">Senha</label>
-                    <input type="password" id="password" autocomplete="off">
+                    <input type="password" id="password" name="password" autocomplete="off">
                 </div>
             </div>
 
@@ -60,26 +62,25 @@
 </html>
 
 <?php
-if (isset($_POST['btnlogin'])) {
-    $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : null;
-    $senha      = isset($_POST['senha']) ? md5($_POST['senha']) : null;
+if (isset($_POST['btnLogin'])) {
+    $user    = isset($_POST['user']) ? $_POST['user'] : null;
+    $password      = isset($_POST['password']) ? md5($_POST['password']) : null;
 
-    if(empty($usuario) && empty($senha)){
+    if(empty($user) && empty($password)){
         echo "Necessário informar usuario e senha";
         exit();
     }
     
-    $sql = "SELECT nomeUsuario, emailUsuario FROM usuario WHERE nomeUsuario = :u AND senhaUsuario = :s";
+    $sql = "SELECT CNPJ, emailCliente FROM Empresas WHERE CNPJ = :u OR emailCliente = :u AND senha = :s";
 
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':u', $usuario);
-    $stmt->bindParam(':s', $senha);
+    $stmt->bindParam(':u', $user);
+    $stmt->bindParam(':s', $password);
     $stmt->execute();
     $user = $stmt->fetch();
 
     if($stmt->rowCount()> 0){
         var_dump($user);
-        
     }else{
         echo "Usuário ou senha invalidos";
         exit();
