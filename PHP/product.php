@@ -57,7 +57,7 @@ $pdo = conectar();
         }
         // preparando o sql para não aceitar sql injection
         $stmt->execute();
-
+        
         // pegando todos os dados da tabela
         $produtos = $stmt->fetchAll();
         ?>
@@ -77,7 +77,8 @@ $pdo = conectar();
     </main>
 
     <!-- Importando o Rodaré -->
-    <?php include("class/footer.php"); ?>
+    <?php include("class/footer.php"); 
+    exit();?>
 </body>
 
 </html>

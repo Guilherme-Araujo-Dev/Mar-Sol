@@ -22,8 +22,10 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-cadastro.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
-    conectar();
+    <?php
+    session_start();
+    include_once "class/connection.php";
+    $pdo = conectar();
     ?>
 
     <title>Mar & Sol Salgados - Cadastro</title>
@@ -36,69 +38,115 @@
 
 
 
-    <div class="corpo horizontal-center"> 
-            <div class="container ">
-                <div class="forms-header">
-                    
-                    <u><h1>Cadastro</h1></u>
-                </div>
-                <form method="post">
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="nome">Seu Primeiro nome:</label>
-                            <input id="nome" name="nome" type="text" placeholder="" class="">
-                        </div>
-                        <div class="form-group col-5">
-                            <label for="nome">Fone:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Número pessoal" class="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="nome">Seu segundo nome:</label>
-                            <input id="sobrenome" name="sobrenome" type="text" placeholder="" class="">
-                        </div>
-                        <div class="form-group col-5">
-                            <label for="nome">CNPJ:</label>
-                            <input id="nome" name="nome" type="text" placeholder="CNPJ da empresa" class="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="nome">Empresa:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Nome da empresa" class="">
-                        </div>
-                        <div class="form-group col-5">
-                            <label for="nome">Estado:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Apenas siglas" class="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="nome">Email:</label>
-                            <input id="nome" name="nome" type="text" placeholder="Pessoal ou Profissional" class="">
-                        </div>
-                        <div class="form-group col-5">
-                            <label for="nome">Cidade:</label>
-                            <input id="nome" name="nome" type="text" placeholder="" class="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="nome">Senha:</label>
-                            <input id="nome" name="nome" type="password" placeholder="*Requisitos para a senha*" class="">
-                        </div>
-                        <div class="form-group col-5">
-                            <label for="nome">Endereço:</label>
-                            <input id="nome" name="nome" type="text" placeholder="" class=""><!--Para deixar redondinho, colocar: form-control no class=""-->
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <input type="submit" value="Cadastrar" class="submit">
-                        <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
-                    </div>
-                </form>
+    <div class="corpo horizontal-center">
+        <div class="container ">
+            <div class="forms-header">
+
+                <u>
+                    <h1>Cadastro</h1>
+                </u>
             </div>
+            <form method="POST">
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">Seu Primeiro nome:</label>
+                        <input id="nome" name="primeiroNome" type="text" placeholder="" class="">
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nome">Fone:</label>
+                        <input id="nome" name="fone" type="text" placeholder="Número pessoal" class="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">Seu segundo nome:</label>
+                        <input id="sobrenome" name="sobrenome" type="text" placeholder="" class="">
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nome">CNPJ:</label>
+                        <input id="nome" name="CNPJ" type="text" placeholder="CNPJ da empresa" class="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">Empresa:</label>
+                        <input id="nome" name="empresa" type="text" placeholder="Nome da empresa" class="">
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nome">Estado:</label>
+                        <input id="nome" name="estado" type="text" placeholder="Apenas siglas" class="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">Email:</label>
+                        <input id="nome" name="email" type="text" placeholder="Pessoal ou Profissional" class="">
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nome">Cidade:</label>
+                        <input id="nome" name="cidade" type="text" placeholder="" class="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">Senha:</label>
+                        <input id="nome" name="senha" type="password" placeholder="*Requisitos para a senha*" class="">
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nome">Endereço:</label>
+                        <input id="nome" name="endereco" type="text" placeholder="" class="">
+                        <!--Para deixar redondinho, colocar: form-control no class=""-->
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
+                    <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
+                </div>
+            </form>
         </div>
+    </div>
 </body>
+
 </html>
+
+<?php
+
+if (isset($_POST['btnCadastro'])) {
+    $primeiroNome    = isset($_POST['primeiroNome']) ? $_POST['primeiroNome'] : null;
+    $sobrenome       = isset($_POST['sobrenome']) ? ($_POST['sobrenome']) : null;
+    $fone            = isset($_POST['fone']) ? ($_POST['fone']) : null;
+    $CNPJ            = isset($_POST['CNPJ']) ? ($_POST['CNPJ']) : null;
+    $empresa         = isset($_POST['empresa']) ? ($_POST['empresa']) : null;
+    $email           = isset($_POST['email']) ? ($_POST['email']) : null;
+    $cidade          = isset($_POST['cidade']) ? ($_POST['cidade']) : null;
+    $senha           = isset($_POST['senha']) ? ($_POST['senha']) : null;
+    $estado           = isset($_POST['estado']) ? ($_POST['estado']) : null;
+    $endereco        = isset($_POST['endereco']) ? ($_POST['endereco']) : null;
+
+    $nome = $primeiroNome . " " . $sobrenome;
+
+    if(empty($primeiroNome) && empty($sobrenome) && empty($fone) && empty($CNPJ) && empty($empresa) && empty($email) && empty($cidade) && empty($senha) && empty($endereco)){
+        echo "Necessário preencher todos os campos";
+        exit();
+    }
+    
+    $sql = "INSERT INTO Empresas (nomeEmpresa, emailCliente, nomeCliente, senha, fone, CNPJ, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':ne', $empresa);
+    $stmt->bindParam(':ec', $email);
+    $stmt->bindParam(':nc', $nome);
+    $stmt->bindParam(':s', $senha);
+    $stmt->bindParam(':f', $fone);
+    $stmt->bindParam(':cj', $CNPJ);
+    $stmt->bindParam(':et', $estado);
+    $stmt->bindParam(':c', $cidade);
+    $stmt->bindParam(':e', $endereco);
+
+    try {
+        $stmt->execute();
+        echo "Você foi cadastrado com sucesso";
+    } catch(Exception) {
+        echo "Por favor insira os dados da maneira correta";
+    }
+}
+?>
