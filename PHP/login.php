@@ -75,13 +75,12 @@ if (isset($_POST['btnLogin'])) {
     $stmt->bindParam(':u', $usuario);
     $stmt->bindParam(':s', $senha);
     $stmt->execute();
-    $user = $stmt->fetch();
 
     if($stmt->rowCount()> 0){
         header("Refresh: 0;url=index.php");
         
     }else{
-        echo "Usuário " . $usuario . " ou senha invalidos " . $senha;
+        echo "Usuário ou senha invalidos ";
         exit();
     }
 }
