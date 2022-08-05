@@ -145,7 +145,7 @@ if (isset($_POST['btnCadastro'])) {
     try {
         $stmt->execute();
         echo "Você foi cadastrado com sucesso";
-    } catch(Exception) {
+    } catch(Exception $e) {
         echo "Por favor insira os dados da maneira correta";
     }
 }
