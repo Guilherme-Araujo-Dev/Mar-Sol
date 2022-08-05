@@ -25,7 +25,7 @@
 <body>
 
     <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
+    <?php include("class/header-file.php"); ?>
 
     <main>
         <!--BARRA DE PESQUISA-->
@@ -135,7 +135,7 @@
     </main>
 
     <!-- Importando o Rodaré -->
-    <?php include("class/footer.php"); ?>
+    <?php include("class/footer-file.php"); ?>
 </body>
 
 </html>

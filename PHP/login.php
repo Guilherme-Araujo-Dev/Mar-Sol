@@ -29,7 +29,7 @@
 
 <body>
     <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
+    <?php include("class/header-file.php"); ?>
 
     <div id="login">
         <form class="card" method="POST">
@@ -42,12 +42,12 @@
             <div class="card-content">
                 <div class="card-content-area">
                     <label for="nome">Usuário</label>
-                    <input type="text" id="usuario" name="user" autocomplete="off">
+                    <input type="text" id="usuario" name="usuario" autocomplete="off">
                 </div>
 
                 <div class="card-content-area">
                     <label for="nome">Senha</label>
-                    <input type="password" id="password" name="password" autocomplete="off">
+                    <input type="password" id="password" name="senha" autocomplete="off">
                 </div>
             </div>
 
@@ -62,27 +62,30 @@
 </html>
 
 <?php
-if (isset($_POST['btnLogin'])) {
-    $user    = isset($_POST['user']) ? $_POST['user'] : null;
-    $password      = isset($_POST['password']) ? md5($_POST['password']) : null;
 
-    if(empty($user) && empty($password)){
+if (isset($_POST['btnLogin'])) {
+    $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : null;
+    $senha      = isset($_POST['senha']) ? ($_POST['senha']) : null;
+
+    if(empty($usuario) && empty($senha)){
         echo "Necessário informar usuario e senha";
         exit();
     }
     
-    $sql = "SELECT CNPJ, emailCliente FROM Empresas WHERE CNPJ = :u OR emailCliente = :u AND senha = :s";
-
+    $sql = "SELECT emailCliente FROM Empresas WHERE emailCliente = :u AND senha = :s";
+    
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':u', $user);
-    $stmt->bindParam(':s', $password);
+    $stmt->bindParam(':u', $usuario);
+    $stmt->bindParam(':s', $senha);
     $stmt->execute();
     $user = $stmt->fetch();
 
     if($stmt->rowCount()> 0){
+        header('Location: https://www.homehost.com.br/');
         var_dump($user);
+        
     }else{
-        echo "Usuário ou senha invalidos";
+        echo "Usuário " . $usuario . " ou senha invalidos " . $senha;
         exit();
     }
 }
