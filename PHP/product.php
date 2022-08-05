@@ -3,7 +3,7 @@ require_once "class/connection.php";
 
 $pdo = conectar();
 
-$sqlcat = "SELECT * FROM Produtos";
+$sqlcat = "SELECT * FROM Produtos LIMIT 10";
 
 // preparando o sql para não aceitar sql injection
 $stmtcat = $pdo->prepare($sqlcat);
