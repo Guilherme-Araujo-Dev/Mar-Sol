@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
-                        <input id="nome" name="fone" type="text" placeholder="Número pessoal ou Empresarial" class="">
+                        <input id="nome" name="fone" type="text" placeholder="(45) 9 9999-9999" class="">
                     </div>
                 </div>
                 <div class="form-row">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">CNPJ:</label>
-                        <input id="nome" name="CNPJ" oninput="CNPJmask(this)" type="text" placeholder="CNPJ da empresa" class="">
+                        <input id="nome" name="CNPJ" oninput="CNPJmask(this)" type="text" placeholder="00.000.000/0000-00" class="">
                     </div>
                 </div>
                 <div class="form-row">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Estado:</label>
-                        <input id="nome" name="estado" type="text" placeholder="Apenas siglas" class="">
+                        <input id="nome" name="estado" type="text" placeholder="PR" class="">
                     </div>
                 </div>
                 <div class="form-row">
