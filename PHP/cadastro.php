@@ -103,7 +103,7 @@
                 </div>
                 <div class="card-footer">
                     <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
-                    <p>Já possui uma conta?<u> <a href="Login.php"> Clique aqui!</u></a></p>
+                    <p>Já possui uma conta?<u> <a href="login.php"> Clique aqui!</u></a></p>
                 </div>
             </form>
         </div>

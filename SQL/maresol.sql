@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Ago-2022 às 21:20
+-- Tempo de geração: 06-Ago-2022 às 21:51
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -92,12 +92,7 @@ INSERT INTO `empresas` (`idEmpresa`, `nomeEmpresa`, `situacao`, `nomeCliente`, `
 (17, 'Green Blacks', 'A', 'Amanda Dias', 'blacks.flag@credo.com', 'S943275631', '(45) 97897-8585', '23.468.756/0001-14', 'PR', 'Corbelia', 'Avenida Afonso Trigo, 590'),
 (18, 'Cioccolatta', 'A', 'Nicolas Costa', 'cioco.latta@brasil.com', 'w12934578', '(45) 91231-2354', '24.468.756/0001-13', 'PR', 'Guaraniacu', 'Avenida Gabriel Zanette, 921'),
 (19, 'Empresas Star', 'A', 'Carlos Azevedo', 'jo.estar@kujo.com', 'h12834575', '(45) 95366-7865', '25.468.756/0001-12', 'PR', 'Foz do Iguacu', 'Rua Sete de setembro, 367'),
-(20, 'Magna ', 'A', 'Rafael Correia', 'swing.magna@brasil.com', 'y45454545', '(45) 91245-4576', '01.468.756/0001-25', 'PR', 'Toledo', 'Rua Tiradentes, 384'),
-(21, 'Empresa Boa', 'A', 'Teste Araújo', 'guilhermearaujop26@gmail.com', 'taGdag', '(45) 99830-5347', '12.748.365/0001-94', 'PR', 'Cascavel', 'Rua da Minha Casa, 123'),
-(22, 'Empresa Legal', 'A', 'Guilherme Araujo', 'empresa.legal@gmail.com', 'Capivara123', '(45) 99830-5347', '10.000.000/0001-10', 'PR', 'Cascavel', 'Rua da Minha Casa, 123'),
-(23, 'Grande Empresa', 'A', 'Guilherme Araújo', 'grande.empresa@restaurante.com', '123456', '(45) 99830-5347', '14.123.654.789/000', 'PR', 'Cascavel', 'Rua da Empresa, 321'),
-(24, 'Teste', 'A', 'Guilherme Araújo', 'teste@gmaill.com', '123456', '(45) 9 9937-682', '00.000.000/0000-00', 'PR', 'Cascavel', 'Aqui'),
-(28, 'gdagad', 'A', 'gdagad gdagad', 'maria.teixeira@restaurante.com', '55555555555555555555555555555555', '(00) 0000-0000', '00.000.000/0000-01', 'PR', 'dassag', 'tyegad');
+(20, 'Magna ', 'A', 'Rafael Correia', 'swing.magna@brasil.com', 'y45454545', '(45) 91245-4576', '01.468.756/0001-25', 'PR', 'Toledo', 'Rua Tiradentes, 384');
 
 -- --------------------------------------------------------
 

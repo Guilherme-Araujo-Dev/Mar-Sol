@@ -53,7 +53,7 @@
 
             <div class="card-footer">
                 <input type="submit" value="Login" name="btnLogin" class="submit">
-                <p>Não possui uma conta?<u> <a href="Cadastro.php"> Clique aqui!</u></a></p>
+                <p>Não possui uma conta?<u> <a href="cadastro.php"> Clique aqui!</u></a></p>
             </div>
         </form>
     </div>
