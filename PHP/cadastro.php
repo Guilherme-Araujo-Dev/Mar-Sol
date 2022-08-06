@@ -151,16 +151,6 @@ if (isset($_POST['btnCadastro'])) {
         $stmt->execute();
         echo "Você foi cadastrado com sucesso";
     } catch(PDOException $e) {
-        if (!$stmt) {
-            echo "\nPDO::errorInfo():\n";
-            print_r($dbh->errorInfo());
-        }
-        echo "<br>" . $e ->getMessage();
-        echo "<br>" . $e ->getCode();
-        echo "<br>" . $e ->getFile();
-        echo "<br>" . $e ->getLine();
-        echo "<br>" . $e ->getTrace();
-        echo "<br>" . $e ->getTraceAsString();
         echo "Por favor insira os dados da maneira correta";
     }
 }
