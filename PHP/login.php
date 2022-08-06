@@ -19,7 +19,6 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php 
-    session_start();
     include_once "class/connection.php";
     $pdo = conectar();
     ?>
@@ -28,7 +27,6 @@
 </head>
 
 <body>
-<?php include("class/header.php"); ?>
 
 
     <div id="login">
