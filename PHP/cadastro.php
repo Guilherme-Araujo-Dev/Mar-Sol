@@ -52,18 +52,18 @@
             <form method="POST">
                 <div class="form-row">
                     <div class="form-group col-5">
-                        <label for="nome">Seu Primeiro nome:</label>
-                        <input id="nome" name="primeiroNome" type="text" placeholder="" class="">
+                        <label for="nome">Nome:</label>
+                        <input id="nome" name="primeiroNome" type="text" placeholder="Insira seu primeiro nome" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
-                        <input id="nome" name="fone" type="text" placeholder="Número pessoal" class="">
+                        <input id="nome" name="fone" type="text" placeholder="Número pessoal ou Empresarial" class="">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-5">
-                        <label for="nome">Seu segundo nome:</label>
-                        <input id="sobrenome" name="sobrenome" type="text" placeholder="" class="">
+                        <label for="nome">Sobrenome:</label>
+                        <input id="sobrenome" name="sobrenome" type="text" placeholder="Insira seu sobrenome" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">CNPJ:</label>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Cidade:</label>
-                        <input id="nome" name="cidade" type="text" placeholder="" class="">
+                        <input id="nome" name="cidade" type="text" placeholder="Cidade onde se localiza a Empresa" class="">
                     </div>
                 </div>
                 <div class="form-row">
@@ -97,7 +97,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Endereço:</label>
-                        <input id="nome" name="endereco" type="text" placeholder="" class="">
+                        <input id="nome" name="endereco" type="text" placeholder="Endereço da Empresa" class="">
                         <!--Para deixar redondinho, colocar: form-control no class=""-->
                     </div>
                 </div>
