@@ -45,8 +45,6 @@ function foneMask(fone) {
 function estadoMask(estado) {
 
     var i = estado.value;
-    console.log("estado: " + estado);
-    console.log("i: " + i);
 
     estado.setAttribute("maxlength", "2"); // atribui o tamanho máximo do campo de 2 caracteres
 

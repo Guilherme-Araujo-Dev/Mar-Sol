@@ -75,7 +75,7 @@
     (45) 99937-6829<br>
     E-mail: maresolsalgados@contato.com
     </div>
-    <a href="http://task.com.br" target="_blank">
+    <a href="index.php">
     <img src="../IMG/logo.png" alt="" width="80" height="60">
     </a>
   </div>

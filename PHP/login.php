@@ -28,6 +28,8 @@
 </head>
 
 <body>
+<?php include("class/header.php"); ?>
+
 
     <div id="login">
         <form class="card" method="POST">
