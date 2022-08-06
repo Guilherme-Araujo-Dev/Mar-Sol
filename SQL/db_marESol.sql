@@ -24,7 +24,7 @@ CREATE TABLE Empresas (
     nomeCliente VARCHAR(100) NOT NULL,
     emailCliente VARCHAR(100) NOT NULL,                              -- Será o Login da Empresa
     senha VARCHAR(32) NOT NULL,                                               -- Será a Senha da Empresa
-    fone VARCHAR(15) NOT NULL,
+    fone VARCHAR(16) NOT NULL,
     CNPJ CHAR(18) NOT NULL,
     estado CHAR(2) NOT NULL,
     cidade VARCHAR(50) NOT NULL,

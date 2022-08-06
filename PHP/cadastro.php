@@ -53,7 +53,7 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Nome:</label>
-                        <input id="nome" name="primeiroNome" type="text" placeholder="Insira seu primeiro nome" class="">
+                        <input id="nome" name="primeiroNome" type="text" placeholder="Insira seu primeiro nome" maxlength="20" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
@@ -63,7 +63,7 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Sobrenome:</label>
-                        <input id="sobrenome" name="sobrenome" type="text" placeholder="Insira seu sobrenome" class="">
+                        <input id="sobrenome" name="sobrenome" type="text" placeholder="Insira seu sobrenome" maxlength="80" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">CNPJ:</label>
@@ -73,7 +73,7 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Empresa:</label>
-                        <input id="nome" name="empresa" type="text" placeholder="Nome da empresa" class="">
+                        <input id="nome" name="empresa" type="text" placeholder="Nome da empresa" maxlength="100" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Estado:</label>
@@ -83,21 +83,21 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Email:</label>
-                        <input id="nome" name="email" type="email" placeholder="empresa@email.com" class="">
+                        <input id="nome" name="email" type="email" placeholder="empresa@email.com" maxlength="100" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Cidade:</label>
-                        <input id="nome" name="cidade" type="text" placeholder="Cidade onde se localiza a Empresa" class="">
+                        <input id="nome" name="cidade" type="text" placeholder="Cidade onde se localiza a Empresa" maxlength="50" class="">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Senha:</label>
-                        <input id="nome" name="senha" type="password" placeholder="*Requisitos para a senha*" class="">
+                        <input id="nome" name="senha" type="password" placeholder="*Requisitos para a senha*" maxlength="32" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Endereço:</label>
-                        <input id="nome" name="endereco" type="text" placeholder="Endereço da Empresa" class="">
+                        <input id="nome" name="endereco" type="text" placeholder="Endereço da Empresa" maxlength="100" class="">
                         <!--Para deixar redondinho, colocar: form-control no class=""-->
                     </div>
                 </div>
@@ -150,7 +150,17 @@ if (isset($_POST['btnCadastro'])) {
     try {
         $stmt->execute();
         echo "Você foi cadastrado com sucesso";
-    } catch(Exception $e) {
+    } catch(PDOException $e) {
+        if (!$stmt) {
+            echo "\nPDO::errorInfo():\n";
+            print_r($dbh->errorInfo());
+        }
+        echo "<br>" . $e ->getMessage();
+        echo "<br>" . $e ->getCode();
+        echo "<br>" . $e ->getFile();
+        echo "<br>" . $e ->getLine();
+        echo "<br>" . $e ->getTrace();
+        echo "<br>" . $e ->getTraceAsString();
         echo "Por favor insira os dados da maneira correta";
     }
 }
