@@ -71,7 +71,7 @@ if (isset($_POST['btnLogin'])) {
         exit();
     }
     
-    $sql = "SELECT emailCliente FROM Empresas WHERE emailCliente = :u AND senha = :s";
+    $sql = "SELECT emailCliente FROM empresas WHERE emailCliente = :u AND senha = :s";
     
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':u', $usuario);

@@ -135,7 +135,7 @@ if (isset($_POST['btnCadastro'])) {
 
     if(empty($estado)) $estado = "PR"; // Se o estado não for informado será definido por padrão como Paraná
 
-    $sql = "INSERT INTO Empresas (nomeEmpresa, emailCliente, nomeCliente, senha, fone, CNPJ, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
+    $sql = "INSERT INTO empresas (nomeEmpresa, emailCliente, nomeCliente, senha, fone, CNPJ, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':ne', $empresa);
     $stmt->bindParam(':ec', $email);

@@ -47,12 +47,12 @@ $pdo = conectar();
         <?php
         if (isset($_POST['btnBusca'])) {
             $busca    = isset($_POST['busca']) ? $_POST['busca'] : ' ';
-            $sql = "SELECT * FROM Produtos WHERE nomeProduto LIKE ?";
+            $sql = "SELECT * FROM produtos WHERE nomeProduto LIKE ?";
             $stmt = $pdo->prepare($sql);
-            $buscaGeral = $busca . '%';
+            $buscaGeral = '%' . $busca . '%';
             $stmt->bindParam(1, $buscaGeral);
         } else {
-            $sql = "SELECT * FROM Produtos LIMIT 10";
+            $sql = "SELECT * FROM produtos LIMIT 10";
             $stmt = $pdo->prepare($sql);
         }
         // preparando o sql para não aceitar sql injection
