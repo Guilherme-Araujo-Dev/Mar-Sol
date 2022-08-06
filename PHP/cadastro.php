@@ -93,7 +93,7 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Senha:</label>
-                        <input id="nome" name="senha" type="password" placeholder="*Requisitos para a senha*" maxlength="32" class="">
+                        <input id="nome" name="senha" type="password" placeholder="Caracter especial e número" maxlength="32" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Endereço:</label>
