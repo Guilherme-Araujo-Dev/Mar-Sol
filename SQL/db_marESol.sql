@@ -23,7 +23,7 @@ CREATE TABLE Empresas (
     situacao CHAR(1) DEFAULT('A'),                                   -- Se ele está ativo (A) ou inativo (I)
     nomeCliente VARCHAR(100) NOT NULL,
     emailCliente VARCHAR(100) NOT NULL,                              -- Será o Login da Empresa
-    senha VARCHAR(32),                                               -- Será a Senha da Empresa
+    senha VARCHAR(32) NOT NULL,                                               -- Será a Senha da Empresa
     fone VARCHAR(15) NOT NULL,
     CNPJ CHAR(18) NOT NULL,
     estado CHAR(2) NOT NULL,

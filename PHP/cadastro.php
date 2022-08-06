@@ -128,7 +128,7 @@ if (isset($_POST['btnCadastro'])) {
 
     $nome = $primeiroNome . " " . $sobrenome;
 
-    if(empty($primeiroNome) && empty($sobrenome) && empty($fone) && empty($CNPJ) && empty($empresa) && empty($email) && empty($cidade) && empty($senha) && empty($endereco)){
+    if(empty($primeiroNome) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)){
         echo "Necessário preencher todos os campos";
         exit();
     }
