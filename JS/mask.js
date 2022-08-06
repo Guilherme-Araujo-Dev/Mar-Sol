@@ -19,8 +19,6 @@ function CNPJmask(cnpj) {
 function foneMask(fone) {
 
     var i = fone.value;
-    console.log("fone: " + fone);
-    console.log("i: " + i);
 
     if (isNaN(i[i.length - 1])) { // impede entrar outro caractere que não seja número
         fone.value = i.substring(0, i.length - 1);
@@ -42,4 +40,22 @@ function foneMask(fone) {
         if (i.length == 9) fone.value += "-"; // coloca traço depois do 9° caracter
 
     }
+}
+
+function estadoMask(estado) {
+
+    var i = estado.value;
+    console.log("estado: " + estado);
+    console.log("i: " + i);
+
+    estado.setAttribute("maxlength", "2"); // atribui o tamanho máximo do campo de 2 caracteres
+
+    if (!(isNaN(i[i.length - 1]))) { // impede entrar um caractere que seja um número
+        estado.value = i.substring(0, i.length - 1);
+        return;
+    }
+
+    if (i.length == 1) estado.value = i.toUpperCase(); // coloca o primeiro caracter em maiúsculo
+    else if (i.length == 2) estado.value = i.toUpperCase(); // coloca o segundo caracter em maiúsculo
+
 }

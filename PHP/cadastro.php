@@ -77,7 +77,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Estado:</label>
-                        <input id="nome" name="estado" type="text" placeholder="PR" class="">
+                        <input id="nome" name="estado" oninput="estadoMask(this)" type="text" placeholder="PR" class="">
                     </div>
                 </div>
                 <div class="form-row">
