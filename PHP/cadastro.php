@@ -21,6 +21,9 @@
     <!-- Importando o CSS -->
     <link rel="stylesheet" type="text/css" href="../CSS/style-cadastro.css">
 
+    <!-- Importando o JS -->
+    <script src="../JS/mask.js"></script>
+
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php
     session_start();
@@ -64,7 +67,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">CNPJ:</label>
-                        <input id="nome" name="CNPJ" type="text" placeholder="CNPJ da empresa" class="">
+                        <input id="nome" name="CNPJ" oninput="CNPJmask(this)" type="text" placeholder="CNPJ da empresa" class="">
                     </div>
                 </div>
                 <div class="form-row">
