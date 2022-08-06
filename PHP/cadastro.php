@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
-                        <input id="nome" name="fone" type="text" placeholder="(45) 9 9999-9999" class="">
+                        <input id="nome" name="fone" oninput="foneMask(this)" type="tel" placeholder="(45) 9 9999-9999" class="">
                     </div>
                 </div>
                 <div class="form-row">
@@ -83,7 +83,7 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Email:</label>
-                        <input id="nome" name="email" type="text" placeholder="Pessoal ou Profissional" class="">
+                        <input id="nome" name="email" type="email" placeholder="empresa@email.com" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Cidade:</label>
