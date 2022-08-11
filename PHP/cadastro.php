@@ -26,7 +26,6 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php
-    session_start();
     include_once "class/connection.php";
     $pdo = conectar();
     ?>
@@ -128,12 +127,12 @@ if (isset($_POST['btnCadastro'])) {
 
     $nome = $primeiroNome . " " . $sobrenome;
 
-    if(empty($primeiroNome) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)){
+    if (empty($primeiroNome) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)) {
         echo "Necessário preencher todos os campos";
         exit();
     }
 
-    if(empty($estado)) $estado = "PR"; // Se o estado não for informado será definido por padrão como Paraná
+    if (empty($estado)) $estado = "PR"; // Se o estado não for informado será definido por padrão como Paraná
 
     $sql = "INSERT INTO empresas (nomeEmpresa, emailCliente, nomeCliente, senha, fone, CNPJ, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
     $stmt = $pdo->prepare($sql);
@@ -150,7 +149,7 @@ if (isset($_POST['btnCadastro'])) {
     try {
         $stmt->execute();
         echo "Você foi cadastrado com sucesso";
-    } catch(PDOException $e) {
+    } catch (PDOException $e) {
         echo "Por favor insira os dados da maneira correta";
     }
 }
