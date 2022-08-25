@@ -27,8 +27,25 @@
 </head>
 
 <body>
+
+
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
+
+        <div class="product">
+            <h1>Produtos</h1>
+        </div>
+
+        <div class="botoes">
+            <input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br>
+            <input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br>
+            <input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br>
+            <input type="Button" style="width:300px;height:60px" value="Deletar Produto">
+
+        </div>
+
+
+
 
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>
