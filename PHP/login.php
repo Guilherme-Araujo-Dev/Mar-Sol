@@ -19,7 +19,6 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php 
-    session_start();
     include_once "class/connection.php";
     $pdo = conectar();
     ?>
@@ -28,7 +27,6 @@
 </head>
 
 <body>
-<?php include("class/header.php"); ?>
 
 
     <div id="login">
@@ -53,7 +51,7 @@
 
             <div class="card-footer">
                 <input type="submit" value="Login" name="btnLogin" class="submit">
-                <p>Não possui uma conta?<u> <a href="Cadastro.php"> Clique aqui!</u></a></p>
+                <p>Não possui uma conta?<u> <a href="cadastro.php"> Clique aqui!</u></a></p>
             </div>
         </form>
     </div>
@@ -71,7 +69,7 @@ if (isset($_POST['btnLogin'])) {
         exit();
     }
     
-    $sql = "SELECT emailCliente FROM Empresas WHERE emailCliente = :u AND senha = :s";
+    $sql = "SELECT emailCliente FROM empresas WHERE emailCliente = :u AND senha = :s";
     
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':u', $usuario);

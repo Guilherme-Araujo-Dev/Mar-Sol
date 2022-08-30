@@ -1,17 +1,44 @@
-.box{
+.box {
     padding-top: 150px;
 }
 
-a:hover{
+a:hover {
     color: red;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.grid-item {
-    display: grid;
-  }
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #666666;
+    text-align: center;
+}
 
+.box {
+    background-color: #fff;
+    width: 500px;
+    margin: 50px auto;
+}
+
+#title {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+#descricao {
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+#logo {
+    margin-top: 25px;
+    max-width: 365px;
+    height: auto;
+}
+
+#logo-task {
+    width: 75px;
+}
