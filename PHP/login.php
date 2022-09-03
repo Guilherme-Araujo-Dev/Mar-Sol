@@ -27,6 +27,9 @@
 </head>
 
 <body>
+    
+    <!-- Importando o Cabeçalho -->
+    <?php include("class/header.php"); ?>
 
 
     <div id="login">

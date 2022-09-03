@@ -1,0 +1,6 @@
+.botoes{
+    padding-top: 224px;
+    padding-bottom: 205px;
+    display: flex;
+    justify-content: space-around;
+}

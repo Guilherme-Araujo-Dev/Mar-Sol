@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-edit_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
@@ -31,18 +31,15 @@
 
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
+    
+<div class="espacamento">
+    <h1>excluir</h1>
+</div>
 
-        <div class="product">
-            <h1>Página do Administrador</h1>
-        </div>
 
-        <div class="botoes">
-            <a href="create_product.php"><input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br></a>
-            <a href="report_product.php"><input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br></a>
-            <a href="edit_product.php"><input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br></a>
-            <a href="delet_product.php"><input type="Button" style="width:300px;height:60px" value="Deletar Produto"></a>
 
-        </div>
+
+
 
 
 
@@ -50,5 +47,4 @@
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>
 </body>
-
 </html>

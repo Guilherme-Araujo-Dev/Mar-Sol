@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-create_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
@@ -32,23 +32,18 @@
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
 
-        <div class="product">
-            <h1>Página do Administrador</h1>
-        </div>
 
-        <div class="botoes">
-            <a href="create_product.php"><input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br></a>
-            <a href="report_product.php"><input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br></a>
-            <a href="edit_product.php"><input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br></a>
-            <a href="delet_product.php"><input type="Button" style="width:300px;height:60px" value="Deletar Produto"></a>
+
+    <div class="botoes">
+            <input type="Button" style="width:200px;height:60px" value="Nome"><br><br>
+            <input type="Button" style="width:200px;height:60px" value="Preço"><br><br>
+            <input type="Button" style="width:200px;height:60px" value="Peso"><br><br>
+            <input type="Button" style="width:200px;height:60px" value="Imagem">
 
         </div>
-
-
 
 
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>
 </body>
-
 </html>
