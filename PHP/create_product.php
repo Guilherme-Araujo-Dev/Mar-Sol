@@ -35,12 +35,33 @@
 
 
     <div class="botoes">
-            <input type="Button" style="width:200px;height:60px" value="Nome"><br><br>
-            <input type="Button" style="width:200px;height:60px" value="Preço"><br><br>
-            <input type="Button" style="width:200px;height:60px" value="Peso"><br><br>
-            <input type="Button" style="width:200px;height:60px" value="Imagem">
 
-        </div>
+                <div class="card-content-area">
+                    <label for="nome">Nome do Produto</label><br>
+                    <input type="text" id="usuario" name="usuario" autocomplete="off">
+                </div>
+
+                <div class="card-content-area">
+                    <label for="nome">Preço</label><br>
+                    <input type="text" id="usuario" name="usuario" autocomplete="off">
+                </div>
+
+                <div class="card-content-area">
+                    <label for="nome">Peso</label><br>
+                    <input type="text" id="usuario" name="usuario" autocomplete="off">
+                </div>
+    </div>
+        <form>
+            <div class="corpo">
+                <legend>Escolha uma Imagem</legend>
+                    <input name="Imagem" type="file" name="Imagem">
+                    
+            </div>
+            <div class="corpo2">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Cancelar</button>
+            </div>
+        </form>
 
 
     <!-- Importando o rodapé-->

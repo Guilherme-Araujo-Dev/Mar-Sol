@@ -1,6 +1,27 @@
+button:hover{
+    background-color: yellow;
+}
+
 .botoes{
     padding-top: 224px;
     padding-bottom: 205px;
     display: flex;
     justify-content: space-around;
+}
+
+form{
+    
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.corpo{
+    width: 38%;
+    margin: auto;  
+    background-color:antiquewhite;
+    padding-bottom: 30px;
+}
+
+.corpo2{
+    padding-top: 10px;
 }
