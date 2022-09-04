@@ -13,7 +13,7 @@
                 <a class="nav-link navPage" aria-current="page" href="index.php" id="home">Início</a>
                 <a class="nav-link navPage" href="product.php" id="product">Produtos</a>
                 <a class="nav-link navPage" href="about.php" id="about">Sobre</a>
-                <a class="nav-link navPage" href="fazer pedido.php" id="makeRequest">Fazer Pedido</a>
+                <!--<a class="nav-link navPage" href="fazer pedido.php" id="makeRequest">Fazer Pedido</a>-->
 
                 <div class="perfil_carrinho">
                     <a href="carrinho.php"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">

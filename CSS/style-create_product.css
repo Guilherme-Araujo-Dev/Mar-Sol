@@ -3,14 +3,13 @@ button:hover{
 }
 
 .botoes{
-    padding-top: 224px;
-    padding-bottom: 205px;
+    padding-top: 140px;
+    padding-bottom: 121px;
     display: flex;
     justify-content: space-around;
 }
 
 form{
-    
     text-align: center;
     padding-bottom: 30px;
 }
