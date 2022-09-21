@@ -20,7 +20,16 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
-    conectar(); 
+    require_once "class/connection.php";
+    $pdo = conectar();
+
+    $sql = "SELECT * FROM categorias";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+
+    $categorias = $stmt->fetchAll();
+
     ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
@@ -32,39 +41,83 @@
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
 
+    <form action="" method="post" class="botoes">
+        <div>
+            <label>Nome do Produto*:</label>
+            <input type="text" name="nome" />
+        </div>
+        <br>
+        <div>
+            <label>Peso*:</label>
+            <input type="text" name="peso" />
+        </div>
+        <br>
+        <div>
+            <label>Preço*:</label>
+            <input type="text" name="preco" />
+        </div>
+        <br>
+        <select type="text" name="categoria">
+            <?php foreach ($categorias as $c) { ?>
+                <option><?php echo $c['nomeCategoria']; ?></option>
+            <?php } ?>
 
-
-    <div class="botoes">
-
-                <div class="card-content-area">
-                    <label for="nome">Nome do Produto</label><br>
-                    <input type="text" id="usuario" name="usuario" autocomplete="off">
-                </div>
-
-                <div class="card-content-area">
-                    <label for="nome">Preço</label><br>
-                    <input type="text" id="usuario" name="usuario" autocomplete="off">
-                </div>
-
-                <div class="card-content-area">
-                    <label for="nome">Peso</label><br>
-                    <input type="text" id="usuario" name="usuario" autocomplete="off">
-                </div>
-    </div>
-        <form>
-            <div class="corpo">
-                <legend>Escolha uma Imagem</legend>
-                    <input name="Imagem" type="file" name="Imagem">
-                    
-            </div>
-            <div class="corpo2">
-                    <button type="submit">Salvar</button>
-                    <button type="reset">Cancelar</button>
-            </div>
-        </form>
-
-
+        </select>
+        <!-- 
+        <div class="corpo">
+            <legend>Escolha uma Imagem</legend>
+            <input name="Imagem" type="file" name="Imagem">
+        -->
+        </div>
+        <input type="submit" value="Salvar" name="btnSalvar" class="submit">
+        <button>Cancelar</button>
+    </form>
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>
 </body>
+
 </html>
+
+<?php
+
+if (isset($_POST['btnSalvar'])) {
+    $nome    = isset($_POST['nome']) ? $_POST['nome'] : null;
+    $peso       = isset($_POST['peso']) ? ($_POST['peso']) : null;
+    $preco            = isset($_POST['preco']) ? ($_POST['preco']) : null;
+    $imagem            = isset($_POST['imagem']) ? ($_POST['imagem']) : null;
+    if (isset($_POST['categoria'])) {
+        $categoria = $_POST['categoria'];
+        echo $categoria;
+        $sql = "SELECT * FROM categorias WHERE nomeCategoria = :ct";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':ct', $categoria);
+        $stmt->execute();
+
+        $categoria = $stmt->fetchAll();
+        $categoria = $categoria[0][0];
+    } else {
+        null;
+    }
+
+
+    if (empty($nome) || empty($peso) || empty($preco) || empty($categoria)) {
+        echo "Necessário preencher todos os campos obrigatórios";
+        exit();
+    }
+
+    $sql = "INSERT INTO produtos (nomeProduto, peso, preco, Categoria_idCategoria, imagem) VALUES (:nm, :ps, :pc, :ct, :im)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':nm', $nome);
+    $stmt->bindParam(':ps', $peso);
+    $stmt->bindParam(':pc', $preco);
+    $stmt->bindParam(':im', $imagem);
+    $stmt->bindParam(':ct', $categoria);
+
+    try {
+        $stmt->execute();
+        echo "Produto foi cadastrado com sucesso";
+    } catch (PDOException $e) {
+        echo "Por favor insira os dados da maneira correta: ";
+    }
+}
+?>
