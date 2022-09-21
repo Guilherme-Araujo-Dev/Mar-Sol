@@ -19,7 +19,8 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-report_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
+    <?php 
+    include_once("class/connection.php");
     conectar(); 
     ?>
 
@@ -31,19 +32,6 @@
 
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
-<div class="espacamento">
-    <h1>excluir</h1>
-</div>
-
-
-
-
-
-
-
-
-
-
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>
 </body>

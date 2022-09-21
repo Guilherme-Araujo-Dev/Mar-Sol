@@ -20,7 +20,7 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
-    conectar(); 
+    $pdo = conectar(); 
     ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
@@ -31,18 +31,6 @@
 
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
-    
-<div class="espacamento">
-    <h1>excluir</h1>
-</div>
-
-
-
-
-
-
-
-
 
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>

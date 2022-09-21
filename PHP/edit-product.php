@@ -19,8 +19,8 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-edit_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
-    require_once "class/connection.php";
+    <?php
+    require_once ("class/connection.php");
     $pdo = conectar();
 
     $sql = "SELECT * FROM categorias";

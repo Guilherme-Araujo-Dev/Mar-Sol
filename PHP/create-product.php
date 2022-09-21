@@ -19,17 +19,9 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style-create_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
-    require_once "class/connection.php";
+    <?php 
+    include_once("class/connection.php");
     $pdo = conectar();
-
-    $sql = "SELECT * FROM categorias";
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute();
-
-    $categorias = $stmt->fetchAll();
-
     ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
@@ -37,23 +29,31 @@
 
 <body>
 
+    <?php     // Declarando algumas váriaveis
+    $sql = "SELECT * FROM categorias";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+
+    $categorias = $stmt->fetchAll();
+    ?>
 
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
 
     <form action="" method="post" class="botoes">
         <div>
-            <label>Nome do Produto*:</label>
+            <p>Nome do Produto:</p>
             <input type="text" name="nome" />
         </div>
         <br>
         <div>
-            <label>Peso*:</label>
+            <p>Peso:</p>
             <input type="text" name="peso" />
         </div>
         <br>
         <div>
-            <label>Preço*:</label>
+            <p>Preço:</p>
             <input type="text" name="preco" />
         </div>
         <br>
