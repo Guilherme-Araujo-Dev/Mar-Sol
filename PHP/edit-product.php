@@ -20,7 +20,16 @@
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
-    conectar(); 
+    require_once "class/connection.php";
+    $pdo = conectar();
+
+    $sql = "SELECT * FROM categorias";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+
+    $categorias = $stmt->fetchAll();
+
     ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
@@ -31,20 +40,39 @@
 
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
-    
-<div class="espacamento">
-    <h1>excluir</h1>
-</div>
 
+    <form action="" method="post" class="botoes pt-5 espacamento">
+        <div class="pt-5">
+            <p>Nome do Produto:</p>
+            <input type="text" name="nome" />
+        </div>
+        <br>
+        <div>
+            <p>Peso:</p>
+            <input type="text" name="peso" />
+        </div>
+        <br>
+        <div>
+            <p>Preço:</p>
+            <input type="text" name="preco" />
+        </div>
+        <br>
+        <select type="text" name="categoria">
+            <?php foreach ($categorias as $c) { ?>
+                <option><?php echo $c['nomeCategoria']; ?></option>
+            <?php } ?>
 
+        </select>
+        </div>
+        <input type="submit" value="Salvar" name="btnSalvar" class="submit">
+        <button>Cancelar</button>
+    </form>
 
-
-
-
-
-
+    <div class="espacamento">
+    </div>
 
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>
 </body>
+
 </html>
