@@ -1,6 +1,11 @@
 <link rel="stylesheet" type="text/css" href="../CSS/style-header.css">
 
 <header>
+<nav class="navbar navbar-expand-lg color-header p-2">
+        <a class="navbar-brand" href="index.php">
+            <img src="" alt="" width="80" height="60">
+        </a>
+    </nav>
     <nav class="navbar navbar-expand-lg color-header fixed-top p-2">
         <a class="navbar-brand" href="index.php">
             <img src="../IMG/logo.png" alt="" width="80" height="60">
