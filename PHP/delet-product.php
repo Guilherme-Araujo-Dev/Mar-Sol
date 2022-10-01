@@ -16,11 +16,11 @@
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-create_product.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-delet_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("class/connection.php");
-    conectar(); 
+    $pdo = conectar(); 
     ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
@@ -31,38 +31,6 @@
 
     <!-- Importando o Cabeçalho -->
     <?php include("class/header.php"); ?>
-
-
-
-    <div class="botoes">
-
-                <div class="card-content-area">
-                    <label for="nome">Nome do Produto</label><br>
-                    <input type="text" id="usuario" name="usuario" autocomplete="off">
-                </div>
-
-                <div class="card-content-area">
-                    <label for="nome">Preço</label><br>
-                    <input type="text" id="usuario" name="usuario" autocomplete="off">
-                </div>
-
-                <div class="card-content-area">
-                    <label for="nome">Peso</label><br>
-                    <input type="text" id="usuario" name="usuario" autocomplete="off">
-                </div>
-    </div>
-        <form>
-            <div class="corpo">
-                <legend>Escolha uma Imagem</legend>
-                    <input name="Imagem" type="file" name="Imagem">
-                    
-            </div>
-            <div class="corpo2">
-                    <button type="submit">Salvar</button>
-                    <button type="reset">Cancelar</button>
-            </div>
-        </form>
-
 
     <!-- Importando o rodapé-->
     <?php include("class/footer.php"); ?>

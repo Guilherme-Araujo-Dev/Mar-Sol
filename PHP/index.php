@@ -22,8 +22,9 @@
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
-    conectar();
+    <?php 
+    include_once("class/connection.php");
+    $pdo = conectar();
     ?>
 
 </head>
