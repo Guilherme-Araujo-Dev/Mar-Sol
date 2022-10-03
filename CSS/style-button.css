@@ -1,4 +1,5 @@
 .product{
+    padding-left: 130px;
     padding-top: 86px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -8,9 +9,9 @@
 
 .botoes{
     text-align: center;
-    padding: 30px;
-    text-decoration: none;
-    padding-bottom: 5px;
+    padding-top: 140px;
+    padding-left: 130px;
+    
 }
 
 input{

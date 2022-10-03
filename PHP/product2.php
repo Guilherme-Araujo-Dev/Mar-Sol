@@ -14,6 +14,9 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+
+    <!-- Importando o CSS dos botoes-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
@@ -31,18 +34,18 @@
     <div class="sidebar">
         <header>Nome do ADM</header>
         <ul>
+            <li>
+                <a href="adm-product.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+            </li>
+
             <div class="home">
-                <li>
-                    <a href="#"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-                </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-qrcode"></i> Produto</a>
+            </li>
             </div>
 
             <li>
-                <a href="product2.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
-            </li>
-
-            <li>
-                <a href="client."><i class="fa-solid fa-link"></i> Clientes</a>
+                <a href="client.php"><i class="fa-solid fa-link"></i> Clientes</a>
             </li>
 
             <li>
@@ -56,11 +59,13 @@
         </ul>
     </div>
 
-    <p>Página do Adiministrador</p>
+    <div class="botoes">
+            <a href="create-product.php"><input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br></a>
+            <a href="report-product.php"><input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br></a>
+            <a href="edit-product.php"><input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br></a>
+            <a href="delet-product.php"><input type="Button" style="width:300px;height:60px" value="Deletar Produto"></a>
 
-    <div class="imagem">
-        <img src="../IMG/aii.jpg">
-    </div>
+        </div>
 
 
 <!--Importando o bootstrap-->

@@ -14,6 +14,9 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+
+    <!-- Importando o CSS dos botoes-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
@@ -31,22 +34,22 @@
     <div class="sidebar">
         <header>Nome do ADM</header>
         <ul>
-            <div class="home">
-                <li>
-                    <a href="#"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-                </li>
-            </div>
+            <li>
+                <a href="adm-product.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+            </li>
 
             <li>
                 <a href="product2.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
             </li>
 
+            <div class="home">
             <li>
-                <a href="client."><i class="fa-solid fa-link"></i> Clientes</a>
+                <a href="#"><i class="fa-solid fa-link"></i> Clientes</a>
             </li>
+            </div>
 
             <li>
-                <a href="#"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
+                <a href="employees.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
             </li>
             
             <li class="voltar">
@@ -54,12 +57,6 @@
             </li>
 
         </ul>
-    </div>
-
-    <p>Página do Adiministrador</p>
-
-    <div class="imagem">
-        <img src="../IMG/aii.jpg">
     </div>
 
 
