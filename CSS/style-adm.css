@@ -64,12 +64,16 @@ i{
     background-color: #800000;
 }
 
-p{
-    padding-left: 240px;
+.admm{
     padding-top: 86px;
+    padding-left: 240px;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nomeproduto{
+    font-size: 30px;
 }
 
 .home{
@@ -79,5 +83,6 @@ p{
 .imagem{
     padding-left: 480px;
 }
+
 
 

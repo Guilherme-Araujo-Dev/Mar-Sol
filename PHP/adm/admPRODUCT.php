@@ -13,16 +13,16 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS dos botoes-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-button.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
+    <?php include_once("../class/connection.php");
     conectar(); 
     ?>
 
@@ -35,28 +35,36 @@
         <header>Nome do ADM</header>
         <ul>
             <li>
-                <a href="adm-product.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-            </li>
-
-            <li>
-                <a href="product2.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
+                <a href="../adm/admHOME.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
             </li>
 
             <div class="home">
             <li>
-                <a href="#"><i class="fa-solid fa-link"></i> Clientes</a>
+                <a href="#"><i class="fa-solid fa-qrcode"></i> Produto</a>
             </li>
             </div>
 
             <li>
-                <a href="employees.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
+                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
+            </li>
+
+            <li>
+                <a href="../adm/admEMPREGADOS.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
             </li>
             
             <li class="voltar">
-                <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <a href="../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar para o Site</a>
             </li>
 
         </ul>
+    </div>
+
+    <div class="botoes">
+            <a href="../product3.php"><input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br></a>
+            <a href="../report-product.php"><input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br></a>
+            <a href="../edit-product.php"><input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br></a>
+            <a href="../delet-product.php"><input type="Button" style="width:300px;height:60px" value="Deletar Produto"></a>
+
     </div>
 
 

@@ -14,9 +14,13 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    
+    <!-- Importando o CSS do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
-    <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-edit_product.css">
+    <!-- Importando o CSS do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style-edit.css">
+
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php
@@ -37,9 +41,33 @@
 
 <body>
 
+<div class="sidebar">
+        <header>Nome do ADM</header>
+        <ul>
+            <li>
+                <a href="./adm/admHOME.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+            </li>
 
-    <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
+            <li>
+                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
+            </li>
+
+            <li>
+                <a href="./adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
+            </li>
+
+            <li>
+                <a href="./adm/admEMPREGADOS.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
+            </li>
+        
+            <li class="voltar">
+                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            </li>
+
+        </ul>
+    </div>
+    <center> Página EDITAR PRODUTO</center>
+
 
     <form action="" method="post" class="botoes pt-5 espacamento">
         <div class="pt-5">
@@ -71,8 +99,7 @@
     <div class="espacamento">
     </div>
 
-    <!-- Importando o rodapé-->
-    <?php include("class/footer.php"); ?>
+    <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -5,7 +5,6 @@ button:hover{
 .botoes{
     padding-top: 140px;
     padding-bottom: 121px;
-    display: flex;
     justify-content: space-around;
 }
 

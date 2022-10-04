@@ -13,13 +13,16 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+
+    <!-- Importando o CSS dos botoes-->
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
+    <?php include_once("../class/connection.php");
     conectar(); 
     ?>
 
@@ -31,36 +34,31 @@
     <div class="sidebar">
         <header>Nome do ADM</header>
         <ul>
+            <li>
+                <a href="../adm/admHOME.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+            </li>
+
+            <li>
+                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
+            </li>
+
+            <li>
+                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
+            </li>
+           
             <div class="home">
                 <li>
-                    <a href="#"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+                    <a href="#"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
                 </li>
             </div>
-
-            <li>
-                <a href="product2.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
-            </li>
-
-            <li>
-                <a href="client."><i class="fa-solid fa-link"></i> Clientes</a>
-            </li>
-
-            <li>
-                <a href="#"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
-            </li>
             
             <li class="voltar">
-                <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <a href="../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar para o Site</a>
             </li>
 
         </ul>
     </div>
-
-    <p>Página do Adiministrador</p>
-
-    <div class="imagem">
-        <img src="../IMG/aii.jpg">
-    </div>
+    <center> Página EMPREGADOS</center>
 
 
 <!--Importando o bootstrap-->

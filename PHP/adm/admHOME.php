@@ -13,13 +13,13 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
+    <?php include_once("../class/connection.php");
     conectar(); 
     ?>
 
@@ -31,33 +31,42 @@
     <div class="sidebar">
         <header>Nome do ADM</header>
         <ul>
+            <div class="home">
+                <li>
+                    <a href="#"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+                </li>
+            </div>
+
             <li>
-                <a href="./adm/admHOME.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
             </li>
 
             <li>
-                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
+                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
             </li>
 
             <li>
-                <a href="./adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
-            </li>
-
-            <li>
-                <a href="./adm/admEMPREGADOS.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
+                <a href="../adm/admEMPREGADOS.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
             </li>
         
             <li class="voltar">
-                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <a href="../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar para o Site</a>
             </li>
 
         </ul>
     </div>
-</head>
 
-<body>
-<center> Página DELETAR PRODUTO</center>
+    <p class="admm">Página do Adiministrador</p>
+
+    <div class="imagem">
+        <img src="../../IMG/aii.jpg">
+    </div>
+
+
+<!--Importando o bootstrap-->
 
 <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
