@@ -62,6 +62,9 @@ $pdo = conectar();
         $produtos = $stmt->fetchAll();
         ?>
         <br><br><br><br>
+        
+        <button class="btncomprar" name="btncomprar" type="submit">Comprar</button> use esse botão para por do lado dos alimentos
+
         <!--BARRA DE PESQUISA-->
         <ul class="produtos">
         <?php foreach ($produtos as $p) { ?>

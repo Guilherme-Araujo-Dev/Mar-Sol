@@ -7,16 +7,13 @@
 
 }
 
-.botoes{
+.botoess{
     text-align: center;
     padding-top: 140px;
-    padding-left: 130px;
-    border-radius: 30px;
-    
+    padding-left: 100px;
 }
 
 #caixa{
-    width: 200px;
-    height: 36px;
-    border-radius: 30px;
+    
+    
 }

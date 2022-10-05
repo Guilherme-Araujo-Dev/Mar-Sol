@@ -86,3 +86,12 @@
 .corpo{
 	margin: 5% 0 -70px 35%;
 }
+
+.btncomprar{
+	border:none;
+    height:40px;
+    
+    width:100px;
+    font-weight:bold;
+    background:#eec81f;
+}

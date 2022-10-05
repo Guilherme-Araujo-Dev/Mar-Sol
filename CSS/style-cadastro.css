@@ -37,7 +37,7 @@ h2{
 }
 
 .horizontal-center {
-    padding-top: 200px;
+    padding-top: 100px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -46,7 +46,7 @@ h2{
 
 .corpo{
     display: flex;
-    height: 850px; 
+    height: 700px; 
     width: 800px;
     margin-bottom: 10%;
 }

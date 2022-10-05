@@ -40,16 +40,16 @@
 
             <div class="home">
             <li>
-                <a href="#"><i class="fa-solid fa-qrcode"></i> Produto</a>
+                <a href="#"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
             </li>
             </div>
 
             <li>
-                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
+                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-user"></i> Clientes</a>
             </li>
 
             <li>
-                <a href="../adm/admEMPREGADOS.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
+                <a href="../adm/admEMPREGADOS.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
             </li>
             
             <li class="voltar">
@@ -59,7 +59,7 @@
         </ul>
     </div>
 
-    <div class="botoes">
+    <div class="botoess">
             <a href="../product3.php"><input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br></a>
             <a href="../report-product.php"><input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br></a>
             <a href="../edit-product.php"><input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br></a>

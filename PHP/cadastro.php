@@ -43,7 +43,6 @@
     <div class="corpo horizontal-center">
         <div class="container ">
             <div class="forms-header">
-
                 <u>
                     <h1>Cadastro</h1>
                 </u>
@@ -107,6 +106,7 @@
             </form>
         </div>
     </div>
+
 </body>
 
 </html>

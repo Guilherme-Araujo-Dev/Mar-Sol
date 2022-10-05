@@ -36,15 +36,15 @@
             </li>
 
             <li>
-                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-qrcode"></i> Produto</a>
+                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
             </li>
 
             <li>
-                <a href="./adm/admCLIENT.php"><i class="fa-solid fa-link"></i> Clientes</a>
+                <a href="./adm/admCLIENT.php"><i class="fa-solid fa-user"></i> Clientes</a>
             </li>
 
             <li>
-                <a href="./adm/admEMPREGADOS.php"><i class="fa-solid fa-bars-staggered"></i> Empregados</a>
+                <a href="./adm/admEMPREGADOS.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
             </li>
         
             <li class="voltar">
