@@ -10,7 +10,7 @@
     left: 0;
     width: 250px;
     height: 100%;
-    background: #d9b570;
+    background: #daa84d;
 }
 
 .sidebar header{
@@ -18,7 +18,7 @@
     color: white;
     text-align: center;
     line-height: 70px;
-    background: orange;
+    background: #d6b371;
     user-select: none;
 }
 
@@ -81,5 +81,8 @@ i{
     padding-left: 480px;
 }
 
+.excluir{
+    text-align: center;
+}
 
 

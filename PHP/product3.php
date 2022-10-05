@@ -96,6 +96,11 @@
         <button>Cancelar</button>
     </form>
 
+    <div class="excluir">
+        n esquece de por a categoria aqui man,
+        se eu n me engano ta no arquivo "create-product.php"<br> exclui isso tb, o css ta no arquivo "style-adm.css" (.excluir)
+    </div>
+
         
 
 <!--Importando o bootstrap-->
