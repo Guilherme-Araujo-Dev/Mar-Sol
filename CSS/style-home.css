@@ -30,3 +30,13 @@
         width: 100%;
     }
 }
+
+.imgcoxinha{
+    display: inline-block;
+    justify-content: space-between;
+    padding-left: 150px;
+}
+
+.fundo{
+    text-align: center;
+}

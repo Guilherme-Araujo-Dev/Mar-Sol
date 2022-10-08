@@ -85,12 +85,14 @@
             <input type="text" name="preco" />
         </div>
         <br>
+        <p class="nomeproduto">Categoria:</p>
         <select type="text" name="categoria">
             <?php foreach ($categorias as $c) { ?>
                 <option><?php echo $c['nomeCategoria']; ?></option>
             <?php } ?>
 
         </select>
+        <br><br>
         </div>
         <input type="submit" value="Salvar" name="btnSalvar" class="submit">
         <button>Cancelar</button>

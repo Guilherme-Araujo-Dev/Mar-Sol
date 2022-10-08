@@ -80,12 +80,15 @@
             <input type="text" id="caixa" name="preco" />
         </div>
         <br>
+        <p class="nomeproduto">Categoria:</p>
         <select type="text" name="categoria">
             <?php foreach ($categorias as $c) { ?>
                 <option><?php echo $c['nomeCategoria']; ?></option>
             <?php } ?>
 
         </select>
+        <br>
+        <br>
         <!-- 
         <div class="corpo">
             <legend>Escolha uma Imagem</legend>

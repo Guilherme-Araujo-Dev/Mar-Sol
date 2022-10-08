@@ -21,6 +21,9 @@
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
+    <!-- Importando o CSS do header-->
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
+
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("../class/connection.php");
     conectar(); 
@@ -30,6 +33,9 @@
 </head>
 
 <body>
+
+  <!-- Importando o Cabeçalho -->
+  <?php include("../class/header.php"); ?>
 
     <div class="sidebar">
         <header>Nome do ADM</header>
@@ -60,11 +66,10 @@
     </div>
 
     <div class="botoess">
-            <a href="../product3.php"><input type="Button" style="width:300px;height:60px" value="Criar Produto"><br><br></a>
-            <a href="../report-product.php"><input type="Button" style="width:300px;height:60px" value="Relatório de Produtos"><br><br></a>
-            <a href="../edit-product.php"><input type="Button" style="width:300px;height:60px" value="Editar Produto"><br><br></a>
-            <a href="../delet-product.php"><input type="Button" style="width:300px;height:60px" value="Deletar Produto"></a>
-
+        <a href="../product3.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Criar Produto"><br><br></a>
+        <a href="../report-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Relatório de Produtos"><br><br></a>
+        <a href="../edit-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Editar Produto"><br><br></a>
+        <a href="../delet-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Deletar Produto"></a>
     </div>
 
 

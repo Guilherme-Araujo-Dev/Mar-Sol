@@ -18,6 +18,9 @@
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
+    <!-- Importando o CSS do header-->
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
+
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("../class/connection.php");
     conectar(); 
@@ -27,6 +30,9 @@
 </head>
 
 <body>
+
+  <!-- Importando o Cabeçalho -->
+  <?php include("../class/header.php"); ?>
 
     <div class="sidebar">
         <header>Nome do ADM</header>

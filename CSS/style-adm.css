@@ -10,7 +10,7 @@
     left: 0;
     width: 250px;
     height: 100%;
-    background: #daa84d;
+    background: gray;
 }
 
 .sidebar header{
@@ -18,7 +18,7 @@
     color: white;
     text-align: center;
     line-height: 70px;
-    background: #d6b371;
+    background: gray;
     user-select: none;
 }
 
@@ -28,7 +28,7 @@
     width: 100%;
     line-height: 65px;
     font-size: 20px;
-    color: #365711;
+    color: black;
     padding-left: 40px;
     box-sizing: border-box;
     border-top: 1px solid rgba(255, 255, 255, .1);
@@ -74,7 +74,7 @@ i{
 }
 
 .home{
-    background-color: #b8a969;
+    background-color: rgb(177, 174, 174);
 }
 
 .imagem{
