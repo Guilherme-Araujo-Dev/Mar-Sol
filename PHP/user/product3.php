@@ -13,19 +13,19 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS dos botoes-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-button.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
 
     <!-- Importando o CSS do create_product-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-create_product.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-create_product.css">
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("class/connection.php");
+    <?php include_once("../class/connection.php");
     conectar(); 
     ?>
 

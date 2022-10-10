@@ -13,13 +13,13 @@
   </script>
 
   <!-- Definindo o Ícone da Página -->
-  <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
   <!-- Importando o CSS -->
-  <link rel="stylesheet" type="text/css" href="../CSS/style-carrinho.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/style-carrinho.css">
 
   <!-- Importando a Conexão com o Banco de Dados -->
-  <?php include_once("class/connection.php");
+  <?php include_once("../class/connection.php");
   conectar();
   ?>
 
@@ -29,7 +29,7 @@
 <body>
 
   <!-- Importando o Cabeçalho -->
-  <?php include("class/header.php"); ?>
+  <?php include("../class/header.php"); ?>
 
   <html lang="en">
 
@@ -37,12 +37,12 @@
     <meta charset="UTF-8">
     <title>TÍTULO DO SITE</title>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-    <link href="../CSS/style-carrinho.css" rel="stylesheet">
+    <link href="../../CSS/style-carrinho.css" rel="stylesheet">
   </head>
 
   <body>
     <div class="box">
-      <img src="../IMG/logo.png" alt="" width="80" height="60">
+      <img src="../../IMG/logo.png" alt="" width="80" height="60">
       <div id="title">
         SITE EM ANDAMENTO
       </div>
@@ -51,7 +51,7 @@
         E-mail: maresolsalgados@contato.com
       </div>
       <a href="index.php">
-        <img src="../IMG/logo.png" alt="" width="80" height="60">
+        <img src="../../IMG/logo.png" alt="" width="80" height="60">
       </a>
     </div>
   </body>

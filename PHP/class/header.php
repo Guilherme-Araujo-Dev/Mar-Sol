@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../CSS/style-header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
 
 <header>
 <nav class="navbar navbar-expand-lg color-header p-2">
@@ -15,9 +15,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end fs-4" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link navPage" aria-current="page" href="../index.php" id="home">Início</a>
-                <a class="nav-link navPage" href="../product.php" id="product">Produtos</a>
-                <a class="nav-link navPage" href="../about.php" id="about">Sobre</a>
+                <a class="nav-link navPage" aria-current="page" href="../user/index.php" id="home">Início</a>
+                <a class="nav-link navPage" href="../user/product.php" id="product">Produtos</a>
+                <a class="nav-link navPage" href="../user/about.php" id="about">Sobre</a>
                 <!--<a class="nav-link navPage" href="fazer pedido.php" id="makeRequest">Fazer Pedido</a>-->
 
                 <div class="perfil_carrinho">
@@ -27,7 +27,7 @@
                     </a>
                 </div>
 
-                <a class="nav-link navPage" href="../login.php" id="makeRequest">Login</a>
+                <a class="nav-link navPage" href="../user/login.php" id="makeRequest">Login</a>
 
                 
             </div>

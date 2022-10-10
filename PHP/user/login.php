@@ -12,14 +12,14 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-login.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-login.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php 
-    include_once ("class/connection.php");
+    include_once ("../class/connection.php");
     $pdo = conectar();
     ?>
 
@@ -29,7 +29,7 @@
 <body>
     
     <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
+    <?php include("../class/header.php"); ?>
 
 
     <div id="login">

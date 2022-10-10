@@ -1,5 +1,5 @@
 <?php
-require_once ("class/connection.php");
+require_once ("../class/connection.php");
 
 $pdo = conectar();
 ?>
@@ -19,10 +19,10 @@ $pdo = conectar();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-product.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-product.css">
 
 
     <title>Mar & Sol Salgados - Produtos</title>
@@ -31,7 +31,7 @@ $pdo = conectar();
 <body>
 
     <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
+    <?php include("../class/header.php"); ?>
 
     <main>
         <!--BARRA DE PESQUISA-->
@@ -62,17 +62,16 @@ $pdo = conectar();
         $produtos = $stmt->fetchAll();
         ?>
         <br><br><br><br>
-        
-        <button class="btncomprar" name="btncomprar" type="submit">Comprar</button> use esse botão para por do lado dos alimentos
 
         <!--BARRA DE PESQUISA-->
         <ul class="produtos">
         <?php foreach ($produtos as $p) { ?>
                 <li class="produto">
-                    <img src="../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeProduto']; ?>" width="300px" height="167px">
+                    <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeProduto']; ?>" width="300px" height="167px">
                     <h1 class="product-text"><?php echo $p['nomeProduto']; ?></h1>
                     <p class="product-text">Informações Nutricionais:</p>
                     <h2 class="product-text">Preço: <?php echo $p['preco']; ?></p>
+                    <button class="btncomprar" name="btncomprar" type="submit">Comprar</button>
                 </li>
             <?php } ?>
 
@@ -80,7 +79,7 @@ $pdo = conectar();
     </main>
 
     <!-- Importando o Rodaré -->
-    <?php include("class/footer.php"); 
+    <?php include("../class/footer.php"); 
     exit();?>
 </body>
 

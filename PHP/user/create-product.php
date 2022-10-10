@@ -13,14 +13,14 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-create_product.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-create_product.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php 
-    include_once("class/connection.php");
+    include_once("../class/connection.php");
     $pdo = conectar();
     ?>
 
@@ -39,7 +39,7 @@
     ?>
 
     <!-- Importando o Cabeçalho -->
-    <?php include("class/header.php"); ?>
+    <?php include("../class/header.php"); ?>
 
     <form action="" method="post" class="botoes">
         <div>
@@ -73,7 +73,7 @@
         <button>Cancelar</button>
     </form>
     <!-- Importando o rodapé-->
-    <?php include("class/footer.php"); ?>
+    <?php include("../class/footer.php"); ?>
 </body>
 
 </html>

@@ -92,5 +92,8 @@
     height:40px;
     width:100px;
     font-weight:bold;
+	display: block;
     background:#eec81f;
+	margin-left: 230%;
+	margin-top: 10%;
 }
