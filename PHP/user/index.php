@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    include_once ("../class/connection.php");
+    $pdo = conectar();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,12 +26,6 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
-
-    <!-- Importando a Conexão com o Banco de Dados -->
-    <?php 
-    include_once("../class/connection.php");
-    $pdo = conectar();
-    ?>
 
 </head>
 

@@ -1,3 +1,10 @@
+<!-- Importando a Conexão com o Banco de Dados -->
+<?php 
+    session_start();
+    include_once("../class/connection.php");
+    conectar(); 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,11 +25,6 @@
 
     <!-- Importando o CSS -->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-about.css">
-
-    <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("../class/connection.php");
-    conectar(); 
-    ?>
 
     <title>Mar & Sol Salgados - Sobre</title>
 </head>

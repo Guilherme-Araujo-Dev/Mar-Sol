@@ -1,3 +1,10 @@
+<!-- Importando a Conexão com o Banco de Dados -->
+<?php
+    session_start();
+    include_once "../class/connection.php";
+    $pdo = conectar();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,12 +30,6 @@
 
     <!-- Importando o JS -->
     <script src="../JS/mask.js"></script>
-
-    <!-- Importando a Conexão com o Banco de Dados -->
-    <?php
-    include_once "../class/connection.php";
-    $pdo = conectar();
-    ?>
 
     <title>Mar & Sol Salgados - Cadastro</title>
 </head>

@@ -1,3 +1,10 @@
+<!-- Importando a Conexão com o Banco de Dados -->
+<?php 
+    session_start();
+    include_once("../class/connection.php");
+    $pdo = conectar();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,12 +24,6 @@
 
     <!-- Importando o CSS -->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-create_product.css">
-
-    <!-- Importando a Conexão com o Banco de Dados -->
-    <?php 
-    include_once("../class/connection.php");
-    $pdo = conectar();
-    ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
