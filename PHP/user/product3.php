@@ -1,3 +1,10 @@
+<!-- Importando a Conexão com o Banco de Dados -->
+<?php 
+    session_start();
+    include_once("../class/connection.php");
+    conectar(); 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,11 +30,6 @@
     
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
-
-    <!-- Importando a Conexão com o Banco de Dados -->
-    <?php include_once("../class/connection.php");
-    conectar(); 
-    ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>

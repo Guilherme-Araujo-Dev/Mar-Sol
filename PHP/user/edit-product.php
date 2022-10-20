@@ -1,3 +1,19 @@
+<!-- Importando a Conexão com o Banco de Dados -->
+<?php
+    session_start();
+    require_once ("../class/connection.php");
+    $pdo = conectar();
+
+    $sql = "SELECT * FROM categorias";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+
+    $categorias = $stmt->fetchAll();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,21 +36,6 @@
 
     <!-- Importando o CSS das caixas-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-edit.css">
-
-
-    <!-- Importando a Conexão com o Banco de Dados -->
-    <?php
-    require_once ("../class/connection.php");
-    $pdo = conectar();
-
-    $sql = "SELECT * FROM categorias";
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute();
-
-    $categorias = $stmt->fetchAll();
-
-    ?>
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>

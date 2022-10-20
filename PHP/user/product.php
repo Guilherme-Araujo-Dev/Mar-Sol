@@ -1,7 +1,7 @@
 <?php
-require_once ("../class/connection.php");
-
-$pdo = conectar();
+    session_start();
+    require_once ("../class/connection.php");
+    $pdo = conectar();
 ?>
 
 <!DOCTYPE html>
