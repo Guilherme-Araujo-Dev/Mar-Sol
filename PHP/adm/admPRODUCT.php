@@ -34,10 +34,12 @@
 
 <body>
 
-  <!-- Importando o Cabeçalho -->
-  <?php include("../class/header.php"); ?>
-
     <div class="sidebar">
+        
+        <div class="imgSIDEBAR">
+            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
+        </div>
+
         <header>Nome do ADM</header>
         <ul>
             <li>
@@ -59,17 +61,17 @@
             </li>
             
             <li class="voltar">
-                <a href="../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar para o Site</a>
+                <a href="../user/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
             </li>
 
         </ul>
     </div>
 
     <div class="botoess">
-        <a href="../product3.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Criar Produto"><br><br></a>
-        <a href="../report-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Relatório de Produtos"><br><br></a>
-        <a href="../edit-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Editar Produto"><br><br></a>
-        <a href="../delet-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Deletar Produto"></a>
+        <a href="../user/product3.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Criar Produto"><br><br></a>
+        <a href="../user/report-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Relatório de Produtos"><br><br></a>
+        <a href="../user/edit-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Editar Produto"><br><br></a>
+        <a href="../user/delet-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Deletar Produto"></a>
     </div>
 
 

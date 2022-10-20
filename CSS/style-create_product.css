@@ -2,11 +2,13 @@ button:hover{
     background-color: yellow;
 }
 
+/*
 .botoes{
     padding-top: 140px;
     padding-bottom: 121px;
     justify-content: space-around;
 }
+*/
 
 form{
     text-align: center;
@@ -22,4 +24,9 @@ form{
 
 .corpo2{
     padding-top: 10px;
+}
+
+.botoesss{
+    padding-top: 50px;
+    padding-left: 200px;
 }

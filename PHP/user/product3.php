@@ -35,10 +35,15 @@
 <body>
 
     <div class="sidebar">
+
+        <div class="imgSIDEBAR">
+            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
+        </div>
+
         <header>Nome do ADM</header>
         <ul>
             <li>
-                <a href="./adm/admHOME.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+                <a href="../adm/admHOME.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
             </li>
 
             <div class="home">
@@ -48,15 +53,15 @@
             </div>
 
             <li>
-                <a href="./adm/admCLIENT.php"><i class="fa-solid fa-user"></i> Clientes</a>
+                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-user"></i> Clientes</a>
             </li>
 
             <li>
-                <a href="./adm/admEMPREGADOS.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
+                <a href="../adm/admEMPREGADOS.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
             </li>
             
             <li class="voltar">
-                <a href="./adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
             </li>
 
         </ul>
@@ -64,7 +69,7 @@
 
     
 
-    <form action="" method="post" class="botoess">
+    <form action="" method="post" class="botoesss">
         <div>
             <p class="nomeproduto">Nome do Produto:</p>
             <input type="text" id="caixa" name="nome" />
