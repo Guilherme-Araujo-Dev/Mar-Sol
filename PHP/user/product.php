@@ -70,13 +70,14 @@
                     <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeProduto']; ?>" width="300px" height="167px">
                     <h1 class="product-text"><?php echo $p['nomeProduto']; ?></h1>
                     <p class="product-text">Informações Nutricionais:</p>
-                    <h2 class="product-text">Preço: R$<?php echo $p['preco']; ?></p>
+                    <h2 class="product-text">Preço: R$<?php echo $p['preco']; ?></h2>
                     <button class="btncomprar" name="btncomprar" type="submit">Comprar</button>
                 </li>
             <?php } ?>
-
         </ul>
     </main>
+
+
 
     <!-- Importando o Rodaré -->
     <?php include("../class/footer.php"); 
