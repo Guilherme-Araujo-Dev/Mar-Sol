@@ -42,7 +42,7 @@ td{
 }
 
 td input{
-    width: 40px;
+    width: 60px;
     height: 30px;
     padding: 5px;
 }
@@ -60,4 +60,23 @@ td img{
 
 .containerPRODUTOS{
     padding: 30px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 450px;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+th:last-child{
+    text-align: right;
 }
