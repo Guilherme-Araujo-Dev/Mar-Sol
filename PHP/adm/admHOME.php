@@ -31,10 +31,13 @@
 
 <body>
 
-  <!-- Importando o Cabeçalho -->
-  <?php include("../class/header.php"); ?>
 
     <div class="sidebar">
+
+        <div class="imgSIDEBAR">
+            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
+        </div>
+
         <header>Nome do ADM</header>
         <ul>
             <div class="home">
@@ -56,7 +59,7 @@
             </li>
         
             <li class="voltar">
-                <a href="../index.php"><i class="fa-solid fa-arrow-left"></i> Voltar para o Site</a>
+                <a href="../user/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
             </li>
 
         </ul>

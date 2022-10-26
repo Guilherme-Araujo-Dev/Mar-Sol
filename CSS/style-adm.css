@@ -17,7 +17,7 @@
     font-size: 22px;
     color: white;
     text-align: center;
-    line-height: 70px;
+    line-height: 100px;
     background: gray;
     user-select: none;
 }
@@ -29,7 +29,7 @@
     line-height: 65px;
     font-size: 20px;
     color: black;
-    padding-left: 40px;
+
     box-sizing: border-box;
     border-top: 1px solid rgba(255, 255, 255, .1);
     border-bottom: 1px solid black;
@@ -56,8 +56,8 @@ i{
 }
 
 .voltar{
-    padding-top: 224px;
-    border-bottom: 1px solid black;
+    padding-top: 70px;
+
 } 
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -85,4 +85,14 @@ i{
     text-align: center;
 }
 
+.voltarINICIAL{
+    color: blue;
+}
+
+/*IMAGEM DA LOGO DO SITE EM SIMA DO NOME DO ADM*/
+
+.imgSIDEBAR{
+    text-align: center;
+
+}
 

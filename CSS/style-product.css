@@ -94,6 +94,6 @@
     font-weight:bold;
 	display: block;
     background:#eec81f;
-	margin-left: 230%;
-	margin-top: 10%;
+	margin-left: 501px; /*n consegui por o botão comprar NA RISCA do background*/
+	margin-top: 100px;
 }

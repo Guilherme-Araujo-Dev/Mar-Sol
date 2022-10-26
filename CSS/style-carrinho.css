@@ -1,44 +1,82 @@
-.box {
-    padding-top: 150px;
+.imgCARRINHO{
+    margin-left: 150px;
+    border-bottom: 70px solid rgb(255, 194, 50);
+    border-left: 30px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 1000px;
+    display: flex;
 }
 
-a:hover {
-    color: red;
+.imgCARRINHO h1{
+    padding-left: 200px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+/*cart items*/
+
+.cart-page{
+padding: 60px;
+
 }
 
-body {
-    font-family: 'Titillium Web', sans-serif;
-    color: #666666;
-    text-align: center;
+table{
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.box {
-    background-color: #fff;
-    width: 500px;
-    margin: 50px auto;
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#title {
-    font-size: 30px;
-    margin-top: 25px;
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
 }
 
-#descricao {
-    font-size: 20px;
-    margin: 20px auto;
+td{
+    padding: 10px 5px;
 }
 
-#logo {
-    margin-top: 25px;
-    max-width: 365px;
-    height: auto;
+td input{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
 }
 
-#logo-task {
-    width: 75px;
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.containerPRODUTOS{
+    padding: 30px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 450px;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+th:last-child{
+    text-align: right;
 }
