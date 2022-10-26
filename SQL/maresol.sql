@@ -1,4 +1,4 @@
---DROP DATABASE marESol;
+-- DROP DATABASE marESol;
 CREATE DATABASE marESol;
 USE marESol;
 
