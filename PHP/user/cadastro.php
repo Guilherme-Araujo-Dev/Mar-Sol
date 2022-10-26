@@ -28,9 +28,6 @@
     <!-- Importando o CSS -->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-cadastro.css">
 
-    <!-- Importando o JS -->
-    <script src="../JS/mask.js"></script>
-
     <title>Mar & Sol Salgados - Cadastro</title>
 </head>
 
@@ -107,6 +104,8 @@
             </form>
         </div>
     </div>
+    <!-- Importando o JS -->
+    <script src="../../JS/mask.js"></script>
 
 </body>
 

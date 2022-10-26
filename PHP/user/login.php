@@ -81,6 +81,7 @@ if (isset($_POST['btnLogin'])) {
     $stmt->execute();
 
     if($stmt->rowCount()> 0){
+        $_SESSION['usuario'] = $user['nomeUsuario'];
         header("Refresh: 0;url=index.php");
         exit();
     }else{
