@@ -1,4 +1,4 @@
--- DROP DATABASE marESol;
+DROP DATABASE marESol;
 CREATE DATABASE marESol;
 USE marESol;
 
@@ -40,6 +40,7 @@ CREATE TABLE empresa (
     endereco VARCHAR(100) NOT NULL,
     nomecliente VARCHAR(100) NOT NULL,
     emailcliente VARCHAR(100) NOT NULL,                              -- Será o Login da empresa
+    tipo CHAR(1) DEFAULT('U'),
     senha CHAR(32),                                               -- Será a Senha da empresa
     fone VARCHAR(16) NOT NULL,
     fk_idcidade INT NOT NULL,
@@ -78,6 +79,10 @@ CREATE TABLE movimento_item (                                    -- Cada item de
     FOREIGN KEY (fk_idproduto) REFERENCES produto(idproduto),
     FOREIGN KEY (fk_idmovimento) REFERENCES movimento(idmovimento)
 );
+
+INSERT INTO estado (nomeestado) VALUES ('PR');
+
+
 
 -- Funciona só no phpMyAdmin
 -- SELECT M.idmovimento, M.data AS Data, M.observacao AS Observação, M.aprovado AS Aprovado, M.entregue AS Entregue, F.nomefuncionario AS Funcionário FROM movimento AS M INNER JOIN funcionario AS F ON M.fk_idfuncionario = F.idfuncionario; 
