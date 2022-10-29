@@ -26,7 +26,7 @@ CREATE TABLE estado (
 
 CREATE TABLE cidade (
     idcidade INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomecidade CHAR(2) NOT NULL UNIQUE,
+    nomecidade VARCHAR(30) NOT NULL UNIQUE,
     fk_idestado INT NOT NULL,
     status CHAR(1) DEFAULT('A'),
     FOREIGN KEY (fk_idestado) REFERENCES estado(idestado)
@@ -59,7 +59,7 @@ CREATE TABLE funcionario (
     FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade)
 );
 
-CREATE TABLE movimento (                                         -- Um 'Pacote' de movimento, pode ter vários Itens
+CREATE TABLE movimento (                                         -- Um 'Pacote'de movimento, pode ter vários Itens
     idmovimento INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     data DATE NOT NULL,
     observacao VARCHAR(200),
@@ -79,9 +79,6 @@ CREATE TABLE movimento_item (                                    -- Cada item de
     FOREIGN KEY (fk_idproduto) REFERENCES produto(idproduto),
     FOREIGN KEY (fk_idmovimento) REFERENCES movimento(idmovimento)
 );
-
-INSERT INTO estado (nomeestado) VALUES ('PR');
-
 
 
 -- Funciona só no phpMyAdmin

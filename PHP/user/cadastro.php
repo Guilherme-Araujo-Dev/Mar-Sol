@@ -89,30 +89,32 @@ $pdo = conectar();
                     <div class="form-row col-5">
                         <label for="nome" class="lab-estado">Estado:</label> <br>
                         <select id="nome" type="text" name="estado" class="slc-estado">
-                            <?php foreach ($estados as $e) { ?>
+                            <?php 
+                            $cont = 0;
+                            foreach ($estados as $e) { ?>
                                 <option><?php echo $e['nomeestado']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
 
                     <?php
-                    $sql = "SELECT * FROM estado";
+                    $sql = "SELECT * FROM cidade WHERE status = 'A' AND fk_idestado = es";
                     $stmt = $pdo->prepare($sql);
-
+                    $stmt->bindParam(':es', $estados[0]);
                     $stmt->execute();
 
-                    $estados = $stmt->fetchAll();
+                    $cidades = $stmt->fetchAll();
                     ?>
 
                     <div class="form-row col-5">
                         <label for="nome" class="lab-cidade">Cidade:</label> <br>
                         <?php
-                        if (!strlen($cidade)) echo "Desculpe, nossos serviços não estão disponíveis na sua cidade";
+                        if (!count($cidades)) echo "Desculpe, nossos serviços não estão disponíveis no seu estado";
                         else { ?>
                             <select id="nome" type="text" name="cidade" class="slc-cidade">
                                 <?php
-                                foreach ($estados as $e) { ?>
-                                    <option><?php echo $e['nomeestado']; ?></option>
+                                foreach ($cidades as $c) { ?>
+                                    <option><?php echo $c['nomecidade']; ?></option>
                             <?php }
                             } ?>
                             </select>
