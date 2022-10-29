@@ -62,6 +62,7 @@
     
     <?php include("../class/footer.php"); ?>
 
+    
 </body>
     
 </html>
