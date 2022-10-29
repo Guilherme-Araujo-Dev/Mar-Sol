@@ -93,6 +93,17 @@ i{
 
 .imgSIDEBAR{
     text-align: center;
-
 }
 
+/*css da pagina admCLIENT.php 👇👇*/
+
+.admCLIENT{
+    padding-left: 70px;
+    margin-left: 150px;
+    border-bottom: 70px solid rgb(255, 194, 50);
+    border-left: 30px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 500px;
+    display: flex;
+}
