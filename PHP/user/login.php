@@ -67,7 +67,8 @@
 if (isset($_POST['btnLogin'])) {
     $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : null;
     $senha      = isset($_POST['senha']) ? ($_POST['senha']) : null;
-
+    $senha = md5($senha);
+    
     if(empty($usuario) && empty($senha)){
         echo "Necessário informar usuario e senha";
         exit();
@@ -81,6 +82,19 @@ if (isset($_POST['btnLogin'])) {
     $stmt->execute();
 
     if($stmt->rowCount()> 0){
+        $_SESSION['usuario'] = $user['nomeUsuario'];
+    
+        $sql = "SELECT status FROM empresas WHERE nomeUsuario = :u";
+    
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':u', $usuario);
+        $stmt->execute();
+
+        $status = $stmt->fetch();
+
+        if($status == 'R') $_SESSION['acesso'] = "Admin";
+        else $_SESSION['acesso'] = "User";
+    
         header("Refresh: 0;url=index.php");
         exit();
     }else{

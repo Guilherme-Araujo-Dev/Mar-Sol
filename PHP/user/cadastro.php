@@ -1,8 +1,8 @@
 <!-- Importando a Conexão com o Banco de Dados -->
 <?php
-    session_start();
-    include_once "../class/connection.php";
-    $pdo = conectar();
+session_start();
+include_once "../class/connection.php";
+$pdo = conectar();
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +28,6 @@
     <!-- Importando o CSS -->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-cadastro.css">
 
-    <!-- Importando o JS -->
-    <script src="../JS/mask.js"></script>
-
     <title>Mar & Sol Salgados - Cadastro</title>
 </head>
 
@@ -40,7 +37,14 @@
     <?php include("../class/header.php"); ?>
 
 
+    <?php
+    $sql = "SELECT * FROM estado";
+    $stmt = $pdo->prepare($sql);
 
+    $stmt->execute();
+
+    $estados = $stmt->fetchAll();
+    ?>
     <div class="corpo horizontal-center">
         <div class="container ">
             <div class="forms-header">
@@ -52,17 +56,18 @@
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Nome:</label>
-                        <input id="nome" name="primeiroNome" type="text" placeholder="Insira seu primeiro nome" maxlength="20" class="">
+                        <input id="nome" name="nomeUsuario" type="text" placeholder="Insira seu primeiro nome" maxlength="20" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
                         <input id="nome" name="fone" oninput="foneMask(this)" type="tel" placeholder="(45) 9 9999-9999" class="">
                     </div>
+
                 </div>
                 <div class="form-row">
                     <div class="form-group col-5">
-                        <label for="nome">Sobrenome:</label>
-                        <input id="sobrenome" name="sobrenome" type="text" placeholder="Insira seu sobrenome" maxlength="80" class="">
+                        <label for="nome">Empresa:</label>
+                        <input id="nome" name="empresa" type="text" placeholder="Nome da empresa" maxlength="100" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">CNPJ:</label>
@@ -71,35 +76,52 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-5">
-                        <label for="nome">Empresa:</label>
-                        <input id="nome" name="empresa" type="text" placeholder="Nome da empresa" maxlength="100" class="">
-                    </div>
-                    <div class="form-group col-5">
-                        <label for="nome">Estado:</label>
-                        <input id="nome" name="estado" oninput="estadoMask(this)" type="text" placeholder="PR" class="">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-5">
                         <label for="nome">Email:</label>
                         <input id="nome" name="email" type="email" placeholder="empresa@email.com" maxlength="100" class="">
                     </div>
-                    <div class="form-group col-5">
-                        <label for="nome">Cidade:</label>
-                        <input id="nome" name="cidade" type="text" placeholder="Cidade onde se localiza a Empresa" maxlength="50" class="">
-                    </div>
-                </div>
-                <div class="form-row">
+
                     <div class="form-group col-5">
                         <label for="nome">Senha:</label>
                         <input id="nome" name="senha" type="password" placeholder="Caracter especial e número" maxlength="32" class="">
                     </div>
-                    <div class="form-group col-5">
-                        <label for="nome">Endereço:</label>
-                        <input id="nome" name="endereco" type="text" placeholder="Endereço da Empresa" maxlength="100" class="">
-                        <!--Para deixar redondinho, colocar: form-control no class=""-->
+                </div>
+                <div class="form-row">
+                    <div class="form-row col-5">
+                        <label for="nome" class="lab-estado">Estado:</label> <br>
+                        <select id="nome" type="text" name="estado" class="slc-estado">
+                            <?php 
+                            $cont = 0;
+                            foreach ($estados as $e) { ?>
+                                <option><?php echo $e['nomeestado']; ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <?php
+                    $sql = "SELECT * FROM cidade WHERE status = 'A' AND fk_idestado = es";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->bindParam(':es', $estados[0]);
+                    $stmt->execute();
+
+                    $cidades = $stmt->fetchAll();
+                    ?>
+
+                    <div class="form-row col-5">
+                        <label for="nome" class="lab-cidade">Cidade:</label> <br>
+                        <?php
+                        if (!count($cidades)) echo "Desculpe, nossos serviços não estão disponíveis no seu estado";
+                        else { ?>
+                            <select id="nome" type="text" name="cidade" class="slc-cidade">
+                                <?php
+                                foreach ($cidades as $c) { ?>
+                                    <option><?php echo $c['nomecidade']; ?></option>
+                            <?php }
+                            } ?>
+                            </select>
                     </div>
                 </div>
+
+
                 <div class="card-footer">
                     <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
                     <p>Já possui uma conta?<u> <a href="login.php"> Clique aqui!</u></a></p>
@@ -107,6 +129,8 @@
             </form>
         </div>
     </div>
+    <!-- Importando o JS -->
+    <script src="../../JS/mask.js"></script>
 
 </body>
 
@@ -115,7 +139,7 @@
 <?php
 
 if (isset($_POST['btnCadastro'])) {
-    $primeiroNome    = isset($_POST['primeiroNome']) ? $_POST['primeiroNome'] : null;
+    $nomeUsuario    = isset($_POST['nomeUsuario']) ? $_POST['nomeUsuario'] : null;
     $sobrenome       = isset($_POST['sobrenome']) ? ($_POST['sobrenome']) : null;
     $fone            = isset($_POST['fone']) ? ($_POST['fone']) : null;
     $CNPJ            = isset($_POST['CNPJ']) ? ($_POST['CNPJ']) : null;
@@ -123,19 +147,31 @@ if (isset($_POST['btnCadastro'])) {
     $email           = isset($_POST['email']) ? ($_POST['email']) : null;
     $cidade          = isset($_POST['cidade']) ? ($_POST['cidade']) : null;
     $senha           = isset($_POST['senha']) ? ($_POST['senha']) : null;
-    $estado           = isset($_POST['estado']) ? ($_POST['estado']) : null;
     $endereco        = isset($_POST['endereco']) ? ($_POST['endereco']) : null;
+    if (isset($_POST['estado'])) {
+        $estado = $_POST['estado'];
+        $sql = "SELECT * FROM estado WHERE nomeestado = :ct";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':et', $estado);
+        $stmt->execute();
 
-    $nome = $primeiroNome . " " . $sobrenome;
+        $estado = $stmt->fetchAll();
+        $estado = $estado[0][0];
+    } else {
+        null;
+    }
 
-    if (empty($primeiroNome) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)) {
+    $nome = $nomeUsuario . " " . $sobrenome;
+    $senha = md5($senha);
+
+    if (empty($nomeUsuario) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)) {
         echo "Necessário preencher todos os campos";
         exit();
     }
 
     if (empty($estado)) $estado = "PR"; // Se o estado não for informado será definido por padrão como Paraná
 
-    $sql = "INSERT INTO empresas (nomeEmpresa, emailCliente, nomeCliente, senha, fone, CNPJ, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
+    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':ne', $empresa);
     $stmt->bindParam(':ec', $email);
