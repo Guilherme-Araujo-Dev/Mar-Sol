@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: gray;
+}
+
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    background: gray;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: black;
+
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-left: 16px;
+}
+
+ul{
+    padding-left: 1px;
+}
+
+i{
+    padding-left: 20px;
+}
+
+#corpo{
+    text-align: center;
+}
+
+.voltar{
+    padding-top: 70px;
+
+} 
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #800000;
+}
+
+.admm{
+    padding-top: 86px;
+    padding-left: 240px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.home{
+    background-color: rgb(177, 174, 174);
+}
+
+.imagem{
+    padding-left: 480px;
+}
+
+.excluir{
+    text-align: center;
+}
+
+.voltarINICIAL{
+    color: blue;
+}
+
+/*IMAGEM DA LOGO DO SITE EM SIMA DO NOME DO ADM*/
+
+.imgSIDEBAR{
+    text-align: center;
+}
+
+/*css da pagina admCLIENT.php 👇👇*/
+
+.admCLIENT{
+    padding-left: 70px;
+    margin-left: 150px;
+    border-bottom: 70px solid rgb(255, 194, 50);
+    border-left: 30px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 500px;
+    display: flex;
+}
+
+.cart-page{
+    padding-top: 60px;
+    padding-left: 400px;
+    width: 1151px;
+
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #383535;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+td a{
+    color: #ff523b;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.containerPRODUTOS{
+    padding: 30px;
+}
+
+.cart-info p{
+    padding-left: 10px;
+}
+
+.centralizado{
+    padding-left: 15px;
+}
+
+.centralizado2{
+    padding-left: 20px;
+}
