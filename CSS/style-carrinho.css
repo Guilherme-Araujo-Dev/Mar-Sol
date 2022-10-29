@@ -15,7 +15,10 @@
 /*cart items*/
 
 .cart-page{
-padding: 60px;
+    padding-top: 60px;
+    padding-left: 150px;
+    width: 1151px;
+
 
 }
 

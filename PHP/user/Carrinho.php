@@ -66,41 +66,12 @@
           <td>R$21.00</td>
         </tr>
 
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="../../IMG/food/bbf.jpg">
-              <div>
-                <p>Bolinho de batata com frango</p>
-                <small>Preço: R$21.00</small><br>
-                <a href="">Remover</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1"></td>
-          <td>R$21.00</td>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="../../IMG/food/bbf.jpg">
-              <div>
-                <p>Bolinho de batata com frango</p>
-                <small>Preço: R$21.00</small><br>
-                <a href="">Remover</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1"></td>
-          <td>R$21.00</td>
-        </tr>
-      
+      <!--SUBTOTAL DOS PRODUTOS-->
       </table>
       <div class="total-price">
         <table>
           <tr>
-            <td>Total Parcial</td>
+            <td>Exemplo</td>
             <td>R$200.00</td>
           </tr>
           <tr>
@@ -108,7 +79,7 @@
             <td>R$200.00</td>
           </tr>
           <tr>
-            <td>Total</td>
+            <td>Exemplo</td>
             <td>R$200.00</td>
           </tr>
         </table>
