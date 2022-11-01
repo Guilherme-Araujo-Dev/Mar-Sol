@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-empregados.css">
 
     <!-- Importando o CSS do header-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
@@ -66,8 +66,49 @@
 
         </ul>
     </div>
-    <center> Página EMPREGADOS</center>
+    <center><br>
+    <div class="admCLIENT">
+        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+        <h1>Empregados</h1>
+    </div>
 
+    </center>
+    <br><br>
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+            <th>Nome do Empregado</th>
+            <th>Contratado em</th>
+            <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="cart-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <div>
+                        <p>João da Silva</p>
+                        <a href="">Remover</a>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="centralizado">
+                    00/00/000
+                    </div>
+                </td>
+                <td>
+                    <div class="centralizado">
+                    A
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 <!--Importando o bootstrap-->
 
