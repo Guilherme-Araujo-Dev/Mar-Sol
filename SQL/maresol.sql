@@ -32,19 +32,29 @@ CREATE TABLE cidade (
     FOREIGN KEY (fk_idestado) REFERENCES estado(idestado)
 );
 
+
+CREATE TABLE endereco (
+    idendereco INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cep INT NOT NULL ZEROFILL,
+    bairro VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero INT NOT NULL,
+    fk_idcidade INT NOT NULL,
+    fk_idempresa INT NOT NULL,
+    FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade),
+    FOREIGN KEY (fk_idempresa) REFERENCES empresa(idempresa)
+);
+
 CREATE TABLE empresa (
     idempresa INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeempresa VARCHAR(100) NOT NULL,
     status CHAR(1) DEFAULT('A'),                                      -- Se ele está ativo (A) ou inativo (I)
-    cnpj CHAR(18) NOT NULL UNIQUE,
-    endereco VARCHAR(100) NOT NULL,
+    cnpj CHAR(18) NOT NULL UNIQUE,                                    -- Não pode existir dois cnpjs iguais no sistema
     nomecliente VARCHAR(100) NOT NULL,
-    emailcliente VARCHAR(100) NOT NULL,                              -- Será o Login da empresa
+    emailcliente VARCHAR(100) NOT NULL,                               -- Será o Login da empresa
     tipo CHAR(1) DEFAULT('U'),
-    senha CHAR(32),                                               -- Será a Senha da empresa
+    senha CHAR(32),                                                   -- Será a Senha da empresa
     fone VARCHAR(16) NOT NULL,
-    fk_idcidade INT NOT NULL,
-    FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade)                        -- Não pode existir dois cnpjs iguais no sistema
 );
 
 CREATE TABLE funcionario (
