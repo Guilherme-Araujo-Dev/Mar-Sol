@@ -86,23 +86,29 @@ $pdo = conectar();
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-row col-5">
-                        <label for="nome" class="lab-estado">Estado:</label> <br>
-                        <select id="nome" type="text" name="estado" class="slc-estado">
-                            <?php 
-                            $cont = 0;
-                            foreach ($estados as $e) { ?>
-                                <option><?php echo $e['nomeestado']; ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-
+                    <form action='get-estado.php' method='POST'>
+                        <aside id="logado">
+                            <div class="form-row col-5">
+                                <label for="nome" class="lab-estado">Estado:</label> <br>
+                                <select id="estados" type="text" name="estado" class="slc-estado">
+                                    <?php
+                                    $cont = 0;
+                                    foreach ($estados as $e) { ?>
+                                        <option value="<?php echo $e['nomeestado']; ?>"><?php echo $e['nomeestado']; ?></option>
+                                    <?php } ?>
+                                </select>
+                    </form>
+                    </aside>
                     <?php
-                    $sql = "SELECT * FROM cidade WHERE status = 'A' AND fk_idestado = es";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->bindParam(':es', $estados[0]);
-                    $stmt->execute();
+                    include("../class/get-estado.php");
+                    $sql = "SELECT * FROM cidade WHERE fk_idestado = es";
 
+                    $stmt = $pdo->prepare($sql);
+                    
+                    $stmt->bindParam(':es', $estado);
+                    $stmt->execute();
+                    
+                    
                     $cidades = $stmt->fetchAll();
                     ?>
 
@@ -111,7 +117,7 @@ $pdo = conectar();
                         <?php
                         if (!count($cidades)) echo "Desculpe, nossos serviços não estão disponíveis no seu estado";
                         else { ?>
-                            <select id="nome" type="text" name="cidade" class="slc-cidade">
+                            <select id="cidade" type="text" name="cidade" class="slc-cidade">
                                 <?php
                                 foreach ($cidades as $c) { ?>
                                     <option><?php echo $c['nomecidade']; ?></option>
@@ -120,7 +126,6 @@ $pdo = conectar();
                             </select>
                     </div>
                 </div>
-
 
                 <div class="card-footer">
                     <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
@@ -131,6 +136,9 @@ $pdo = conectar();
     </div>
     <!-- Importando o JS -->
     <script src="../../JS/mask.js"></script>
+    <script src="../../JS/select-stades.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 </body>
 
@@ -138,40 +146,26 @@ $pdo = conectar();
 
 <?php
 
+if (isset($_POST[]))
+
 if (isset($_POST['btnCadastro'])) {
     $nomeUsuario    = isset($_POST['nomeUsuario']) ? $_POST['nomeUsuario'] : null;
-    $sobrenome       = isset($_POST['sobrenome']) ? ($_POST['sobrenome']) : null;
     $fone            = isset($_POST['fone']) ? ($_POST['fone']) : null;
     $CNPJ            = isset($_POST['CNPJ']) ? ($_POST['CNPJ']) : null;
     $empresa         = isset($_POST['empresa']) ? ($_POST['empresa']) : null;
     $email           = isset($_POST['email']) ? ($_POST['email']) : null;
-    $cidade          = isset($_POST['cidade']) ? ($_POST['cidade']) : null;
     $senha           = isset($_POST['senha']) ? ($_POST['senha']) : null;
-    $endereco        = isset($_POST['endereco']) ? ($_POST['endereco']) : null;
-    if (isset($_POST['estado'])) {
-        $estado = $_POST['estado'];
-        $sql = "SELECT * FROM estado WHERE nomeestado = :ct";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':et', $estado);
-        $stmt->execute();
-
-        $estado = $stmt->fetchAll();
-        $estado = $estado[0][0];
-    } else {
-        null;
-    }
-
-    $nome = $nomeUsuario . " " . $sobrenome;
-    $senha = md5($senha);
 
     if (empty($nomeUsuario) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)) {
         echo "Necessário preencher todos os campos";
         exit();
     }
 
+    $senha = md5($senha); // Deixando a senha encriptografada
+
     if (empty($estado)) $estado = "PR"; // Se o estado não for informado será definido por padrão como Paraná
 
-    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj, estado, cidade, endereco) VALUES (:ne, :ec, :nc, :s, :f, :cj, :et, :c, :e)";
+    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES (:ne, :ec, :nc, :s, :f, :cj)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':ne', $empresa);
     $stmt->bindParam(':ec', $email);
@@ -179,12 +173,23 @@ if (isset($_POST['btnCadastro'])) {
     $stmt->bindParam(':s', $senha);
     $stmt->bindParam(':f', $fone);
     $stmt->bindParam(':cj', $CNPJ);
-    $stmt->bindParam(':et', $estado);
-    $stmt->bindParam(':c', $cidade);
-    $stmt->bindParam(':e', $endereco);
 
     try {
         $stmt->execute();
+
+        if (isset($_POST['estado'])) {
+            $estado = $_POST['estado'];
+            $sql = "SELECT * FROM estado WHERE nomeestado = :ct";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':et', $estado);
+            $stmt->execute();
+    
+            $estado = $stmt->fetchAll();
+            $estado = $estado[0][0];
+        } else {
+            null;
+        }
+
         echo "Você foi cadastrado com sucesso";
     } catch (PDOException $e) {
         echo "Por favor insira os dados da maneira correta";
