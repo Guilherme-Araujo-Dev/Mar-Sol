@@ -47,7 +47,7 @@ CREATE TABLE empresa (
     fone VARCHAR(16) NOT NULL
 );
 
-CREATE TABLE endereco (
+CREATE TABLE endereco_funcionario (
     idendereco INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cep INT ZEROFILL NOT NULL,
     bairro VARCHAR(100) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE funcionario (
     email VARCHAR(100) NOT NULL,
     fone VARCHAR(16) NOT NULL,
     fk_idendereco INT NOT NULL,
-    FOREIGN KEY (fk_idendereco) REFERENCES endereco(idendereco)
+    FOREIGN KEY (fk_idendereco) REFERENCES endereco_funcionario(idendereco)
 );
 
 CREATE TABLE movimento (                                         -- Um 'Pacote'de movimento, pode ter vários Itens
