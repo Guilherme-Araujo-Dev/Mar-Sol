@@ -33,17 +33,7 @@ CREATE TABLE cidade (
 );
 
 
-CREATE TABLE endereco (
-    idendereco INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    cep INT NOT NULL ZEROFILL,
-    bairro VARCHAR(100) NOT NULL,
-    rua VARCHAR(100) NOT NULL,
-    numero INT NOT NULL,
-    fk_idcidade INT NOT NULL,
-    fk_idempresa INT NOT NULL,
-    FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade),
-    FOREIGN KEY (fk_idempresa) REFERENCES empresa(idempresa)
-);
+
 
 CREATE TABLE empresa (
     idempresa INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -54,7 +44,29 @@ CREATE TABLE empresa (
     emailcliente VARCHAR(100) NOT NULL,                               -- Será o Login da empresa
     tipo CHAR(1) DEFAULT('U'),
     senha CHAR(32),                                                   -- Será a Senha da empresa
-    fone VARCHAR(16) NOT NULL,
+    fone VARCHAR(16) NOT NULL
+);
+
+CREATE TABLE endereco (
+    idendereco INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cep INT ZEROFILL NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero INT NOT NULL,
+    fk_idcidade INT NOT NULL,
+    FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade)
+);
+
+CREATE TABLE endereco_empresa (
+    idendereco INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cep INT ZEROFILL NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero INT NOT NULL,
+    fk_idcidade INT NOT NULL,
+    fk_idempresa INT NOT NULL,
+    FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade),
+    FOREIGN KEY (fk_idempresa) REFERENCES empresa(idempresa)
 );
 
 CREATE TABLE funcionario (
@@ -63,10 +75,8 @@ CREATE TABLE funcionario (
     cpf CHAR(14) NOT NULL UNIQUE,
     email VARCHAR(100) NOT NULL,
     fone VARCHAR(16) NOT NULL,
-    endereco VARCHAR(100) NOT NULL,
-    status CHAR(1) DEFAULT('A'),   
-    fk_idcidade INT NOT NULL,    
-    FOREIGN KEY (fk_idcidade) REFERENCES cidade(idcidade)
+    fk_idendereco INT NOT NULL,
+    FOREIGN KEY (fk_idendereco) REFERENCES endereco(idendereco)
 );
 
 CREATE TABLE movimento (                                         -- Um 'Pacote'de movimento, pode ter vários Itens
