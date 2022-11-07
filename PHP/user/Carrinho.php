@@ -65,24 +65,17 @@
           <td><input type="number" value="1"></td>
           <td>R$21.00</td>
         </tr>
-
-      <!--SUBTOTAL DOS PRODUTOS-->
       </table>
+
+<!--SUBTOTAL DOS PRODUTOS-->
       <div class="total-price">
         <table>
           <tr>
             <td>Exemplo</td>
             <td>R$200.00</td>
           </tr>
-          <tr>
-            <td>Exemplo</td>
-            <td>R$200.00</td>
-          </tr>
-          <tr>
-            <td>Exemplo</td>
-            <td>R$200.00</td>
-          </tr>
         </table>
+        
       </div>
     </div>
 

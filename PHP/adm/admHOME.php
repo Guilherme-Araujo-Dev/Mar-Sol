@@ -71,6 +71,13 @@
         <img src="../../IMG/aii.jpg">
     </div>
 
+<!--Texto de bom dia, boa tarde, boa noite👇👇-->
+<div class="diaa">
+    <h1 id="welcome">Bom dia</h1>
+    <!--Importando o Js-->
+    <script src="../../jS/time.js"></script>
+</div>
+
 
 <!--Importando o bootstrap-->
 

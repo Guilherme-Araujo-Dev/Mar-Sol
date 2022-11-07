@@ -70,11 +70,12 @@ td img{
     display: flex;
     justify-content: flex-end;
 }
-
+    
 .total-price table{
     border-top: 3px solid #ff523b;
     width: 100%;
-    max-width: 450px;
+    max-width: 372px;
+    padding-top: 100px;
 }
 
 td:last-child{
