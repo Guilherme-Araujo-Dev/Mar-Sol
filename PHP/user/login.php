@@ -80,9 +80,10 @@ if (isset($_POST['btnLogin'])) {
     $stmt->bindParam(':u', $usuario);
     $stmt->bindParam(':s', $senha);
     $stmt->execute();
+    $user = explode('@', $usuario, 2); 
 
     if($stmt->rowCount()> 0){
-        $_SESSION['usuario'] = $user['nomeUsuario'];
+        $_SESSION['usuario'] = strtoupper($user[0]); 
     
         $sql = "SELECT status FROM empresas WHERE nomeUsuario = :u";
     
@@ -92,9 +93,11 @@ if (isset($_POST['btnLogin'])) {
 
         $status = $stmt->fetch();
 
-        if($status == 'R') $_SESSION['acesso'] = "Admin";
-        else $_SESSION['acesso'] = "User";
-    
+        if($status == 'A') {
+            if($tipo == 'A') $_SESSION['acesso'] = "Admin";
+            else $_SESSION['acesso'] = "User";
+        }
+
         header("Refresh: 0;url=index.php");
         exit();
     }else{
