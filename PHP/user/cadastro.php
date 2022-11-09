@@ -146,8 +146,6 @@ $pdo = conectar();
 
 <?php
 
-if (isset($_POST[]))
-
 if (isset($_POST['btnCadastro'])) {
     $nomeUsuario    = isset($_POST['nomeUsuario']) ? $_POST['nomeUsuario'] : null;
     $fone            = isset($_POST['fone']) ? ($_POST['fone']) : null;
