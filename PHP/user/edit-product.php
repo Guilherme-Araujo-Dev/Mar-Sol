@@ -1,6 +1,4 @@
-<!-- Importando a Conexão com o Banco de Dados -->
 <?php
-    session_start();
     require_once ("../class/connection.php");
     $pdo = conectar();
 

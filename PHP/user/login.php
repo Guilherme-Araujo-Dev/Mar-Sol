@@ -1,6 +1,4 @@
-<!-- Importando a Conexão com o Banco de Dados -->
 <?php 
-    session_start();
     include_once ("../class/connection.php");
     $pdo = conectar();
 ?>
@@ -80,15 +78,17 @@ if (isset($_POST['btnLogin'])) {
     $stmt->bindParam(':u', $usuario);
     $stmt->bindParam(':s', $senha);
     $stmt->execute();
-    $user = explode('@', $usuario, 2); 
+    $user = explode('@', $usuario, 2);
+    $user[0] = explode('.', $user[0], 2);
+    $usuario = explode(' ', $user[0][0], 2);
 
     if($stmt->rowCount()> 0){
-        $_SESSION['usuario'] = strtoupper($user[0]); 
+        $_SESSION['usuario'] = strtoupper($usuario[0]); 
     
         $sql = "SELECT status FROM empresas WHERE nomeUsuario = :u";
     
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':u', $usuario);
+        $stmt->bindParam(':u', $user[1]);
         $stmt->execute();
 
         $status = $stmt->fetch();

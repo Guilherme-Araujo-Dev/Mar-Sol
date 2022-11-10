@@ -1,5 +1,7 @@
 <?php
+session_start();
 if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
@@ -24,7 +26,11 @@ if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
                 <a class="nav-link navPage" href="../user/about.php" id="about">Sobre</a>
                 <!--<a class="nav-link navPage" href="fazer pedido.php" id="makeRequest">Fazer Pedido</a>-->
 
-                <a class="nav-link navPage" href="<?php if($_SESSION['usuario'] == null) echo "../user/login.php"; else if($_SESSION['acesso'] == "Admin") echo "../adm/admCLIENT.php"; else echo "../user/index.php" ?>" id="makeRequest"><?php if($_SESSION['usuario'] == null) echo "Login"; else echo $_SESSION['usuario'] ?></a>
+                <a class="nav-link navPage" href="<?php if($_SESSION['usuario'] == null) echo "../user/login.php";
+                                                        else { 
+                                                            if($_SESSION['acesso'] == "Admin") echo "../adm/admCLIENT.php"; 
+                                                            else echo "../user/index.php";
+                                                        } ?>" id="makeRequest"><?php if($_SESSION['usuario'] == null) echo "Login"; else echo $_SESSION['usuario'] ?></a>
 
                 <div class="perfil_carrinho">
                     <a href="carrinho.php"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
