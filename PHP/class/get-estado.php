@@ -1,14 +1,21 @@
 <?php
+require_once "connection.php";
+$pdo = conectar();
 
-$estado = $_POST['estado'];
+$idestado = $_GET['estado'];
 
-
-$sql = "SELECT idestado FROM estado WHERE nomeestado = es";
-$stmt = $pdo->prepare($sql);
-
-$stmt->bindParam(':es', $estado);
+$stmt = $pdo->prepare("SELECT * FROM cidades WHERE fk_idestado = '$idestado' ORDER BY nomecidade");
 $stmt->execute();
 
+$rs = $stmt->fetchAll();
+echo "<label for='nome' class='lab-cidade'>Cidade:</label><select name='cidade'";
+foreach ($rs as $r) {
+    echo "<option class='slc-cidade' value=";
+    echo $r['idcidade'];
+    echo ">";
+    echo $r['nomecidade'];
+    echo "</option";
+}
+echo "</select>";
 
-$estado = $stmt->fetch();
-
+?>

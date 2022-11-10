@@ -1,8 +1,11 @@
 <!-- Importando a Conexão com o Banco de Dados -->
 <?php
-session_start();
 include_once "../class/connection.php";
 $pdo = conectar();
+
+$stmt = $pdo->prepare("SELECT * FROM estados ORDER BY nomeestado");
+$stmt->execute();
+$rs = $stmt->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +30,20 @@ $pdo = conectar();
 
     <!-- Importando o CSS -->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-cadastro.css">
+
+    <script type="text/javascript" src="../../JS/jquery.js"></script>
+    <!-- 
+        o script abaixo faz a magica de pegar os dados no primeiro select e
+        chamar a rotina listaCidades.php passando o estado escolhido e gerando
+        o processo de preenchimento do 2 select de forma dinamica. 
+    -->
+    <script>
+        $(document).ready(function() {
+            $('#estado').change(function() {
+                $('#cidade').load('../class/get-estado.php?estado=' + $('#estado').val());
+            });
+        });
+    </script>
 
     <title>Mar & Sol Salgados - Cadastro</title>
 </head>
@@ -86,59 +103,28 @@ $pdo = conectar();
                     </div>
                 </div>
                 <div class="form-row">
-                    <form action='get-estado.php' method='POST'>
-                        <aside id="logado">
-                            <div class="form-row col-5">
-                                <label for="nome" class="lab-estado">Estado:</label> <br>
-                                <select id="estados" type="text" name="estado" class="slc-estado">
-                                    <?php
-                                    $cont = 0;
-                                    foreach ($estados as $e) { ?>
-                                        <option value="<?php echo $e['nomeestado']; ?>"><?php echo $e['nomeestado']; ?></option>
-                                    <?php } ?>
-                                </select>
-                    </form>
-                    </aside>
-                    <?php
-                    include("../class/get-estado.php");
-                    $sql = "SELECT * FROM cidade WHERE fk_idestado = es";
-
-                    $stmt = $pdo->prepare($sql);
-                    
-                    $stmt->bindParam(':es', $estado);
-                    $stmt->execute();
-                    
-                    
-                    $cidades = $stmt->fetchAll();
-                    ?>
-
                     <div class="form-row col-5">
-                        <label for="nome" class="lab-cidade">Cidade:</label> <br>
-                        <?php
-                        if (!count($cidades)) echo "Desculpe, nossos serviços não estão disponíveis no seu estado";
-                        else { ?>
-                            <select id="cidade" type="text" name="cidade" class="slc-cidade">
-                                <?php
-                                foreach ($cidades as $c) { ?>
-                                    <option><?php echo $c['nomecidade']; ?></option>
-                            <?php }
-                            } ?>
+                        <label for="nome" class="lab-estado">Estado:</label> <br>
+                        <select name="estado" id="estado" class="slc-estado">
+                                <?php foreach ($rs as $r) { ?>
+                                    <option value="<?php echo $r['idestado']; ?>"><?php echo $r['nomeestado']; ?></option>
+                                <?php } ?>
                             </select>
+                            <br><br>
+                        </div>
+                        <div id="cidade" class="lab-cidade"></div><br>
                     </div>
-                </div>
 
-                <div class="card-footer">
-                    <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
-                    <p>Já possui uma conta?<u> <a href="login.php"> Clique aqui!</u></a></p>
-                </div>
+                    <div class="card-footer">
+                        <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
+                        <p>Já possui uma conta?<u> <a href="login.php"> Clique aqui!</u></a></p>
+                    </div>
             </form>
         </div>
     </div>
     <!-- Importando o JS -->
     <script src="../../JS/mask.js"></script>
     <script src="../../JS/select-stades.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 </body>
 
@@ -181,7 +167,7 @@ if (isset($_POST['btnCadastro'])) {
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':et', $estado);
             $stmt->execute();
-    
+
             $estado = $stmt->fetchAll();
             $estado = $estado[0][0];
         } else {
