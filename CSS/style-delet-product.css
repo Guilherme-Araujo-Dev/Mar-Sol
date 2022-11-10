@@ -52,3 +52,9 @@ td{
 .centralizado2{
     padding-left: 20px;
 }
+
+td a{
+    color: #ff523b;
+    font-size: 12px;
+    padding-left: 10px;
+}

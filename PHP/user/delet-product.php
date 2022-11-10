@@ -77,6 +77,45 @@
     </center>
     <br><br>
 
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome do Produto</th>
+                <th>Excluir</th>
+            </tr>
+
+
+                <td>
+                    <div>
+                        <img src="../../IMG/food/ccg.jpg" alt="imagem" width="100px" height="100px">
+                    </div>
+                </td>
+
+                <td>
+                    <div>
+                        <p>
+                            Coxinha de Carne Grande (ccg)
+                        </p>
+                    </div>
+                </td>
+
+                <td>
+                    <div>
+                        <p>
+                            <a href="">Remover</a>
+                        </p>
+                    </div>
+                </td>
+
+            </tr>
+<!--
+    1. O tr cria uma nova linha dentro da tabela
+    2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
+-->
+        </table>
+    </div>
+
 <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
 </body>
 </html>
