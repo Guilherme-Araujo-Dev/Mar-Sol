@@ -25,6 +25,9 @@
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
+    <!-- Importando o CSS-->
+    <link rel="stylesheet" href="../../CSS/style-report-product.css">
+
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
@@ -62,7 +65,121 @@
 
         </ul>
     </div>
-    <center> Página RELATÓRIO PRODUTO</center>
+    <center><br>
+        <div class="admREPORT">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+            </svg>
+            <h1>Relatórios</h1>
+        </div>
+    </center>
+    <br><br>
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+            <th class="codigo">Código</th>
+            <th>Produto</th>
+            <th>Peso</th>
+            <th>Preço</th>
+            <th>Saída</th>
+            </tr>
+
+
+            <!--Primeira linha-->
+            <tr>
+                <!--Código-->
+                <td>
+                    <div>
+                        <p>1</p>
+                    </div>
+                    </div>
+                </td>
+
+                <!--Produto-->
+                <td>
+                    <div class="centralizado">
+                    Bolinha de Batata com Carne
+                    </div>
+                </td>
+
+                <!--Peso-->
+                <td>
+                    <div class="centralizado">
+                    300g
+                    </div>
+                </td>
+
+                <!--Preço-->
+                <td>
+                    <div>
+                        <p>
+                            R$0.00
+                        </p>
+                    </div>
+                </td>
+
+                <!--Saída-->
+                <td>
+                    <div>
+                        <p>
+                            00/00/0000
+                        </p>
+                    </div>
+                </td>
+
+            </tr>
+
+            <!--Segunda linha-->
+            <tr>
+                <!--Código-->
+                <td>
+                    <div>
+                        <p>2</p>
+                    </div>
+                    </div>
+                </td>
+
+                <!--Produto-->
+                <td>
+                    <div class="centralizado">
+                    Coxinha de Frango
+                    </div>
+                </td>
+
+                <!--Peso-->
+                <td>
+                    <div class="centralizado">
+                    200g
+                    </div>
+                </td>
+
+                <!--Preço-->
+                <td>
+                    <div>
+                        <p>
+                            R$0.00
+                        </p>
+                    </div>
+                </td>
+
+                <!--Saída-->
+                <td>
+                    <div>
+                        <p>
+                            00/00/0000
+                        </p>
+                    </div>
+                </td>
+
+            </tr>
+<!--
+    1. O tr cria uma nova linha dentro da tabela
+    2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
+-->
+        </table>
+    </div>
 
 
 <!--Importando o bootstrap-->

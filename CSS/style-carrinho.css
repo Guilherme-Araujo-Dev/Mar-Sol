@@ -69,6 +69,7 @@ td img{
 .total-price{
     display: flex;
     justify-content: flex-end;
+    padding-bottom: 300px;
 }
     
 .total-price table{

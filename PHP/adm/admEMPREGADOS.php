@@ -134,9 +134,9 @@
         </table>
     </div>
 
-<!--Importando o bootstrap-->
+    <!--Importando o bootstrap-->
 
-<script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
 
 </body>
 
