@@ -53,15 +53,6 @@ $rs = $stmt->fetchAll();
     <!-- Importando o Cabeçalho -->
     <?php include("../class/header.php"); ?>
 
-
-    <?php
-    $sql = "SELECT * FROM estado";
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute();
-
-    $estados = $stmt->fetchAll();
-    ?>
     <div class="corpo horizontal-center">
         <div class="container ">
             <div class="forms-header">
@@ -99,7 +90,7 @@ $rs = $stmt->fetchAll();
 
                     <div class="form-group col-5">
                         <label for="nome">Senha:</label>
-                        <input id="nome" name="senha" type="password" placeholder="Caracter especial e número" maxlength="32" class="">
+                        <input id="nome" name="senha" type="password" placeholder="********" maxlength="32" class="">
                     </div>
                 </div>
                 <div class="form-row">
@@ -141,7 +132,7 @@ if (isset($_POST['btnCadastro'])) {
     $senha           = isset($_POST['senha']) ? ($_POST['senha']) : null;
 
     if (empty($nomeUsuario) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)) {
-        echo "Necessário preencher todos os campos";
+        echo "<script> alert('Necessário Preencher todos os campos'); </script>";
         exit();
     }
 
@@ -174,9 +165,9 @@ if (isset($_POST['btnCadastro'])) {
             null;
         }
 
-        echo "Você foi cadastrado com sucesso";
+        echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
     } catch (PDOException $e) {
-        echo "Por favor insira os dados da maneira correta";
+        echo "<script> alert('Insira os dados de maneira correta'); </script>";
     }
 }
 ?>
