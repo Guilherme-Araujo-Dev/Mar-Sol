@@ -12,7 +12,7 @@ $rs = $stmt->fetchAll();
 echo "<label for='nome' class='lab-cidade'>Cidade:</label>";
 
 if($rs) {
-    echo "<select name='cidade'";
+    echo "<select id='cidades' name='cidades'";
     foreach ($rs as $r) {
         echo "<option class='slc-cidade' value=";
         echo $r['idcidade'];

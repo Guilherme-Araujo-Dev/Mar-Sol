@@ -64,7 +64,7 @@ $rs = $stmt->fetchAll();
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Nome:</label>
-                        <input id="nome" name="nomeUsuario" type="text" placeholder="Insira seu primeiro nome" maxlength="20" class="">
+                        <input id="nome" name="nomeUsuario" type="text" placeholder="Insira nome do operador" maxlength="100" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
@@ -124,50 +124,41 @@ $rs = $stmt->fetchAll();
 <?php
 
 if (isset($_POST['btnCadastro'])) {
-    $nomeUsuario    = isset($_POST['nomeUsuario']) ? $_POST['nomeUsuario'] : null;
-    $fone            = isset($_POST['fone']) ? ($_POST['fone']) : null;
-    $CNPJ            = isset($_POST['CNPJ']) ? ($_POST['CNPJ']) : null;
-    $empresa         = isset($_POST['empresa']) ? ($_POST['empresa']) : null;
-    $email           = isset($_POST['email']) ? ($_POST['email']) : null;
-    $senha           = isset($_POST['senha']) ? ($_POST['senha']) : null;
+    $nomeUsuario     = isset($_POST['nomeUsuario']) ? $_POST['nomeUsuario'] : null;
+    $fone            = isset($_POST['fone'])        ? ($_POST['fone'])          : null;
+    $CNPJ            = isset($_POST['CNPJ'])        ? ($_POST['CNPJ'])          : null;
+    $empresa         = isset($_POST['empresa'])     ? ($_POST['empresa'])       : null;
+    $email           = isset($_POST['email'])       ? ($_POST['email'])         : null;
+    $senha           = isset($_POST['senha'])       ? ($_POST['senha'])         : null;
+    $estado          = isset($_POST['estado'])      ? ($_POST['estado'])        : null;
+    $cidade          = isset($_POST['cidades'])     ? ($_POST['cidades'])       : null;
 
-    if (empty($nomeUsuario) || empty($sobrenome) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco)) {
-        echo "<script> alert('Necessário Preencher todos os campos'); </script>";
-        exit();
+    if (empty($nomeUsuario) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($estado) || empty($senha) || empty($endereco)) {
+        //echo "<script> alert('Necessário Preencher todos os campos'); </script>";
+        //exit();
     }
 
     $senha = md5($senha); // Deixando a senha encriptografada
 
-    if (empty($estado)) $estado = "PR"; // Se o estado não for informado será definido por padrão como Paraná
-
-    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES (:ne, :ec, :nc, :s, :f, :cj)";
+    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj, estado, cidade) VALUES (:ne, :ec, :nc, :s, :f, :cj, :es, :cd)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':ne', $empresa);
     $stmt->bindParam(':ec', $email);
     $stmt->bindParam(':nc', $nome);
     $stmt->bindParam(':s', $senha);
     $stmt->bindParam(':f', $fone);
-    $stmt->bindParam(':cj', $CNPJ);
+    $stmt->bindParam(':es', $estado);
+    $stmt->bindParam(':cd', $cidade);
+
+    echo "Estado: " . $estado;
+    echo "Cidade: " . $cidade;
 
     try {
         $stmt->execute();
-
-        if (isset($_POST['estado'])) {
-            $estado = $_POST['estado'];
-            $sql = "SELECT * FROM estado WHERE nomeestado = :ct";
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':et', $estado);
-            $stmt->execute();
-
-            $estado = $stmt->fetchAll();
-            $estado = $estado[0][0];
-        } else {
-            null;
-        }
-
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
     } catch (PDOException $e) {
-        echo "<script> alert('Insira os dados de maneira correta'); </script>";
+        echo $e;
+        //echo "<script> alert('Insira os dados de maneira correta'); </script>";
     }
 }
 ?>
