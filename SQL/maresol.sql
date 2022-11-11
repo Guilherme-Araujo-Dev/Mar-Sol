@@ -14,6 +14,7 @@ CREATE TABLE produtos (
     peso FLOAT(5,2) NOT NULL,
     preco FLOAT(5,2) NOT NULL,
     imagem VARCHAR(200),                                           -- Passa local onde a imagem se hospeda
+    info TEXT(500),
     fk_idcategoria INT NOT NULL,
     status CHAR(1) DEFAULT('A') CHECK (status IN ('A' , 'I')),
     FOREIGN KEY (fk_idcategoria) REFERENCES categorias(idcategoria)
@@ -39,7 +40,7 @@ CREATE TABLE empresas (
     cnpj CHAR(18) NOT NULL UNIQUE,                                    -- Não pode existir dois cnpjs iguais no sistema
     nomecliente VARCHAR(100) NOT NULL,
     emailcliente VARCHAR(100) NOT NULL,                               -- Será o Login da empresas
-    tipo CHAR(1) DEFAULT('U') CHECK (status IN ('U' , 'A')),
+    tipo CHAR(1) DEFAULT('U') CHECK (tipo IN ('U' , 'A')),
     senha CHAR(32) NOT NULL,                                                   -- Será a Senha da empresas
     fone VARCHAR(16) NOT NULL
 );
@@ -81,9 +82,9 @@ CREATE TABLE movimentos (                                         -- Um 'Pacote'
     idmovimento INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     data DATE NOT NULL,
     observacao VARCHAR(200),
-    aprovado CHAR(1) DEFAULT('N') CHECK (status IN ('S' , 'N')),                          -- Informa se o pedido está aprovado (S) ou não (N) pelo sistema
-    entregue CHAR(1) DEFAULT('N') CHECK (status IN ('S' , 'N')),                          -- Informa se o pedido foi entregue (S) ou não (N)
-    tipo CHAR(1) DEFAULT('S') CHECK (status IN ('S' , 'N')),                             -- Informa se o tipo do Moviemento é Entrada (E) ou Saída (S)                                            
+    aprovado CHAR(1) DEFAULT('N') CHECK (aprovado IN ('S' , 'N')),                          -- Informa se o pedido está aprovado (S) ou não (N) pelo sistema
+    entregue CHAR(1) DEFAULT('N') CHECK (entregue IN ('S' , 'N')),                          -- Informa se o pedido foi entregue (S) ou não (N)
+    tipo CHAR(1) DEFAULT('S') CHECK (tipo IN ('S' , 'E')),                             -- Informa se o tipo do Moviemento é Entrada (E) ou Saída (S)                                            
     fk_idfuncionario INT NOT NULL,
     fk_idempresa INT NOT NULL,
     FOREIGN KEY (fk_idempresa) REFERENCES empresas(idempresa),
