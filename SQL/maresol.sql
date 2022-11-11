@@ -26,7 +26,7 @@ CREATE TABLE estados (
 
 CREATE TABLE cidades (
     idcidade INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomecidade VARCHAR(30) NOT NULL UNIQUE,
+    nomecidade VARCHAR(30) NOT NULL,
     fk_idestado INT NOT NULL,
     status CHAR(1) DEFAULT('A'),
     FOREIGN KEY (fk_idestado) REFERENCES estados(idestado)
