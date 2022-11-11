@@ -46,12 +46,12 @@
         <?php
         if (isset($_POST['btnBusca'])) {
             $busca    = isset($_POST['busca']) ? $_POST['busca'] : ' ';
-            $sql = "SELECT * FROM produto WHERE nomeProduto LIKE ?";
+            $sql = "SELECT * FROM produtos WHERE nomeproduto LIKE ?";
             $stmt = $pdo->prepare($sql);
             $buscaGeral = '%' . $busca . '%';
             $stmt->bindParam(1, $buscaGeral);
         } else {
-            $sql = "SELECT * FROM produto LIMIT 10";
+            $sql = "SELECT * FROM produtos LIMIT 10";
             $stmt = $pdo->prepare($sql);
         }
         // preparando o sql para não aceitar sql injection
@@ -62,12 +62,11 @@
         ?>
         <br><br><br><br>
 
-        <!--BARRA DE PESQUISA-->
         <ul class="produtos">
         <?php foreach ($produto as $p) { ?>
                 <li class="produto">
-                    <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeProduto']; ?>" width="300px" height="167px">
-                    <h1 class="product-text"><?php echo $p['nomeProduto']; ?></h1>
+                    <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>" width="300px" height="167px">
+                    <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
                     <p class="product-text">Informações Nutricionais:</p>
                     <h2 class="product-text">Preço: R$<?php echo $p['preco']; ?></h2>
                     <button class="btncomprar" name="btncomprar" type="submit">Comprar</button>
