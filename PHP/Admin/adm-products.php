@@ -14,6 +14,9 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+
+    <!-- Importando o CSS dos botoes-->
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
@@ -31,52 +34,45 @@
 
 <body>
 
-
     <div class="sidebar">
-
+        
         <div class="imgSIDEBAR">
             <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
         </div>
 
         <header>Nome do ADM</header>
         <ul>
+        <li>
+                <a href="../Admin/adm-home.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+            </li>
+
+            <li>
+                <a href="../Admin/adm-products.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
+            </li>
+
+            <li>
+                <a href="../Admin/adm-clients.php"><i class="fa-solid fa-user"></i> Clientes</a>
+            </li>
+           
             <div class="home">
                 <li>
-                    <a href="#"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+                    <a href="#"><i class="fa-solid fa-user-tie"></i> Empregados</a>
                 </li>
             </div>
-
-            <li>
-                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
-            </li>
-
-            <li>
-                <a href="../adm/admCLIENT.php"><i class="fa-solid fa-user"></i> Clientes</a>
-            </li>
-
-            <li>
-                <a href="../adm/admEMPREGADOS.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
-            </li>
-        
+            
             <li class="voltar">
-                <a href="../user/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
+                <a href="../Home/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
             </li>
 
         </ul>
     </div>
 
-    <p class="admm">Página do Adiministrador</p>
-
-    <div class="imagem">
-        <img src="../../IMG/aii.jpg">
+    <div class="botoess">
+        <a href="../Home/product3.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Criar Produto"><br><br></a>
+        <a href="../Home/report-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Relatório de Produtos"><br><br></a>
+        <a href="../Home/edit-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Editar Produto"><br><br></a>
+        <a href="../Home/delet-product.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Deletar Produto"></a>
     </div>
-
-<!--Texto de bom dia, boa tarde, boa noite👇👇-->
-<div class="diaa">
-    <h1 id="welcome">Bom dia</h1>
-    <!--Importando o Js-->
-    <script src="../../jS/time.js"></script>
-</div>
 
 
 <!--Importando o bootstrap-->

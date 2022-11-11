@@ -1,4 +1,4 @@
-![logo da Mar & Sol Salgados](IMG/logo.png)
+![logo da Mar & Sol Salgados](../IMG/logo.png)
 
 <h2 align="center"> Mar & Sol Salgados E-Commerce System </h2> 
 
