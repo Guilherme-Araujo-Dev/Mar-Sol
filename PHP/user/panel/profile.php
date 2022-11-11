@@ -31,11 +31,11 @@
         <header>Perfil</header>
         <ul>
             <li>
-                <a href="../panel/pedidos-andamentos.php"> Pedidos em Andamento</a>
+                <a href="../panel/pedidos-andamentos.php"> Pedidos Encaminhados</a>
             </li>
 
             <li>
-                <a href=""> Pedidos à entregar</a>
+                <a href=""> Pedidos à Entregar</a>
             </li>
 
             <li>

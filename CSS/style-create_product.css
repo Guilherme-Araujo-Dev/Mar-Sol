@@ -1,6 +1,6 @@
 /*PARTE DE CIMA DA PAGINA*/
 .admCREATE{
-    padding-left: 70px;
+    padding-left: 20px;
     margin-left: 150px;
     border-bottom: 70px solid rgb(255, 194, 50);
     border-left: 30px solid transparent;
@@ -72,13 +72,6 @@ button:hover{
 
 form{
     text-align: center;
-    padding-bottom: 30px;
-}
-
-.corpo{
-    width: 38%;
-    margin: auto;  
-    background-color:antiquewhite;
     padding-bottom: 30px;
 }
 

@@ -1,10 +1,6 @@
-form{
-    text-align: center;
-    padding-left: 100px;
-}
-
+/*PARTE DE CIMA DA PAGINA*/
 .admEDIT{
-    padding-left: 70px;
+    padding-left: 20px;
     margin-left: 150px;
     border-bottom: 70px solid rgb(255, 194, 50);
     border-left: 30px solid transparent;
@@ -56,4 +52,31 @@ td{
 
 .centralizado2{
     padding-left: 20px;
+}
+
+svg{
+    padding-right: 10px;
+}
+
+button:hover{
+    background-color: yellow;
+}
+
+/*
+.botoes{
+    padding-top: 140px;
+    padding-bottom: 121px;
+    justify-content: space-around;
+}
+*/
+
+form{
+    padding-left: 200px;
+    text-align: center;
+
+}
+
+.botoesss{
+    padding-top: 50px;
+    padding-left: 200px;
 }
