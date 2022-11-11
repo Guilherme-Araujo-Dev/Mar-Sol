@@ -53,15 +53,6 @@ $rs = $stmt->fetchAll();
     <!-- Importando o Cabeçalho -->
     <?php include("../class/header.php"); ?>
 
-
-    <?php
-    $sql = "SELECT * FROM estado";
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute();
-
-    $estados = $stmt->fetchAll();
-    ?>
     <div class="corpo horizontal-center">
         <div class="container ">
             <div class="forms-header">
