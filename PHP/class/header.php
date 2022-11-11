@@ -21,15 +21,15 @@ if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
         </button>
         <div class="collapse navbar-collapse justify-content-end fs-4" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link navPage" aria-current="page" href="../user/index.php" id="home">Início</a>
-                <a class="nav-link navPage" href="../user/product.php" id="product">Produtos</a>
-                <a class="nav-link navPage" href="../user/about.php" id="about">Sobre</a>
+                <a class="nav-link navPage" aria-current="page" href="../Home/index.php" id="home">Início</a>
+                <a class="nav-link navPage" href="../Home/product.php" id="product">Produtos</a>
+                <a class="nav-link navPage" href="../Home/about.php" id="about">Sobre</a>
                 <!--<a class="nav-link navPage" href="fazer pedido.php" id="makeRequest">Fazer Pedido</a>-->
 
-                <a class="nav-link navPage" href="<?php if($_SESSION['usuario'] == null) echo "../user/login.php";
+                <a class="nav-link navPage" href="<?php if($_SESSION['usuario'] == null) echo "../Home/login.php";
                                                         else { 
-                                                            if($_SESSION['acesso'] == "Admin") echo "../adm/admCLIENT.php"; 
-                                                            else echo "../user/index.php";
+                                                            if($_SESSION['acesso'] == "Admin") echo "../Admin/adm-clients.php"; 
+                                                            else echo "../Home/index.php";
                                                         } ?>" id="makeRequest"><?php if($_SESSION['usuario'] == null) echo "Login"; else echo $_SESSION['usuario'] ?></a>
 
                 <div class="perfil_carrinho">
