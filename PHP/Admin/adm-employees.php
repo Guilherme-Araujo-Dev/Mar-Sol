@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') header("Refresh: 0;url=../Home/index.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,7 +52,7 @@
             </li>
 
             <li>
-                <a href="../Admin/adm-product.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
+                <a href="../Admin/adm-products.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
             </li>
 
             <li>

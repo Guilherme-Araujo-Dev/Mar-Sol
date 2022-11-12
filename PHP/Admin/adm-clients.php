@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') header("Refresh: 0;url=../Home/index.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
