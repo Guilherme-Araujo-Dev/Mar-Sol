@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

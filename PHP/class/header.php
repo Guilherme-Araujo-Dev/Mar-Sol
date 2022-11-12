@@ -29,6 +29,7 @@ if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
                 <a class="nav-link navPage" href="<?php if($_SESSION['usuario'] == null) echo "../Home/login.php";
                                                         else { 
                                                             if($_SESSION['acesso'] == "Admin") echo "../Admin/index.php"; 
+                                                            else if($_SESSION['acesso'] == "User") echo "Panel/profile.php";
                                                             else echo "../Home/index.php";
                                                         } ?>" id="makeRequest"><?php if($_SESSION['usuario'] == null) echo "Login"; else echo $_SESSION['usuario'] ?></a>
 
