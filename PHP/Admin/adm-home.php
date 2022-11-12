@@ -37,38 +37,7 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
 <body>
 
 
-    <div class="sidebar">
-
-        <div class="imgSIDEBAR">
-            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
-        </div>
-
-        <header>Nome do ADM</header>
-        <ul>
-            <div class="home">
-                <li>
-                    <a href="#"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-                </li>
-            </div>
-
-            <li>
-                <a href="../Admin/adm-products.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
-            </li>
-
-            <li>
-                <a href="../Admin/adm-clients.php"><i class="fa-solid fa-user"></i> Clientes</a>
-            </li>
-
-            <li>
-                <a href="../Admin/adm-employees.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
-            </li>
-        
-            <li class="voltar">
-                <a href="../Home/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
-            </li>
-
-        </ul>
-    </div>
+    <?php include("../class/adm-sidebar.php"); ?>
 
     <p class="admm">Página do Adiministrador</p>
 
@@ -76,7 +45,8 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
         <img src="../../IMG/aii.jpg">
     </div>
 
-<!--Texto de bom dia, boa tarde, boa noite👇👇-->
+
+    <!--Texto de bom dia, boa tarde, boa noite👇👇-->
 <div class="diaa">
     <h1 id="welcome">Bom dia</h1>
     <!--Importando o Js-->

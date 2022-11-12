@@ -39,40 +39,7 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
 
 <body>
 
-    <div class="sidebar">
-
-        <div class="imgSIDEBAR">
-            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
-        </div>
-
-        <header>Nome do ADM</header>
-        <ul>
-            <li>
-                <a href="../Admin/adm-home.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-            </li>
-
-            <div class="home">
-                <li>
-                    <a href="#"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
-                </li>
-            </div>
-
-            <li>
-                <a href="../Admin/adm-clients.php"><i class="fa-solid fa-user"></i> Clientes</a>
-            </li>
-
-
-            <li>
-                <a href="../Admin/adm-employees.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
-            </li>
-
-
-            <li class="voltar">
-                <a href="../Home/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
-            </li>
-
-        </ul>
-    </div>
+    <?php include("../class/adm-sidebar.php"); ?>
 
     <div class="botoess">
         <a href="../Home/product3.php"><input type="Button" style="width:300px;height:60px; background-color:#daa84d" value="Criar Produto"><br><br></a>

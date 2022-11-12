@@ -5,51 +5,6 @@
     text-decoration: none;
 }
 
-.sidebar{
-    position: fixed;
-    left: 0;
-    width: 260px;
-    height: 100%;
-    background: gray;
-}
-
-.sidebar header{
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    line-height: 100px;
-    background: gray;
-    user-select: none;
-}
-
-.sidebar ul a{
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 65px;
-    font-size: 20px;
-    color: black;
-
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid black;
-    text-decoration: none;
-}
-ul li:hover a{
-    padding-left: 50px;
-}
-
-.sidebar ul a i{
-    margin-left: 16px;
-}
-
-ul{
-    padding-left: 1px;
-}
-
-i{
-    padding-left: 20px;
-}
 
 #corpo{
     text-align: center;
