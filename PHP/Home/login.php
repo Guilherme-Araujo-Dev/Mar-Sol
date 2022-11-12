@@ -1,6 +1,6 @@
-<?php 
-    include_once ("../class/connection.php");
-    $pdo = conectar();
+<?php
+include_once("../class/connection.php");
+$pdo = conectar();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    
+
     <!-- Importando o Cabeçalho -->
     <?php include("../class/header.php"); ?>
 
@@ -66,42 +66,43 @@ if (isset($_POST['btnLogin'])) {
     $usuario    = isset($_POST['usuario']) ? $_POST['usuario'] : null;
     $senha      = isset($_POST['senha']) ? ($_POST['senha']) : null;
     $senha = md5($senha);
-    
-    if(empty($usuario) && empty($senha)){
+
+    if (empty($usuario) && empty($senha)) {
         echo "Necessário informar usuario e senha";
         exit();
     }
-    
-    $sql = "SELECT emailCliente FROM empresas WHERE emailCliente = :u AND senha = :s";
-    
+
+    $sql = "SELECT emailcliente FROM empresas WHERE emailcliente = :u AND senha = :s";
+
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':u', $usuario);
     $stmt->bindParam(':s', $senha);
     $stmt->execute();
     $user = explode('@', $usuario, 2);
     $user[0] = explode('.', $user[0], 2);
-    $usuario = explode(' ', $user[0][0], 2);
+    $user_b = explode(' ', $user[0][0], 2);
 
-    if($stmt->rowCount()> 0){
-        $_SESSION['usuario'] = strtoupper($usuario[0]); 
-    
-        $sql = "SELECT status FROM empresas WHERE nomeUsuario = :u";
-    
+    if ($stmt->rowCount() > 0) {
+        $_SESSION['usuario'] = strtoupper($user_b[0]);
+
+        $sql = "SELECT * FROM empresas WHERE emailcliente = :u";
+
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':u', $user[1]);
+        $stmt->bindParam(':u', $usuario);
         $stmt->execute();
 
-        $status = $stmt->fetch();
+        $emp = $stmt->fetchAll();
 
-        if($status == 'A') {
-            if($tipo == 'A') $_SESSION['acesso'] = "Admin";
+        if ($emp[0]['status'] == 'A') {
+            if ($emp[0]['tipo'] == 'A') $_SESSION['acesso'] = "Admin";
             else $_SESSION['acesso'] = "User";
+        } else {
+            //echo "<script> alert('O usuário escolhido está destivado') </script>";
         }
 
-        header("Refresh: 0;url=index.php");
         exit();
-    }else{
-        echo "Usuário ou senha invalidos ";
+    } else {
+        echo "<script> alert('Usuário e/ou senha inválido(s)') </script>";
         exit();
     }
 }
