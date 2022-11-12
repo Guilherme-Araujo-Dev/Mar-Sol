@@ -153,10 +153,13 @@ if (isset($_POST['btnCadastro'])) {
     $empresa         = isset($_POST['empresa'])     ? ($_POST['empresa'])       : null;
     $email           = isset($_POST['email'])       ? ($_POST['email'])         : null;
     $senha           = isset($_POST['senha'])       ? ($_POST['senha'])         : null;
-    $estado          = isset($_POST['estado'])      ? ($_POST['estado'])        : null;
     $cidade          = isset($_POST['cidades'])     ? ($_POST['cidades'])       : null;
+    $cep             = isset($_POST['cep'])         ? ($_POST['cep'])           : null;
+    $bairro          = isset($_POST['bairro'])      ? ($_POST['bairro'])        : null;
+    $endereco        = isset($_POST['endereco'])    ? ($_POST['endereco'])      : null;
+    $numero          = isset($_POST['numero'])      ? ($_POST['numero'])        : null;
 
-    if (empty($nomeUsuario) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($estado) || empty($senha) || empty($endereco)) {
+    if (empty($nomeUsuario) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($senha) || empty($endereco) || empty($bairro) || empty($cep) || empty($numero)) {
         echo "<script> alert('Necessário Preencher todos os campos'); </script>";
         exit();
     }
@@ -172,20 +175,32 @@ if (isset($_POST['btnCadastro'])) {
     $stmt->bindParam(':f', $fone);
     $stmt->bindParam(':cj', $CNPJ);
 
-    /*
-    $stmt->bindParam(':es', $estado);
-    $stmt->bindParam(':cd', $cidade);
-
-    echo "Estado: " . $estado;
-    echo "Cidade: " . $cidade;
-*/
     try {
         $stmt->execute();
+
+        $sql = "SELECT idempresa FROM empresas WHERE nomeempresa = :ne";
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindParam(':ne', $empresa);
+        $stmt->execute();
+        $idempresa = $stmt->fetchAll();
+
+        $sql = "INSERT INTO endereco_empresas (cep, bairro, rua, numero, fk_idcidade, fk_idempresa) VALUES (:cp, :br, :ra, :nm, :fkcd, :fkem)";
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindParam(':cp', $cep);
+        $stmt->bindParam(':br', $bairro);
+        $stmt->bindParam(':ra', $endereco);
+        $stmt->bindParam(':nm', $numero);
+        $stmt->bindParam(':fkcd', $cidade);
+        $stmt->bindParam(':fkem', $idempresa[0][0]);
+
+        $stmt->execute();
+
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
-        echo "<meta http-equiv='refresh' content='2; URL=../Home/login.php'/>";
+        echo "<meta http-equiv='refresh' content='0; URL=../Home/login.php'/>";
     } catch (PDOException $e) {
         echo $e;
-        echo "<script> alert('Insira os dados de maneira correta'); </script>";
     }
 }
 ?>
