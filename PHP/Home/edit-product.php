@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+?>
+
+
+<?php
     require_once ("../class/connection.php");
     $pdo = conectar();
 
@@ -40,38 +46,7 @@
 
 <body>
 
-<div class="sidebar">
-
-        <div class="imgSIDEBAR">
-            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
-        </div>
-        
-        <header>Nome do ADM</header>
-        <ul>
-            <li>
-                <a href="../Admin/adm-home.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-            </li>
-
-            <div class="home">
-            <li>
-                <a href="#"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
-            </li>
-            </div>
-
-            <li>
-                <a href="../Admin/adm-clients.php"><i class="fa-solid fa-user"></i> Clientes</a>
-            </li>
-
-            <li>
-                <a href="../Admin/adm-employees.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
-            </li>
-        
-            <li class="voltar">
-                <a href="../Admin/adm-products.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            </li>
-
-        </ul>
-    </div>
+<?php include("../class/adm-sidebar.php"); ?>
     <center><br>
         <div class="admEDIT">
         <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -81,8 +56,6 @@
             <h1>Editar Produto</h1>
         </div>
     </center>
-    
-
 
     <form action="" method="post" class="botoes pt-5 espacamento">
         <div class="pt-5">

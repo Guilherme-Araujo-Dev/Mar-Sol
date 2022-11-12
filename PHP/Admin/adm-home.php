@@ -21,7 +21,7 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
     <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm-home.css">
 
     <!-- Importando o CSS do header-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">

@@ -1,3 +1,8 @@
+<?php
+session_start();
+if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+?>
+
 <?php 
     include_once("../class/connection.php");
     conectar(); 
@@ -26,53 +31,24 @@
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
+    <!-- Importando o CSS do sidebar-->
+    <link rel="stylesheet" href="../../CSS/style-product3.css">
+
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
-
-    <div class="sidebar">
-
-        <div class="imgSIDEBAR">
-            <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
-        </div>
-
-        <header>Nome do ADM</header>
-        <ul>
-            <li>
-                <a href="../Admin/adm-home.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
-            </li>
-
-            <div class="home">
-            <li>
-                <a href="#"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
-            </li>
-            </div>
-
-            <li>
-                <a href="../Admin/adm-clients.php"><i class="fa-solid fa-user"></i> Clientes</a>
-            </li>
-
-            <li>
-                <a href="../Admin/adm-employees.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
-            </li>
-            
-            <li class="voltar">
-                <a href="../Admin/adm-products.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            </li>
-
-        </ul>
-    </div>
+<?php include("../class/adm-sidebar.php"); ?>
     <center><br>
         <div class="admCREATE">
             <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
             <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
             </svg>
-            <h1>Criar Produto</h1>
+            <h1> Criar Produto</h1>
         </div>
     </center>
     <br>
-    <form action="" method="post" class="botoesss">
+    <form action="" method="post" class="form">
         <div>
             <p class="nomeproduto">Nome do Produto:</p>
             <input type="text" id="caixa" name="nome" />
@@ -105,7 +81,7 @@
         </div>
         <input type="submit" value="Salvar" name="btnSalvar" class="submit">
         <button>Cancelar</button>
-    </form>
+    
 
         
 

@@ -1,4 +1,4 @@
-.admEDIT{
+.admCREATE{
     padding-left: 70px;
     margin-left: 150px;
     border-bottom: 70px solid rgb(255, 194, 50);
@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.botoes{
+.form{
     text-align: center;
     padding-left: 15%;
 }

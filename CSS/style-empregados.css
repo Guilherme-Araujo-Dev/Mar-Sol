@@ -1,55 +1,7 @@
-*{
-    margin:0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-}
-
-#corpo{
-    text-align: center;
-}
-
 .voltar{
     padding-top: 70px;
 
 } 
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #800000;
-}
-
-.admm{
-    padding-top: 86px;
-    padding-left: 240px;
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.home{
-    background-color: rgb(177, 174, 174);
-}
-
-.imagem{
-    padding-left: 480px;
-}
-
-.excluir{
-    text-align: center;
-}
-
-.voltarINICIAL{
-    color: blue;
-}
-
-/*IMAGEM DA LOGO DO SITE EM SIMA DO NOME DO ADM*/
-
-.imgSIDEBAR{
-    text-align: center;
-}
-
-/*css da pagina admCLIENT.php 👇👇*/
 
 .admCLIENT{
     padding-left: 70px;
@@ -63,9 +15,9 @@
 }
 
 .cart-page{
-    padding-top: 60px;
-    padding-left: 400px;
-    width: 1151px;
+    padding-top: 4%;
+    padding-left: 30%;
+    width: 88%;
 
 
 }
@@ -82,24 +34,24 @@ table{
 
 th{
     text-align: left;
-    padding: 5px;
+    padding: 1%;
     color: #fff;
     background: #383535;
     font-weight: normal;
 }
 
 td{
-    padding: 10px 5px;
+    padding: 1% 0%;
 }
 
 td a{
     color: #ff523b;
-    font-size: 12px;
-    padding-left: 10px;
+    font-size: 80%;
+    padding-left: 10%;
 }
 
 .containerPRODUTOS{
-    padding: 30px;
+    padding: 30%;
 }
 
 .cart-info p{
@@ -107,9 +59,9 @@ td a{
 }
 
 .centralizado{
-    padding-left: 15px;
+    padding-left: 5%;
 }
 
 .centralizado2{
-    padding-left: 20px;
+    padding-left: 20%;
 }

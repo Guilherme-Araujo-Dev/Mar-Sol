@@ -11,20 +11,20 @@
         <p> <?php echo $_SESSION['usuario'] ?> </p>
         <ul>
             <li>
-                <a href="../Admin/adm-home.php"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+                <a href="../Admin/adm-home.php"><i class="fa-sharp fa-solid fa-house"> Home</i></a>
             </li>
 
             <li>
-                <a href="../Admin/adm-products.php"><i class="fa-solid fa-cookie-bite"></i> Produto</a>
+                <a href="../Admin/adm-products.php"><i class="fa-solid fa-cookie-bite"> Produtos</i></a>
             </li>
 
             <li>
-                <a href="../Admin/adm-products.php"><i class="fa-solid fa-user"></i> Clientes</a>
+                <a href="../Admin/adm-clients.php"><i class="fa-solid fa-user"> Clientes</i></a>
             </li>
 
 
             <li>
-                <a href="../Admin/adm-employees.php"><i class="fa-solid fa-user-tie"></i> Empregados</a>
+                <a href="../Admin/adm-employees.php"><i class="fa-solid fa-user-tie"> Empregados</i></a>
             </li>
             
             <li class="voltar">

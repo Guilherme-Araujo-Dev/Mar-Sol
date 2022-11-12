@@ -3,6 +3,9 @@ session_start();
 if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
 ?>
 
+<?php include_once("../../Class/connection.php");
+    conectar(); 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,48 +23,18 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
-    
-    <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-adm.css">
 
    <!-- Importando o CSS-->
    <link rel="stylesheet" href="../../../CSS/style-pedidos-andamentos.css">
 
+   
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-    <div class="sidebar">
 
-        <header>PERFIL</header>
-        <ul>
-            <li>
-                <a href="#"> Pedidos Encaminhados</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-entregar.php"> Pedidos à Entregar</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-entregues.php"> Pedidos Entregues</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-cancelados.php"> Pedidos Cancelados</a>
-            </li>
-
-            <!--
-            <li class="voltar">
-                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            </li>
-            -->
-        </ul>
-    </div>
-</head>
-
-<body>
+<?php include("../../class/adm-sidebar.php"); ?>
 <center><br>
         <div class="admREPORT">
             <h1>Encaminhados</h1>
@@ -118,5 +91,6 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     </div>
 
 <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
