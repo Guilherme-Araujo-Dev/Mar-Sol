@@ -140,19 +140,22 @@ if (isset($_POST['btnCadastro'])) {
 
     $senha = md5($senha); // Deixando a senha encriptografada
 
-    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj, estado, cidade) VALUES (:ne, :ec, :nc, :s, :f, :cj, :es, :cd)";
+    $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES (:ne, :ec, :nc, :s, :f, :cj)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':ne', $empresa);
     $stmt->bindParam(':ec', $email);
-    $stmt->bindParam(':nc', $nome);
+    $stmt->bindParam(':nc', $nomeUsuario);
     $stmt->bindParam(':s', $senha);
     $stmt->bindParam(':f', $fone);
+    $stmt->bindParam(':cj', $CNPJ);
+
+    /*
     $stmt->bindParam(':es', $estado);
     $stmt->bindParam(':cd', $cidade);
 
     echo "Estado: " . $estado;
     echo "Cidade: " . $cidade;
-
+*/
     try {
         $stmt->execute();
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
