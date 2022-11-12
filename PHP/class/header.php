@@ -1,13 +1,13 @@
 <?php
 session_start();
-if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
+if (!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
 
 ?>
 
 <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
 
 <header>
-<nav class="navbar navbar-expand-lg color-header p-2">
+    <nav class="navbar navbar-expand-lg color-header p-2">
         <a class="navbar-brand" href="index.php">
             <img src="" alt="" width="80" height="60">
         </a>
@@ -26,12 +26,13 @@ if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
                 <a class="nav-link navPage" href="../Home/about.php" id="about">Sobre</a>
                 <!--<a class="nav-link navPage" href="fazer pedido.php" id="makeRequest">Fazer Pedido</a>-->
 
-                <a class="nav-link navPage" href="<?php if($_SESSION['usuario'] == null) echo "../Home/login.php";
-                                                        else { 
-                                                            if($_SESSION['acesso'] == "Admin") echo "../Admin/index.php"; 
-                                                            else if($_SESSION['acesso'] == "User") echo "Panel/profile.php";
-                                                            else echo "../Home/index.php";
-                                                        } ?>" id="makeRequest"><?php if($_SESSION['usuario'] == null) echo "Login"; else echo $_SESSION['usuario'] ?></a>
+                <a class="nav-link navPage active" href="<?php if ($_SESSION['usuario'] == null) echo "../Home/login.php";
+                                                            else {
+                                                                if ($_SESSION['acesso'] == "Admin") echo "../Admin/index.php";
+                                                                else if ($_SESSION['acesso'] == "User") echo "Panel/profile.php";
+                                                                else echo "../Home/index.php";
+                                                            } ?>" id="makeRequest"><?php if ($_SESSION['usuario'] == null) echo "Login";
+                                                                                else echo $_SESSION['usuario'] ?></a>
 
                 <div class="perfil_carrinho">
                     <a href="carrinho.php"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -39,10 +40,8 @@ if(!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
                         </svg>
                     </a>
                 </div>
-                
+
             </div>
         </div>
     </nav>
 </header>
-
-<script src="../JS/select-page.js"></script>

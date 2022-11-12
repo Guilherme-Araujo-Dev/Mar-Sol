@@ -25,7 +25,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     <link rel="stylesheet" type="text/css" href="../../../CSS/style-adm.css">
 
    <!-- Importando o CSS-->
-   <link rel="stylesheet" href="../../../CSS/style-pedidos-andamentos.css.css">
+   <link rel="stylesheet" href="../../../CSS/style-pedidos-andamentos.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>

@@ -75,18 +75,19 @@ if (isset($_POST['btnLogin'])) {
         exit();
     }
 
-    $sql = "SELECT emailcliente FROM empresas WHERE emailcliente = :u AND senha = :s";
+    $sql = "SELECT * FROM empresas WHERE emailcliente = :u AND senha = :s";
 
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':u', $usuario);
     $stmt->bindParam(':s', $senha);
     $stmt->execute();
-    $user = explode('@', $usuario, 2);
-    $user[0] = explode('.', $user[0], 2);
-    $user_b = explode(' ', $user[0][0], 2);
+
+    $user = $stmt->fetchAll();
+
+    $user = explode(' ', $user[0]['nomecliente'], 2);
 
     if ($stmt->rowCount() > 0) {
-        $_SESSION['usuario'] = strtoupper($user_b[0]);
+        $_SESSION['usuario'] = $user[0];
 
         $sql = "SELECT * FROM empresas WHERE emailcliente = :u";
 
