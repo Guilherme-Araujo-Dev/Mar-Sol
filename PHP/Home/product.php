@@ -67,9 +67,9 @@
                 <li class="produto">
                     <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>" width="300px" height="167px">
                     <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
-                    <p class="product-text">Informações Nutricionais:</p>
-                    <h2 class="product-text">Preço: R$<?php echo $p['preco']; ?></h2>
-                    <button class="btncomprar" name="btncomprar" type="submit">Comprar</button>
+                    <p class="product-text">Informações Nutricionais: <? echo $p['info']; ?> </p>
+                    <h2 class="product-text">Preço: R$ <?php echo number_format($p['preco'], 2, ',', ''); ?></h2>
+                    <button class="btnComprar" name="btnComprar" type="submit">Comprar</button>
                 </li>
             <?php } ?>
         </ul>
