@@ -97,7 +97,7 @@ if (isset($_POST['btnLogin'])) {
             if ($emp[0]['tipo'] == 'A') $_SESSION['acesso'] = "Admin";
             else $_SESSION['acesso'] = "User";
         } else {
-            //echo "<script> alert('O usuário escolhido está destivado') </script>";
+            echo "<script> alert('O usuário escolhido está destivado') </script>";
         }
 
         exit();
