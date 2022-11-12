@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') header("Refresh: 0;url=../Home/index.php");
+if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
 ?>
 
 <!DOCTYPE html>

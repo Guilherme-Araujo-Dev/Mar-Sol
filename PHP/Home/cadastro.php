@@ -50,7 +50,6 @@ $rs = $stmt->fetchAll();
 
 <body>
 
-    <!-- Importando o Cabeçalho -->
     <?php include("../class/header.php"); ?>
 
     <div class="corpo horizontal-center">
@@ -97,25 +96,49 @@ $rs = $stmt->fetchAll();
                     <div class="form-row col-5">
                         <label for="nome" class="lab-estado">Estado:</label> <br>
                         <select name="estado" id="estado" class="slc-estado">
-                                <?php foreach ($rs as $r) { ?>
-                                    <option value="<?php echo $r['idestado']; ?>"><?php echo $r['nomeestado']; ?></option>
-                                <?php } ?>
-                            </select>
-                            <br><br>
-                        </div>
-                        <div id="cidade" class="lab-cidade"></div><br>
+                            <?php foreach ($rs as $r) { ?>
+                                <option value="<?php echo $r['idestado']; ?>"><?php echo $r['nomeestado']; ?></option>
+                            <?php } ?>
+                        </select>
+                        <br><br>
                     </div>
+                    <div id="cidade" class="lab-cidade"></div><br>
+                </div>
 
-                    <div class="card-footer">
-                        <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
-                        <p>Já possui uma conta?<u> <a href="login.php"> Clique aqui!</u></a></p>
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">CEP:</label>
+                        <input id="nome" name="cep" type="text" placeholder="00000-000" oninput="CEPmask(this)" class="">
                     </div>
+                    <div class="form-group col-5">
+                        <label for="nome">Bairro:</label>
+                        <input id="nome" name="bairro" type="text" class="">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-5">
+                        <label for="nome">Endereco:</label>
+                        <input id="nome" name="endereco" type="text" placeholder="R. " oninput="CEPmask(this)" class="">
+                    </div>
+                    <div class="form-group col-5">
+                        <label for="nome">Número:</label>
+                        <input id="nome" name="numero" type="text" class="">
+                    </div>
+                </div>
+
+                <div class="card-footer ">
+                    <input type="submit" value="Cadastrar" name="btnCadastro" class="submit">
+                    <p>Já possui uma conta?<u> <a href="login.php"> Clique aqui!</u></a></p>
+                </div>
             </form>
         </div>
     </div>
     <!-- Importando o JS -->
     <script src="../../JS/mask.js"></script>
     <script src="../../JS/select-stades.js"></script>
+
+    <?php include("../class/footer.php"); ?>
 
 </body>
 
@@ -134,8 +157,8 @@ if (isset($_POST['btnCadastro'])) {
     $cidade          = isset($_POST['cidades'])     ? ($_POST['cidades'])       : null;
 
     if (empty($nomeUsuario) || empty($fone) || empty($CNPJ) || empty($empresa) || empty($email) || empty($cidade) || empty($estado) || empty($senha) || empty($endereco)) {
-        //echo "<script> alert('Necessário Preencher todos os campos'); </script>";
-        //exit();
+        echo "<script> alert('Necessário Preencher todos os campos'); </script>";
+        exit();
     }
 
     $senha = md5($senha); // Deixando a senha encriptografada
@@ -159,9 +182,10 @@ if (isset($_POST['btnCadastro'])) {
     try {
         $stmt->execute();
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
+        echo "<meta http-equiv='refresh' content='2; URL=../Home/login.php'/>";
     } catch (PDOException $e) {
         echo $e;
-        //echo "<script> alert('Insira os dados de maneira correta'); </script>";
+        echo "<script> alert('Insira os dados de maneira correta'); </script>";
     }
 }
 ?>

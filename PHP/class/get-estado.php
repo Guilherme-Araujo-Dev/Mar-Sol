@@ -12,9 +12,9 @@ $rs = $stmt->fetchAll();
 echo "<label for='nome' class='lab-cidade'>Cidade:</label>";
 
 if($rs) {
-    echo "<select id='cidades' name='cidades'";
+    echo "<select id='cidades' name='cidades' class='slc-cidade'>";
     foreach ($rs as $r) {
-        echo "<option class='slc-cidade' value=";
+        echo "<option value=";
         echo $r['idcidade'];
         echo ">";
         echo $r['nomecidade'];
@@ -23,7 +23,7 @@ if($rs) {
     echo "</select>";
 } 
 else {
-    echo "<label class='lab-cidade' style=''> Desculpe, nossos serviços não estão disponíveis na sua região </label>";
+    echo "<label class='lab-cidade' style=''> Desculpe, nossos serviços não estão disponíveis <br> na sua região </label>";
 }
 
 

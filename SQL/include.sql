@@ -96,10 +96,10 @@ INSERT INTO produtos (nomeproduto, peso, preco, imagem, fk_idcategoria) VALUES (
 -- INSERT INTO funcionario (nomefuncionario, email, fone, cpf) VALUES ( 'Sarah Alves Costa', '527.498.490-80', 'sarah.costa@trabalho.com', '(45) 93473-2231', 'PR', 'Cascavel', 'Rua 7 de Setembro, 823');
 -- INSERT INTO funcionario (nomefuncionario, email, fone, cpf) VALUES ( 'Emily Lima Barros', '103.291.150-65', 'emily.barros@trabalho.com', '(45) 94552-1833', 'PR', 'Cascavel', 'Rua 8 de Setembro, 175');
 
-INSERT INTO movimentos (data, funcionario_idfuncionario, empresa_idempresa) VALUES ('2018-01-01', 1, 1);
+-- INSERT INTO movimentos (data, funcionario_idfuncionario, empresa_idempresa) VALUES ('2018-01-01', 1, 1);
 
-INSERT INTO movimento_itens (fk_idproduto, fk_idmovimento, quantidade) VALUES (1, 1, 20);
-INSERT INTO movimento_itens (fk_idproduto, fk_idmovimento, quantidade) VALUES (2, 1, 10);
-INSERT INTO movimento_itens (fk_idproduto, fk_idmovimento, quantidade) VALUES (3, 1, 5);
+-- INSERT INTO movimento_itens (fk_idproduto, fk_idmovimento, quantidade) VALUES (1, 1, 20);
+-- INSERT INTO movimento_itens (fk_idproduto, fk_idmovimento, quantidade) VALUES (2, 1, 10);
+-- INSERT INTO movimento_itens (fk_idproduto, fk_idmovimento, quantidade) VALUES (3, 1, 5);
 
 

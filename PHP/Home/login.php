@@ -57,6 +57,9 @@ $pdo = conectar();
             </div>
         </form>
     </div>
+
+    <?php include("../class/footer.php"); ?>
+
 </body>
 </html>
 
@@ -96,6 +99,8 @@ if (isset($_POST['btnLogin'])) {
         if ($emp[0]['status'] == 'A') {
             if ($emp[0]['tipo'] == 'A') $_SESSION['acesso'] = "Admin";
             else $_SESSION['acesso'] = "User";
+
+            echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
         } else {
             echo "<script> alert('O usuário escolhido está destivado') </script>";
         }

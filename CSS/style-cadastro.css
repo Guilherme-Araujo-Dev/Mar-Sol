@@ -114,7 +114,7 @@ h2 {
 }
 
 .container {
-
+    padding-bottom: 85%;
     background-color: rgb(228, 228, 228);
 }
 
@@ -148,7 +148,6 @@ p a {
 }
 
 .slc-cidade {
-    margin-left: -10px;
     padding-right: 145px;
     padding-left: 0px;
     margin-top: 9px;
