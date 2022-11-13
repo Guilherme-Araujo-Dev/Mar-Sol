@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
-
-?>
-
-<link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
+<link rel="stylesheet" type="text/css" href="../../../CSS/style-header.css">
 
 <header>
     <nav class="navbar navbar-expand-lg color-header p-2">

@@ -24,13 +24,12 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     
     <!--Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
-    
 
-    <title>Mar & Sol - Painel do Administrador</title>
+    <title>Mar & Sol - Painel do Administrador</title>  
 </head>
 <body>
 
-
+<?php include("../../Class/panel-header.php") ?>
 <?php include("../../Class/panel-sidebar.php") ?>
 
     <center>
