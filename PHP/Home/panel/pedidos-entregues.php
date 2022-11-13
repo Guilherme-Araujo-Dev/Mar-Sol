@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
+if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
 ?>
 
 
@@ -20,63 +20,39 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
-    
+
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../../CSS/style-adm.css">
 
-   <!-- Importando o CSS-->
-   <link rel="stylesheet" href="../../../CSS/style-pedidos-entregues.css">
+    <!-- Importando o CSS-->
+    <link rel="stylesheet" href="../../../CSS/style-pedidos-entregues.css">
+
+    <!--Importando o CSS do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-    <div class="sidebar">
+    <?php include("../../Class/panel-sidebar.php") ?>
 
-        <header>PERFIL</header>
-        <ul>
-            <li>
-                <a href="../panel/pedidos-andamentos.php"> Pedidos Encaminhados</a>
-            </li>
+    <body>
+        <center><br>
+            <div class="admREPORT">
+                <h1>Entregues</h1>
+            </div>
+        </center>
+        <br><br>
 
-            <li>
-                <a href="../panel/pedidos-entregar.php"> Pedidos à Entregar</a>
-            </li>
-
-            <li>
-                <a href="#"> Pedidos Entregues</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-cancelados.php"> Pedidos Cancelados</a>
-            </li>
-
-            <!--
-            <li class="voltar">
-                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            </li>
-            -->
-        </ul>
-    </div>
-</head>
-
-<body>
-<center><br>
-        <div class="admREPORT">
-            <h1>Entregues</h1>
-        </div>
-    </center>
-    <br><br>
-
-    <div class="small-container cart-page">
-        <table>
-            <tr>
-                <th>Produto</th>
-                <th class="invisivel">invisivel</th>
-                <th class="invisivel">invisivel</th>
-                <th>Nome do Produto</th>
-            </tr>
+        <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th class="invisivel">invisivel</th>
+                    <th class="invisivel">invisivel</th>
+                    <th>Nome do Produto</th>
+                </tr>
 
 
                 <td>
@@ -88,7 +64,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
                 <td>
                     <div>
                         <p>
-                            
+
                         </p>
                     </div>
                 </td>
@@ -96,7 +72,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
                 <td>
                     <div>
                         <p>
-                            
+
                         </p>
                     </div>
                 </td>
@@ -109,14 +85,15 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
                     </div>
                 </td>
 
-            </tr>
-            <!--
+                </tr>
+                <!--
                 1. O tr cria uma nova linha dentro da tabela
                 2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
             -->
-        </table>
-    </div>
+            </table>
+        </div>
 
-<script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
-</body>
+        <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
+    </body>
+
 </html>

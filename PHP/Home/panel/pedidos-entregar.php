@@ -31,34 +31,9 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 
 <body>
 
-    <div class="sidebar">
 
-        <header>PERFIL</header>
-        <ul>
-            <li>
-                <a href="../panel/pedidos-andamentos.php"> Pedidos Encaminhados</a>
-            </li>
+<?php include("../../Class/panel-sidebar.php") ?>
 
-            <li>
-                <a href="#"> Pedidos à Entregar</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-entregues.php"> Pedidos Entregues</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-cancelados.php"> Pedidos Cancelados</a>
-            </li>
-
-            <!--
-            <li class="voltar">
-                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            </li>
-            -->
-        </ul>
-    </div>
-</head>
 
 <body>
 <center><br>

@@ -26,39 +26,17 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
    <!-- Importando o CSS-->
    <link rel="stylesheet" href="../../../CSS/style-pedidos-cancelados.css">
 
+   <!--Importando o CSS do sidebar-->
+   <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-    <div class="sidebar">
 
-        <header>PERFIL</header>
-        <ul>
-            <li>
-                <a href="../panel/pedidos-andamentos.php"> Pedidos Encaminhados</a>
-            </li>
 
-            <li>
-                <a href="../panel/pedidos-entregar.php"> Pedidos à Entregar</a>
-            </li>
-
-            <li>
-                <a href="../panel/pedidos-entregues.php"> Pedidos Entregues</a>
-            </li>
-
-            <li>
-                <a href="#"> Pedidos Cancelados</a>
-            </li>
-
-            <!--
-            <li class="voltar">
-                <a href="../adm/admPRODUCT.php"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            </li>
-            -->
-        </ul>
-    </div>
-</head>
+<?php include("../../Class/panel-sidebar.php") ?>
 
 <body>
 <center><br>

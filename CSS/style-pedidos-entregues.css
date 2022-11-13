@@ -1,5 +1,5 @@
 .admREPORT{
-    padding-left: 150px;
+    padding-left: 11%;
     margin-left: 150px;
     border-bottom: 70px solid rgb(255, 194, 50);
     border-left: 30px solid transparent;
@@ -9,23 +9,16 @@
     display: flex;
 }
 
-.admREPORT h1{
-    padding-top: 3px;
-}
-
 .cart-page{
-    padding-top: 60px;
-    padding-left: 450px;
-    width: 1151px;
-    padding-right: 100px;
-}
+    padding-top: 4%;
+    padding-left: 30%;
+    width: 88%;
 
-.cart-page .codigo{
-    /*padding-left: 100px; mover a palavra código para a esquerda*/
+
 }
 
 table{
-    width: 110%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -35,14 +28,25 @@ table{
 }
 
 th{
-    padding: 5px;
+    text-align: left;
+    padding: 1%;
     color: #fff;
     background: #383535;
     font-weight: normal;
 }
 
 td{
-    padding: 10px 5px;
+    padding: 1% 0%;
+}
+
+td a{
+    color: #ff523b;
+    font-size: 80%;
+    padding-left: 10%;
+}
+
+.containerPRODUTOS{
+    padding: 30%;
 }
 
 .cart-info p{
@@ -50,13 +54,9 @@ td{
 }
 
 .centralizado{
-    padding-left: 15px;
+    padding-left: 5%;
 }
 
 .centralizado2{
-    padding-left: 20px;
-}
-
-.invisivel{
-    color: #383535;
+    padding-left: 20%;
 }

@@ -11,6 +11,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 <html lang="pt-br">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,14 +28,17 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
    <!-- Importando o CSS-->
    <link rel="stylesheet" href="../../../CSS/style-pedidos-andamentos.css">
 
+   <!--Importando o CSS do sidebar-->
+   <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+
    
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
+<?php include("../../Class/panel-sidebar.php") ?>
 
-<?php include("../../class/adm-sidebar.php"); ?>
 <center><br>
         <div class="admREPORT">
             <h1>Encaminhados</h1>

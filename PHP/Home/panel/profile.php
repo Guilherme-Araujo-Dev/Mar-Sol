@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
+if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../profile.php'/>";
 ?>
 
 <!DOCTYPE html>
@@ -18,37 +18,37 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
-    
-    <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-adm.css">
 
     <!-- Importando o CSS-->
     <link rel="stylesheet" type="text/css" href="../../../CSS/style-profile.css">
-
-
+    
+    <!--Importando o CSS do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
     
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 <body>
 
-    <div class="sidebar">
-        <header>Perfil</header>
+
+<div class="sidebar">
+
+        <a href="../panel/profile.php"><header>Perfil</header></a>
         <ul>
             <li>
                 <a href="../panel/pedidos-andamentos.php"> Pedidos Encaminhados</a>
             </li>
 
             <li>
-                <a href=""> Pedidos à Entregar</a>
+                <a href="../panel/pedidos-entregar.php"> Pedidos à Entregar</a>
             </li>
 
             <li>
-                <a href=""> Pedidos Entregues</a>
+                <a href="../panel/pedidos-entregues.php"> Pedidos Entregues</a>
             </li>
 
             <li>
-                <a href=""> Pedidos Cancelados</a>
+                <a href="../panel/pedidos-cancelados.php"> Pedidos Cancelados</a>
             </li>
 
             <!--
