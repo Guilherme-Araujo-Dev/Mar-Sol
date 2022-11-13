@@ -1,5 +1,6 @@
 .produtos {
-	width: 940px;
+	padding-left: 1%;
+	width: 60%;
 	margin: 0 auto;
 	background-color: #eeeeee;
 	margin-bottom: 2%;
@@ -95,6 +96,6 @@
     font-weight:bold;
 	display: block;
     background:#eec81f;
-	margin-left: 501px; /*n consegui por o botão comprar NA RISCA do background*/
-	margin-top: 100px;
+	margin-left: 48%; /*n consegui por o botão comprar NA RISCA do background*/
+	margin-top: 18%;
 }

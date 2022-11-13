@@ -34,7 +34,7 @@ if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; U
 </head>
 
 <body>
-
+    <?php include("../../Class/panel-header.php") ?>
     <?php include("../../Class/panel-sidebar.php") ?>
 
     <body>
