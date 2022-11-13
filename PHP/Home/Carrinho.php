@@ -69,8 +69,8 @@
       <div class="total-price">
         <table>
           <tr>
-            <td>Exemplo</td>
-            <td>R$200.00</td>
+            <td>Total</td>
+            <td>R$21.00</td>
           </tr>
         </table>
         

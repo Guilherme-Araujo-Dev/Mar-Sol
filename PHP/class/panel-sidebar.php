@@ -4,7 +4,7 @@
 <div class="sidebar">
 
     <div class="perfil">
-        <a href="../panel/profile.php"><header>Perfil</header></a>
+        <a href="../Panel/profile.php"><header>Perfil</header></a>
     </div>
 
         <ul>
