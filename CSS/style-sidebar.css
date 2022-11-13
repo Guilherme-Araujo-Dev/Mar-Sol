@@ -1,10 +1,10 @@
-
-.sidebar{
+.sidebar {
     position: fixed;
     left: 0;
     width: 270px;
     height: 100%;
     background: gray;
+    box-shadow: 0px 0px 3px 3px #00000074;
 }
 
 .sidebar p {
@@ -16,7 +16,7 @@
     user-select: none;
 }
 
-.sidebar ul a{
+.sidebar ul a {
     display: block;
     height: 100%;
     width: 100%;
@@ -29,18 +29,19 @@
     border-bottom: 1px solid black;
     text-decoration: none;
 }
-ul li:hover a{
+
+ul li:hover a {
     padding-left: 50px;
 }
 
-.sidebar ul a i{
+.sidebar ul a i {
     margin-left: 16px;
 }
 
-ul{
+ul {
     padding-left: 1px;
 }
 
-i{
+i {
     padding-left: 20px;
 }
