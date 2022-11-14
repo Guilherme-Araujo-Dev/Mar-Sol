@@ -117,7 +117,7 @@ if (isset($_GET['ac'])) {
                 } else {
                   $total = 0;
                   $i = 0;
-                 
+
                   foreach ($_SESSION['carrinho'] as $id => $qtd) {
                     $sql = "SELECT * FROM produtos WHERE idproduto = :p";
                     $stmt = $pdo->prepare($sql);
@@ -143,11 +143,9 @@ if (isset($_GET['ac'])) {
 						<td style="text-align: right;">R$ ' . $sub . '</td>
             <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" class="imgtrash"></a></td>
 					</tr>';
-          
-          
                   }
                   $total = number_format($total, 2, ',', '.');
-                  
+
                   echo '<tr>
 				<td colspan="1"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
         <td colspan="2" class="pl-5"></td>
@@ -155,7 +153,7 @@ if (isset($_GET['ac'])) {
                 } ?>
               </form>
 
-      </div>
+          </div>
 
 
     </table>
@@ -174,7 +172,7 @@ if (isset($_GET['ac'])) {
           <div class="modal-body">
             <form method="post">
               <div class="form-group">
-                <label class="col-form-label">Cliente:</label> 
+                <label class="col-form-label">Cliente:</label>
                 <input type="text" value="<?php echo $_SESSION['nomeCompleto']; ?>" readonly="readonly"> <br>
                 <label class="col-form-label">Empresa: </label>
                 <input type="text" value="<?php echo $_SESSION['empresa']; ?>" readonly="readonly"> <br>

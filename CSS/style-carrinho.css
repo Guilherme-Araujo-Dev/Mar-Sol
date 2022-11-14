@@ -83,14 +83,25 @@ th{
     padding-left: 90px;
 }
 
-td{
-    padding: 1% 0%;
-}
 
-td input{
+.valoresprodutos input{
     width: 50%;
     height: 30px;
     padding: 5px;
+    padding-top: 5px;
+    margin-top: 20%;
+}
+
+.valoresprodutos p{
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    padding-top: 5px;
+    margin-top: 20%;
+}
+
+td b {
+    margin-top: 50px;
 }
 
 td a{
