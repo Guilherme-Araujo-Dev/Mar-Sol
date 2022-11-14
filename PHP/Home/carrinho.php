@@ -147,8 +147,8 @@ if (isset($_GET['ac'])) {
                   $total = number_format($total, 2, ',', '.');
                   
                   echo '<tr>
-				<td colspan="2"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
-				<td colspan="2" class="text-right font-weight-bold">Total</td><td class="font-weight-bold">R$ ' . $total . '</td></tr>';
+				<td colspan="1"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
+				<td colspan="4" class="text-right font-weight-bold">Total</td><td class="font-weight-bold">R$ ' . $total . '</td></tr>';
                 } ?>
               </form>
 
