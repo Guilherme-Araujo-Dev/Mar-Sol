@@ -71,7 +71,7 @@ session_start();
                     <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
                     <p class="product-text">Informações Nutricionais: <? echo $p['info']; ?> </p>
                     <h2 class="product-text">Preço: R$ <?php echo number_format($p['preco'], 2, ',', ''); ?></h2>
-                    <button class="btnComprar" name="btnComprar" type="submit" href="carrinho.php?ac=add&id=<?php echo $p['idproduto']; ?>">Comprar</button>
+                    <button class="btnComprar" name="btnComprar" type="submit" onclick="window.location.href = 'carrinho.php?ac=add&id=<?php echo $p['idproduto']; ?>'">Comprar</button>
                 </li>
             <?php } ?>
         </ul>
