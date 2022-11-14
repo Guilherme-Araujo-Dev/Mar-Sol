@@ -84,6 +84,7 @@ if (isset($_POST['btnLogin'])) {
     $stmt->execute();
 
     $user = $stmt->fetchAll();
+    $_SESSION['idUsuario'] = $user[0]['idempresa'];
 
     $user = explode(' ', $user[0]['nomecliente'], 2);
 
