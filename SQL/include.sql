@@ -49,7 +49,7 @@ INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj)
 INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'Sorrentino', 'sorrentino.italia@spaguet.com', 'William Sorrentino', 'U29348569', '(45) 92453-6243', '22.468.756/0001-15'); -- SENHA 
 INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'Green Blacks', 'blacks.flag@credo.com', 'Amanda Dias', 'S943275631', '(45) 97897-8585', '23.468.756/0001-14'); -- SENHA 
 INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'Cioccolatta', 'cioco.latta@brasil.com', 'Nicolas Costa', 'w12934578', '(45) 91231-2354', '24.468.756/0001-13'); -- SENHA 
-INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'empresas Star', 'jo.estar@kujo.com', 'Jotaro Kujo', 'Yare Yare Daze', '(45) 95366-7865', '25.468.756/0001-12'); -- SENHA 0fa89b15799d7e5039ed375c52ce6324
+INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'Speedwagon Foundation', 'jotaro.kujo@star.com', 'Jotaro Kujo', '0fa89b15799d7e5039ed375c52ce6324', '(45) 95366-7865', '25.468.756/0001-12'); -- SENHA Yare Yare Daze
 INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'Magna ', 'swing.magna@brasil.com', 'Rafael Correia', 'y45454545', '(45) 91245-4576', '01.468.756/0001-25'); -- SENHA 
 
 INSERT INTO endereco_empresas (cep, bairro, rua, numero, fk_idcidade, fk_idempresa) VALUES (85803280, "Santa Felicidade", "Geraldo de Oliveira", 740, 1, 11);

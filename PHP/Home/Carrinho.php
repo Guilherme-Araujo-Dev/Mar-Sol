@@ -1,6 +1,8 @@
-<?php 
-  include_once("../class/connection.php");
-  conectar();
+<?php
+include_once("../class/connection.php");
+conectar();
+session_start();
+if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=login.php'/>";
 ?>
 
 <!DOCTYPE html>
@@ -32,54 +34,54 @@
   <?php include("../class/header.php"); ?>
 
 
-<br>
-    <div class="imgCARRINHO">
-      <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+  <br>
+  <div class="imgCARRINHO">
+    <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
       <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-      </svg>
+    </svg>
 
-      <h1>Carrinho de compras</h1>
-    </div>
+    <h1>Carrinho de compras</h1>
+  </div>
 
-    <div class="small-container cart-page">
+  <div class="small-container cart-page">
+    <table>
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Total parcial</th>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="../../IMG/food/bbf.jpg">
+            <div>
+              <p>Bolinho de batata com frango</p>
+              <small>Preço: R$21.00</small><br>
+              <a href="">Remover</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1"></td>
+        <td>R$21.00</td>
+      </tr>
+    </table>
+
+    <!--SUBTOTAL DOS PRODUTOS-->
+    <div class="total-price">
       <table>
         <tr>
-          <th>Produto</th>
-          <th>Quantidade</th>
-          <th>Total parcial</th>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="../../IMG/food/bbf.jpg">
-              <div>
-                <p>Bolinho de batata com frango</p>
-                <small>Preço: R$21.00</small><br>
-                <a href="">Remover</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1"></td>
+          <td>Total</td>
           <td>R$21.00</td>
         </tr>
       </table>
 
-<!--SUBTOTAL DOS PRODUTOS-->
-      <div class="total-price">
-        <table>
-          <tr>
-            <td>Total</td>
-            <td>R$21.00</td>
-          </tr>
-        </table>
-        
-      </div>
     </div>
+  </div>
 
 
 
-    <?php include("../class/footer.php"); ?>
+  <?php include("../class/footer.php"); ?>
 
 
 </body>

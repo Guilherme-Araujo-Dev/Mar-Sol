@@ -200,7 +200,11 @@ if (isset($_POST['btnCadastro'])) {
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
         echo "<meta http-equiv='refresh' content='0; URL=../Home/login.php'/>";
     } catch (PDOException $e) {
-        echo $e;
+        $erro = explode("'", $e->getMessage(), 2);
+        if($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";
+        else echo "<script> alert('Insira os dados da maneira correta'); </script>";
+    } catch(Exception) {
+        echo "<script> alert('Insira os dados da maneira correta'); </script>";
     }
 }
 ?>
