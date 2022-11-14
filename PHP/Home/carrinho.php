@@ -135,12 +135,12 @@ if (isset($_GET['ac'])) {
                     echo '
                     
 					<tr class="valoresprodutos">
-          <td><img src="../../IMG/food/' . $dados['imagem'] . '" width="40px" height="20px"></a></td>
+          <td class="td-imagem"><img src="../../IMG/food/' . $dados['imagem'] . '"></a></td>
           
-						<td><b>' . $produto . '</b></td>
+						<td><p>' . $produto . '</p></td>
 						<td><input type="text" style="text-align:right" size="3" name="prod[' . $id . ']" value="' . $qtd . '" /></td>
-						<td style="text-align: right;">R$ ' . $preco . '</td>
-						<td style="text-align: right;">R$ ' . $sub . '</td>
+						<td style="text-align: right; padding-top: 33px; padding-right: 48px;" >R$ ' . $preco . '</td>
+						<td style="text-align: right; padding-top: 33px; ">R$ ' . $sub . '</td>
             <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" class="imgtrash"></a></td>
 					</tr>';
                   }
@@ -149,7 +149,7 @@ if (isset($_GET['ac'])) {
                   echo '<tr>
 				<td colspan="1"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
         <td colspan="2" class="pl-5"></td>
-				<td colspan="1" class="text-center font-weight-bold" style="padding-left: 2.5%;">Total</td> <td class="font-weight-bold" colspan="2">R$ ' . $total . '</td></tr>';
+				<td colspan="1" class="text-center text-italic"" style="padding-left: 20.5%;">Total</td> <td class="font-weight-bold valor-final" colspan="2">R$ ' . $total . '</td></tr>';
                 } ?>
               </form>
 
@@ -177,12 +177,15 @@ if (isset($_GET['ac'])) {
                 <label class="col-form-label">Empresa: </label>
                 <input type="text" value="<?php echo $_SESSION['empresa']; ?>" readonly="readonly"> <br>
                 <label class="col-form-label">CNPJ:</label>
-                <input type="text" value="<?php echo $_SESSION['cnpj']; ?>" readonly="readonly"> <br>
+                <input type="text" value="<?php echo $_SESSION['cnpj']; ?>" readonly="readonly"> <br> <br>
               </div>
               <div class="form-group">
                 <?php $hoje = date('d/m/Y'); ?>
                 <label class="col-form-label">Data da Compra:</label>
-                <input type="text" value="<?php echo $hoje; ?>" readonly="readonly">
+                <input type="text" value="<?php echo $hoje; ?>" readonly="readonly"> <br>
+                <strong><label class="col-form-label">VALOR FINAL:  </label> </strong>
+                <label class="col-form-label text-italic"> <?php echo " R$ " . $total ?>  </label>
+
               </div>
           </div>
           <div class="modal-footer">
