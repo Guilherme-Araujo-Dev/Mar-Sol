@@ -2,7 +2,7 @@
 include_once("../class/connection.php");
 conectar();
 session_start();
-if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=login.php'/>";
+if ($_SESSION['usuario'] == null) echo ""; //"<meta http-equiv='refresh' content='0; URL=login.php'/>";
 ?>
 
 <!DOCTYPE html>

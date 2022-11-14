@@ -1,6 +1,7 @@
 <?php
-    require_once ("../class/connection.php");
-    $pdo = conectar();
+require_once("../class/connection.php");
+$pdo = conectar();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -36,10 +37,10 @@
         <!--BARRA DE PESQUISA-->
         <div class="corpo">
             <div class="divBusca">
-            <form method="POST">
-                <input type="text" class="txtBusca" id="busca" name="busca" placeholder="Buscar..." />
-                <button class="btnBusca" name="btnBusca" type="submit">Buscar</button>
-            </form>
+                <form method="POST">
+                    <input type="text" class="txtBusca" id="busca" name="busca" placeholder="Buscar..." />
+                    <button class="btnBusca" name="btnBusca" type="submit">Buscar</button>
+                </form>
             </div>
         </div>
 
@@ -56,30 +57,29 @@
         }
         // preparando o sql para não aceitar sql injection
         $stmt->execute();
-        
+
         // pegando todos os dados da tabela
         $produto = $stmt->fetchAll();
         ?>
+
         <br><br><br><br>
 
         <ul class="produtos">
-        <?php foreach ($produto as $p) { ?>
+            <?php foreach ($produto as $p) { ?>
                 <li class="produto">
                     <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>" width="300px" height="167px">
                     <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
                     <p class="product-text">Informações Nutricionais: <? echo $p['info']; ?> </p>
                     <h2 class="product-text">Preço: R$ <?php echo number_format($p['preco'], 2, ',', ''); ?></h2>
-                    <button class="btnComprar" name="btnComprar" type="submit">Comprar</button>
+                    <button class="btnComprar" name="btnComprar" type="submit" href="carrinho.php?ac=add&id=<?php echo $p['idproduto']; ?>">Comprar</button>
                 </li>
             <?php } ?>
         </ul>
     </main>
 
-
-
     <!-- Importando o Rodaré -->
-    <?php include("../class/footer.php"); 
-    exit();?>
+    <?php include("../class/footer.php");
+    exit(); ?>
 </body>
 
 </html>

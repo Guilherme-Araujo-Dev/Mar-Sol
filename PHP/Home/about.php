@@ -2,6 +2,7 @@
 <?php 
     include_once("../class/connection.php");
     conectar(); 
+    session_start();
 ?>
 
 <!DOCTYPE html>

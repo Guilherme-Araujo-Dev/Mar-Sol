@@ -1,7 +1,5 @@
 <?php
-session_start();
 if (!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
-
 ?>
 
 <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">

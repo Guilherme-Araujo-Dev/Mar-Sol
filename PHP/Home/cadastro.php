@@ -2,6 +2,7 @@
 <?php
 include_once "../class/connection.php";
 $pdo = conectar();
+session_start();
 
 $stmt = $pdo->prepare("SELECT * FROM estados ORDER BY nomeestado");
 $stmt->execute();

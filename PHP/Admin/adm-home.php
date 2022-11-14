@@ -37,9 +37,7 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
 <body>
 
 
-    <?php include("../class/adm-sidebar.php"); ?>
-
-    <p class="admm">Página do Adiministrador</p>
+<?php include("../class/adm-sidebar.php"); ?>
 
     <div class="imagem">
         <img src="../../IMG/aii.jpg">

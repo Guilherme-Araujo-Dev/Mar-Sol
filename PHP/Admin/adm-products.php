@@ -23,9 +23,6 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
     <!-- Importando o CSS dos botoes-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
 
-    <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
-
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("../class/connection.php");
     conectar();
