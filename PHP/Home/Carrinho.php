@@ -96,11 +96,12 @@ if (isset($_GET['ac'])) {
   <div class="cart-page">
     <table>
       <tr>
-        <th>Imagem</th>
-        <th>Produto</th>
-        <th>Quantidade</th>
-        <th>Preço</th>
-        <th>Subtotal</th>
+        <th class="titulo">Imagem</th>
+        <th class="produto">Produto</th>
+        <th class="quantidade">Quantidade</th>
+        <th class="preco">Preço</th>
+        <th class="subtotal">Subtotal</th>
+        <th class="excluir">Excluir</th>
       </tr>
 
       <div class="container w-100 p-3">
@@ -109,13 +110,14 @@ if (isset($_GET['ac'])) {
 
             <table class="table tabela">
               <form action="?ac=up" method="post">
+
                 <?php
                 if (count($_SESSION['carrinho']) == 0) {
                   echo '<tr><td colspan="5">Não há produto no carrinho</td></tr>';
                 } else {
                   $total = 0;
                   $i = 0;
-
+                 
                   foreach ($_SESSION['carrinho'] as $id => $qtd) {
                     $sql = "SELECT * FROM produtos WHERE idproduto = :p";
                     $stmt = $pdo->prepare($sql);
@@ -138,18 +140,19 @@ if (isset($_GET['ac'])) {
 						<td><input type="text" style="text-align:right" size="3" name="prod[' . $id . ']" value="' . $qtd . '" /></td>
 						<td style="text-align: right;">R$ ' . $preco . '</td>
 						<td style="text-align: right;">R$ ' . $sub . '</td>
-            <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" width="5%" height="5%"></a></td>
+            <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" class="imgtrash"></a></td>
 					</tr>';
+          
                   }
                   $total = number_format($total, 2, ',', '.');
-
+                  
                   echo '<tr>
-				<td colspan="2"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td> </td>
+				<td colspan="2"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
 				<td colspan="2" class="text-right font-weight-bold">Total</td><td class="font-weight-bold">R$ ' . $total . '</td></tr>';
                 } ?>
               </form>
 
-          </div>
+      </div>
 
 
     </table>

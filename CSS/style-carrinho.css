@@ -1,10 +1,10 @@
 .imgCARRINHO{
-    margin-left: 150px;
+    margin-left: 15%;
     border-bottom: 70px solid rgb(255, 194, 50);
     border-left: 30px solid transparent;
     border-right: 15px solid transparent;
     height: 0;
-    width: 1000px;
+    width: 70%;
     display: flex;
 }
 
@@ -16,11 +16,9 @@
 /*cart items*/
 
 .cart-page{
-    padding-top: 60px;
-    padding-left: 150px;
-    width: 1151px;
-
-
+    padding-top: 4%;
+    padding-left: 10%;
+    width: 85%;
 }
 
 table{
@@ -34,19 +32,59 @@ table{
 }
 
 th{
-    text-align: left;
-    padding: 5px;
+    padding: 0.6%;
     color: #fff;
     background: #ff523b;
     font-weight: normal;
 }
 
+/*ESPAÇAMENTO DOS TH DA TABELA👇👇*/
+.titulo{
+    padding-left: 1%;
+}
+
+.quantidade{
+    padding-left: 11%;
+}
+
+.produto{
+    padding-left: 6%;
+}
+
+.preco{
+    padding-left: 7.5%;
+}
+
+.subtotal{
+    padding-left: 7%;
+}
+
+.excluir{
+    padding-right: 3%;
+}
+/*ESPAÇAMENTO DOS TH DA TABELA👆👆*/
+
+.imgtrash{
+    padding-left: 20px;
+    max-width: 70px;
+    max-height: 50px;
+    margin-right: 20px;
+}
+
+.total{
+    padding-left: 50px;
+}
+
+.teste{
+    padding-left: 90px;
+}
+
 td{
-    padding: 10px 5px;
+    padding: 1% 0%;
 }
 
 td input{
-    width: 60px;
+    width: 50%;
     height: 30px;
     padding: 5px;
 }
