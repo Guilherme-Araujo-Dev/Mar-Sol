@@ -86,6 +86,12 @@ if (isset($_POST['btnLogin'])) {
     $user = $stmt->fetchAll();
     $_SESSION['idUsuario'] = $user[0]['idempresa'];
 
+    $_SESSION['nomeCompleto'] = $user[0]['nomecliente'];
+
+    $_SESSION['empresa'] = $user[0]['nomeempresa'];
+
+    $_SESSION['cnpj'] = $user[0]['cnpj'];
+
     $user = explode(' ', $user[0]['nomecliente'], 2);
 
     if ($stmt->rowCount() > 0) {

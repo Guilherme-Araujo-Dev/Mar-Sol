@@ -93,9 +93,10 @@ if (isset($_GET['ac'])) {
     <h1>Carrinho de compras</h1>
   </div>
 
-  <div class="small-container cart-page">
+  <div class="cart-page">
     <table>
       <tr>
+        <th>Imagem</th>
         <th>Produto</th>
         <th>Quantidade</th>
         <th>Preço</th>
@@ -116,13 +117,13 @@ if (isset($_GET['ac'])) {
                   $i = 0;
 
                   foreach ($_SESSION['carrinho'] as $id => $qtd) {
-                    $sql = "SELECT * FROM produto WHERE codigoProduto = :p";
+                    $sql = "SELECT * FROM produtos WHERE idproduto = :p";
                     $stmt = $pdo->prepare($sql);
                     $stmt->bindValue(':p', $id);
                     $stmt->execute();
                     $dados = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                    $produto = $dados['descricao'];
+                    $produto = $dados['nomeproduto'];
                     $preco = number_format($dados['preco'], 2, ',', '.');
                     $sub = number_format($dados['preco'] * $qtd, 2, ',', '.');
                     $total += $dados['preco'] * $qtd;
@@ -131,11 +132,13 @@ if (isset($_GET['ac'])) {
                     $i++;
                     echo '
 					<tr>
-						<td><a href="?ac=del&id=' . $id . '"><img src="img/lixeira.png" width="20px" height="20px"></a></td>
+          <td><img src="../../IMG/food/' . $dados['imagem'] . '" width="40px" height="20px"></a></td>
+          
 						<td><b>' . $produto . '</b></td>
 						<td><input type="text" style="text-align:right" size="3" name="prod[' . $id . ']" value="' . $qtd . '" /></td>
 						<td style="text-align: right;">R$ ' . $preco . '</td>
 						<td style="text-align: right;">R$ ' . $sub . '</td>
+            <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" width="5%" height="5%"></a></td>
 					</tr>';
                   }
                   $total = number_format($total, 2, ',', '.');
@@ -146,22 +149,12 @@ if (isset($_GET['ac'])) {
                 } ?>
               </form>
 
-              <!--TOTAL DOS PRODUTOS-->
-              <div class="total-price">
-                <table>
-                  <tr>
-                    <td>Total</td>
-                    <td>R$21.00</td>
-                  </tr>
-                </table>
-
-              </div>
           </div>
 
 
     </table>
     <div class="row justify-content-md-center">
-      <div class="col-6"><a class="btn btn-dark col-12" href="listaproduto.php">Continuar Comprando</a></td>
+      <div class="col-6"><a class="btn btn-dark col-12" href="product.php">Continuar Comprando</a></td>
       </div>
       <div class="col-6"><button type="button" class="btn btn-primary col-12" data-toggle="modal" data-target="#vendas">Fechar Venda</button></div>
     </div>
@@ -175,12 +168,16 @@ if (isset($_GET['ac'])) {
           <div class="modal-body">
             <form method="post">
               <div class="form-group">
-                <label class="col-form-label">Cliente:</label>
-                <input type="text" name="cliente" value="<?php echo $clientes->nomeCliente; ?>">
+                <label class="col-form-label">Cliente:</label> 
+                <input type="text" value="<?php echo $_SESSION['nomeCompleto']; ?>" readonly="readonly"> <br>
+                <label class="col-form-label">Empresa: </label>
+                <input type="text" value="<?php echo $_SESSION['empresa']; ?>" readonly="readonly"> <br>
+                <label class="col-form-label">CNPJ:</label>
+                <input type="text" value="<?php echo $_SESSION['cnpj']; ?>" readonly="readonly"> <br>
               </div>
               <div class="form-group">
                 <?php $hoje = date('d/m/Y'); ?>
-                <label class="col-form-label">Data:</label>
+                <label class="col-form-label">Data da Compra:</label>
                 <input type="text" value="<?php echo $hoje; ?>" readonly="readonly">
               </div>
           </div>
@@ -191,7 +188,11 @@ if (isset($_GET['ac'])) {
         </div>
       </div>
     </div>
-    <?php include("../class/footer.php"); ?>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br>
+
+  <?php include("../class/footer.php"); ?>
 </body>
 
 </html>
