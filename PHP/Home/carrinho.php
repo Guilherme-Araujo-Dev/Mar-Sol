@@ -205,7 +205,7 @@ if (isset($_POST['finalizaVenda'])) {
 
   $Movimentos = array(
     'tipo' => "S",
-    'cliente' => (int) $_SESSION['cliente'],
+    'usuario' => (int) $_SESSION['cliente'],
     'dataCompra' => date('Y-m-d'),
     'valorTotal' => $_SESSION['valor_total']
   );
@@ -218,7 +218,7 @@ if (isset($_POST['finalizaVenda'])) {
   //inserindo os itens comprados 
   foreach ($_SESSION['carrinho'] as $id => $qtd) {
 
-    $stm = $pdo->prepare("insert into itens (Venda_idVenda,Produto_codigoProduto,quantidade) values (?,?,?)");
+    $stm = $pdo->prepare("INSERT INTO movimento_itens (fk_idmovimento,fk_idproduto,quantidade) values (?,?,?)");
     $stm->bindValue('1', $_SESSION["ultimoId"]);
     $stm->bindValue('2', $id);
     $stm->bindValue('3', $qtd);
@@ -228,7 +228,7 @@ if (isset($_POST['finalizaVenda'])) {
     unset($_SESSION['carrinho']);
     unset($_SESSION['valor_total']);
 
-    header("Location: listaproduto.php");
+    header("Location: products.php");
   }
 }
 ?>
