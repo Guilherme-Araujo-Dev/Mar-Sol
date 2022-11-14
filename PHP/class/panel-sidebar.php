@@ -9,19 +9,23 @@
 
         <ul>
             <li>
-                <a href="../panel/pedidos-andamentos.php"> Pedidos Encaminhados</a>
+                <a href="pedidos-andamentos.php"> Pedidos Encaminhados</a>
             </li>
 
             <li>
-                <a href="../panel/pedidos-entregar.php"> Pedidos à Entregar</a>
+                <a href="pedidos-entregar.php"> Pedidos à Entregar</a>
             </li>
 
             <li>
-                <a href="../panel/pedidos-entregues.php"> Pedidos Entregues</a>
+                <a href="pedidos-entregues.php"> Pedidos Entregues</a>
             </li>
 
             <li>
-                <a href="../panel/pedidos-cancelados.php"> Pedidos Cancelados</a>
+                <a href="pedidos-cancelados.php"> Pedidos Cancelados</a>
+            </li>
+
+            <li>
+                <a href="../logoff.php" name> Sair da Conta </a>
             </li>
 
             <!--
