@@ -48,7 +48,8 @@ if ($_SESSION['usuario'] == null) echo ""; //"<meta http-equiv='refresh' content
       <tr>
         <th>Produto</th>
         <th>Quantidade</th>
-        <th>Total parcial</th>
+        <th>Preço</th>
+        <th>Subtotal</th>
       </tr>
 
       <tr>
@@ -64,10 +65,11 @@ if ($_SESSION['usuario'] == null) echo ""; //"<meta http-equiv='refresh' content
         </td>
         <td><input type="number" value="1"></td>
         <td>R$21.00</td>
+        <td>R$21.00</td>
       </tr>
     </table>
 
-    <!--SUBTOTAL DOS PRODUTOS-->
+    <!--TOTAL DOS PRODUTOS-->
     <div class="total-price">
       <table>
         <tr>
