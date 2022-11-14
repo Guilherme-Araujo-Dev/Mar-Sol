@@ -133,7 +133,8 @@ if (isset($_GET['ac'])) {
                     $_SESSION['valor_total'] = $total;
                     $i++;
                     echo '
-					<tr>
+                    
+					<tr class="valoresprodutos">
           <td><img src="../../IMG/food/' . $dados['imagem'] . '" width="40px" height="20px"></a></td>
           
 						<td><b>' . $produto . '</b></td>
@@ -143,13 +144,14 @@ if (isset($_GET['ac'])) {
             <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" class="imgtrash"></a></td>
 					</tr>';
           
+          
                   }
                   $total = number_format($total, 2, ',', '.');
                   
                   echo '<tr>
 				<td colspan="1"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
         <td colspan="2" class="pl-5"></td>
-				<td colspan="1" class="text-center font-weight-bold" style="padding-left: 2.5%;">Total</td> <td class="font-weight-bold">R$ ' . $total . '</td></tr>';
+				<td colspan="1" class="text-center font-weight-bold" style="padding-left: 2.5%;">Total</td> <td class="font-weight-bold" colspan="2">R$ ' . $total . '</td></tr>';
                 } ?>
               </form>
 
