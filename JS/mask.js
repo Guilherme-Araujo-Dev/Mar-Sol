@@ -1,3 +1,20 @@
+let noPaste = function(nome) {
+    $(document).ready(function() {
+
+        var i = document.getElementsByName(nome)
+        $(i).bind('paste', function(e) {
+            e.preventDefault();
+        });
+    
+    });
+}
+
+noPaste("CNPJ");
+noPaste("cep");
+noPaste("fone");
+noPaste("estado");
+noPaste("numero");
+
 // Função que cria uma mascara para o campo CNPJ
 function CNPJmask(cnpj) {
 
@@ -28,6 +45,16 @@ function CEPmask(cep) {
     cep.setAttribute("maxlength", "9"); // atribui o tamanho máximo do campo de 9 caracteres
     if (i.length == 5) cep.value += "-"; // coloca traço depois do 5° caracter
 
+}
+
+function NUMEROmask(numero) {
+
+    var i = numero.value;
+
+    if (isNaN(i[i.length - 1])) { // impede entrar outro caractere que não seja número
+        numero.value = i.substring(0, i.length - 1);
+        return;
+    }
 }
 
 // Função que cria uma mascara para o campo Fone

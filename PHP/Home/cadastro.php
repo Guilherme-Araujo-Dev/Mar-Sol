@@ -124,7 +124,7 @@ $rs = $stmt->fetchAll();
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Número:</label>
-                        <input id="nome" name="numero" type="text" class="">
+                        <input id="nome" name="numero" oninput="NUMEROmask(this)" type="text" class="">
                     </div>
                 </div>
 
