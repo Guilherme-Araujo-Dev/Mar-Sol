@@ -4,7 +4,7 @@
 <div class="sidebar">
 
     <div class="perfil">
-        <a href="../Panel/profile.php"><header>Perfil</header></a>
+        <a href="../Panel/profile.php"><p><?php echo $_SESSION['usuario'] ?></p></a>
     </div>
 
         <ul>
@@ -27,12 +27,6 @@
             <li>
                 <a href="../logoff.php" name> Sair da Conta </a>
             </li>
-
-            <!--
-            <li class="voltar">
-                <a href="../user/index.php"><i class="fa-solid fa-arrow-left"></i> Voltar ao Site</a>
-            </li>
-            -->
 
         </ul>
     </div>

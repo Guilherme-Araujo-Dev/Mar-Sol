@@ -32,6 +32,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 <?php include("../../Class/panel-header.php") ?>
 <?php include("../../Class/panel-sidebar.php") ?>
 
+<div class="center">
     <center>
         <br>
             <svg xmlns="http://www.w3.org/2000/svg" width="410" height="410" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -40,7 +41,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
         
         <br><br>
     </center>
-
+</div>
 <!--Importando o bootstrap-->
 
 <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
