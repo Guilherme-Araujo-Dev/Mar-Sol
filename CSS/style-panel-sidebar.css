@@ -14,7 +14,7 @@
     text-align: center;
     line-height: 100px;
     background: gray;
-    user-select: none;
+    
 }
 
 .sidebar ul a{
@@ -54,4 +54,8 @@ i{
 
 .invisivel{
     color: rgb(56, 53, 53);
+}
+
+.center{
+    padding-left: 300px;
 }

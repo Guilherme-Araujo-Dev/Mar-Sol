@@ -35,15 +35,6 @@
 
 <body>
 
-<?php
-session_start();
-if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
-?>
-
-<?php 
-    include_once("../class/connection.php");
-    conectar(); 
-?>
 </head>
 
 <body>
