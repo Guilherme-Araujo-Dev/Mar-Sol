@@ -120,7 +120,7 @@ $rs = $stmt->fetchAll();
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Endereco:</label>
-                        <input id="nome" name="endereco" type="text" placeholder="R. " oninput="CEPmask(this)" class="">
+                        <input id="nome" name="endereco" type="text" placeholder="R. " class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Número:</label>
@@ -189,6 +189,9 @@ if (isset($_POST['btnCadastro'])) {
         $sql = "INSERT INTO endereco_empresas (cep, bairro, rua, numero, fk_idcidade, fk_idempresa) VALUES (:cp, :br, :ra, :nm, :fkcd, :fkem)";
         $stmt = $pdo->prepare($sql);
 
+        $cep = explode("-", $cep, 2);
+        $cep = $cep[0] . $cep[1];
+
         $stmt->bindParam(':cp', $cep);
         $stmt->bindParam(':br', $bairro);
         $stmt->bindParam(':ra', $endereco);
@@ -202,9 +205,9 @@ if (isset($_POST['btnCadastro'])) {
         echo "<meta http-equiv='refresh' content='0; URL=../Home/login.php'/>";
     } catch (PDOException $e) {
         $erro = explode("'", $e->getMessage(), 2);
-        if($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";
+        if ($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";
         else echo "<script> alert('Insira os dados da maneira correta'); </script>";
-    } catch(Exception) {
+    } catch (Exception) {
         echo "<script> alert('Insira os dados da maneira correta'); </script>";
     }
 }
