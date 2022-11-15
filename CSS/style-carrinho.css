@@ -57,6 +57,7 @@ th{
 
 .subtotal{
     padding-left: 9.7%;
+    padding-left: 9%;
 }
 
 .excluir{
@@ -69,10 +70,8 @@ th{
     max-width: 50px;
     max-height: 30px;
     margin-right: 30px;
-}
-
-.valoresprodutos{
-    margin-top: 40px;
+    margin-left: 20px;
+    margin-top: 23px;
 }
 
 .total{
@@ -83,14 +82,34 @@ th{
     padding-left: 90px;
 }
 
-td{
-    padding: 1% 0%;
-}
-
-td input{
+.valoresprodutos input{
     width: 50%;
     height: 30px;
     padding: 5px;
+    padding-top: 5px;
+    margin-top: 20%;
+}
+
+.valoresprodutos p{
+    height: 30px;
+    margin-top: 8%;
+    font-weight: bold;
+}
+
+.valoresprodutos {
+    padding-top: 33px;
+}
+
+.valor-final {
+    font-weight: bold;
+}
+
+td {
+    padding-top: 33px;
+}
+
+.text-italic {
+    font-style: italic;
 }
 
 td a{
