@@ -42,7 +42,7 @@ CREATE TABLE empresas (
     emailcliente VARCHAR(100) NOT NULL,                               -- Será o Login da empresas
     tipo CHAR(1) DEFAULT('U') CHECK (tipo IN ('U' , 'A')),
     senha CHAR(32) NOT NULL,                                                   -- Será a Senha da empresas
-    fone BIGINT(16) ZEROFILL NOT NULL
+    fone VARCHAR(16) NOT NULL
 );
 
 CREATE TABLE endereco_empresas (
@@ -70,9 +70,9 @@ CREATE TABLE endereco_funcionarios (
 CREATE TABLE funcionarios (
     idfuncionario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomefuncionario VARCHAR(100) NOT NULL,
-    cpf BIGINT(14) ZEROFILL NOT NULL UNIQUE,
+    cpf CHAR(14) NOT NULL UNIQUE,
     email VARCHAR(100) NOT NULL,
-    fone BIGINT(16) ZEROFILL NOT NULL,
+    fone VARCHAR(16) NOT NULL,
     fk_idendereco INT NOT NULL,
     status CHAR(1) DEFAULT('A') CHECK (status IN ('A' , 'I')),     
     FOREIGN KEY (fk_idendereco) REFERENCES endereco_funcionarios(idendereco)
