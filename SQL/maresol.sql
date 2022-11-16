@@ -37,7 +37,7 @@ CREATE TABLE empresas (
     idempresa INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeempresa VARCHAR(100) NOT NULL,
     status CHAR(1) DEFAULT('A') CHECK (status IN ('A' , 'I')),                                      -- Se ele está ativo (A) ou inativo (I)
-    cnpj CHAR(18) NOT NULL UNIQUE,                                    -- Não pode existir dois cnpjs iguais no sistema
+    cnpj BIGINT(18) ZEROFILL NOT NULL UNIQUE,                                    -- Não pode existir dois cnpjs iguais no sistema
     nomecliente VARCHAR(100) NOT NULL,
     emailcliente VARCHAR(100) NOT NULL,                               -- Será o Login da empresas
     tipo CHAR(1) DEFAULT('U') CHECK (tipo IN ('U' , 'A')),
