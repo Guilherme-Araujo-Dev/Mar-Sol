@@ -167,6 +167,33 @@ if (isset($_POST['btnCadastro'])) {
 
     $senha = md5($senha); // Deixando a senha encriptografada
 
+    // Tirando os Caracteres especiais do CNPJ
+    $CNPJ = explode(".", $CNPJ, 3);
+    $CNPJ = $CNPJ[0] . $CNPJ[1] . $CNPJ[2];
+
+    $CNPJ = explode("/", $CNPJ, 2);
+    $CNPJ = $CNPJ[0] . $CNPJ[1];
+
+    $CNPJ = explode("-", $CNPJ, 2);
+    $CNPJ = $CNPJ[0] . $CNPJ[1];
+
+    // Tirando os Caracteres especiais do Fone
+    $fone = explode("(", $fone, 2);
+    $fone = $fone[0] . $fone[1];
+    
+    $fone = explode(")", $fone, 2);
+    $fone = $fone[0] . $fone[1];
+    
+    $fone = explode("-", $fone, 2);
+    $fone = $fone[0] . $fone[1];
+    
+    $fone = explode(" ", $fone, 2);
+    $fone = $fone[0] . $fone[1];
+    
+    $fone = explode(" ", $fone, 2);
+    if(isset($fone[1])) $fone = $fone[0] . $fone[1]; // Caso for número de Celular
+    else $fone = $fone[0]; // Caso for número fixo
+
     $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES (:ne, :ec, :nc, :s, :f, :cj)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':ne', $empresa);
@@ -189,6 +216,7 @@ if (isset($_POST['btnCadastro'])) {
         $sql = "INSERT INTO endereco_empresas (cep, bairro, rua, numero, fk_idcidade, fk_idempresa) VALUES (:cp, :br, :ra, :nm, :fkcd, :fkem)";
         $stmt = $pdo->prepare($sql);
 
+        // Tirando os Caracteres especiais do CEP
         $cep = explode("-", $cep, 2);
         $cep = $cep[0] . $cep[1];
 
