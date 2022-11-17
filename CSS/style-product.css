@@ -18,17 +18,17 @@
 }
 
 .produto img {
-	margin-right: 20px;
+	margin-right: 1%;
 	background: #fff;
 	border: 1px solid #ccc;
-	border-radius: 5px;
+	border-radius: 3%;
 	box-shadow: 0 0 5px #ccc;
-	width: 250px;
+	width: 33%;
 }
 
 .produto p {
 	display: block;
-	margin: 50px 272px;
+	margin: 50px 21%;
 	position:absolute;
 	height: 50px;
 	font-size: 20px;
@@ -36,17 +36,17 @@
 
 .produto h2 {
 	display: block;
-	margin: 140px 272px;
+	margin: 140px 21%;
 	position:absolute;
 	font-size: 20px;
 }
 
 .produto h1 {
 	position: absolute;
-	margin-left: 272px;
+	margin-left: 21%;
 	display: block;
 	height: 50px;
-	font-size: 30px;
+	font-size: 190%;
 }
 
 
@@ -56,14 +56,14 @@
     background-color:#E0EEEE;
     border:solid 2px #db8742;
     border-radius:10px;
-    width:500px;
+    width:60%;
     height:36px;
 }
 
 .txtBusca{
     float:left;
     background-color:transparent;
-    padding-left:5px;
+    padding-left:1%;
     font-size:18px;
     border:none;
     height:32px;
@@ -75,7 +75,7 @@
     float:right;
     height:32px;
     border-radius:0 7px 7px 0;
-    width:70px;
+    width:16%;
     font-weight:bold;
     background:#eec81f;
 }
@@ -92,7 +92,7 @@
 	border-radius: 10px;
 	border:none;
     height:40px;
-    width:100px;
+    width:13%;
     font-weight:bold;
 	display: block;
     background:#eec81f;
