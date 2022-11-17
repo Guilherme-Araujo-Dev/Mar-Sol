@@ -29,7 +29,7 @@
 
 .produto p {
 	display: block;
-	margin: 50px 30%;
+	margin: 50px 28%; /*mudar espaçamento do texto "informações nutricionais"*/
 	position:absolute;
 	height: 50px;
 	font-size: 20px;
@@ -37,14 +37,14 @@
 
 .produto h2 {
 	display: block;
-	margin: 140px 30%;
+	margin: 140px 29%; /*mudar espaçamento do texto "Preço"*/
 	position:absolute;
 	font-size: 20px;
 }
 
 .produto h1 {
 	position: absolute;
-	margin-left: 30%;
+	margin-left: 28%; /*mudar espaçamento dos nomes do produto*/
 	display: block;
 	height: 50px;
 	font-size: 190%;
