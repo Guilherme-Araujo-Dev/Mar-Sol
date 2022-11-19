@@ -126,3 +126,11 @@ h2{
     text-decoration: none;
 }
 
+@media screen and (max-width: 768px){
+    .horizontal-center{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+

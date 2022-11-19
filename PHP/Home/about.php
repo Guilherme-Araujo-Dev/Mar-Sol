@@ -33,9 +33,9 @@
     <?php include("../class/header.php"); ?>
     <br><br><br><br>
 
-    <h1 class=""><b>+ DE 10 ANOS ATENDENDO TODA REGIÃO OESTE DO PARANÁ.</b></h1>
+    <h1 class="corpo"><b>+ DE 10 ANOS ATENDENDO TODA REGIÃO OESTE DO PARANÁ.</b></h1>
     <br><br>
-    <div class="corpo">
+    <div class="corpoo">
         <p class="sobre">
             Situada em Cascavel/PR, nós somos<br> uma fábrica de alimentos industriais<br> que
             a mais de 10 anos atendemos<br> toda região Oeste do Paraná, com<br> muito amor,
