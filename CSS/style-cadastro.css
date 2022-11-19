@@ -48,42 +48,23 @@ h2 {
 
 .corpo {
     display: flex;
-    height: 700px;
-    width: 800px;
+    width: 60%;
     margin-bottom: 10%;
-}
-
-
-
-.forms {
-
-    padding: 40px;
-    border-radius: 2px;
-    width: 800px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 10;
-    background-color: #ff0000;
-
 }
 
 .form-row {
     font-weight: bold;
-    padding-left: 110px;
+    padding-left: 15%;
 }
 
 .form-row label {
     color: black;
-    font-size: 12px;
-    opacity: 0.8;
+    font-size: 80%;
 }
 
 .forms-header {
-    padding: 40px;
-    padding-bottom: 20px;
+    padding: 5%;
+    padding-bottom: 5%;
 
 }
 
@@ -95,8 +76,8 @@ h2 {
 }
 
 .form-group input {
-    margin-top: 10px;
-    padding: 0 5px;
+    margin-top: 3%;
+    padding: 0 5%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
@@ -114,14 +95,14 @@ h2 {
 }
 
 .container {
-    padding-bottom: 85%;
+    padding-bottom: 10%; /*espaço embaixo do JA POSSUI UMA CONTA?*/
     background-color: rgb(228, 228, 228);
 }
 
 .card-footer,
 p a {
     text-align: center;
-    font-size: 12px;
+    font-size: 100%;
     opacity: 0.8;
     color: rgb(66, 61, 61);
     text-decoration: none;
@@ -156,4 +137,36 @@ p a {
     border-top-width: 1.11667px;
     border-top-style: solid;
     border-left-style: solid;
+}
+
+@media screen and (max-width: 600px){
+    .corpo{
+        padding-left: 0%;
+        width: 100%;
+    }
+
+    .horizontal-center{
+        padding-top: 10%;
+    }
+
+    .form-row {
+        font-weight: bold;
+        padding-left: 0%;
+        justify-content: space-between;
+    }
+
+    .lab-estado{
+        padding-top: 20%;
+        padding-left: 70%;
+    }
+
+    .slc-estado{
+        margin-top: 0%;
+        margin-left: 80%;
+    }
+
+    .lab-cidade{
+        margin-left: 5%;
+        padding-bottom: 20%;
+    }
 }

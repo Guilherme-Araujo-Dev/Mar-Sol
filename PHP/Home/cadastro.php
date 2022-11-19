@@ -64,7 +64,7 @@ $rs = $stmt->fetchAll();
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Nome:</label>
-                        <input id="nome" name="nomeUsuario" type="text" placeholder="Insira nome do operador" maxlength="100" class="">
+                        <input id="nome" name="nomeUsuario" type="text" placeholder="Nome do operador" maxlength="100" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
