@@ -145,6 +145,7 @@ if (isset($_GET['ac'])) {
 					</tr>';
                   }
                   $total = number_format($total, 2, ',', '.');
+                  $_SESSION['valor_total'] = $total;
 
                   echo '<tr>
 				<td colspan="1"><input class="btn btn-success col-12" type="submit" value="Atualizar Carrinho" /></td>
@@ -183,8 +184,8 @@ if (isset($_GET['ac'])) {
                 <?php $hoje = date('d/m/Y'); ?>
                 <label class="col-form-label">Data da Compra:</label>
                 <input type="text" value="<?php echo $hoje; ?>" readonly="readonly"> <br>
-                <strong><label class="col-form-label">VALOR FINAL:  </label> </strong>
-                <label class="col-form-label text-italic"> <?php echo " R$ " . $total ?>  </label>
+                <strong><label class="col-form-label">VALOR FINAL: </label> </strong>
+                <label class="col-form-label text-italic"> <?php echo " R$ " . $total ?> </label>
 
               </div>
           </div>
@@ -206,16 +207,14 @@ if (isset($_GET['ac'])) {
 <?php
 if (isset($_POST['finalizaVenda'])) {
 
-  $Movimentos = array(
-    'tipo' => "S",
-    'usuario' => (int) $_SESSION['cliente'],
-    'dataCompra' => date('Y-m-d'),
-    'valorTotal' => $_SESSION['valor_total']
-  );
 
-  $movimento   = $crud->insert($Movimentos);
+  $stm = $pdo->prepare("INSERT INTO movimentos (tipo, fk_idempresa, fk_idfuncionario, data) values ('S',?,0,?)");
+  $stm->bindValue('1', (int) $_SESSION['idUsuario']);
+  $stm->bindValue('2', date('Y-m-d'));
+  $stm->execute();
 
-  $_SESSION['ultimoId'] = $movimento[1];
+
+  $_SESSION['ultimoId'] = $_SESSION['idUsuario'];
   //var_dump($_SESSION);
 
   //inserindo os itens comprados 
@@ -231,7 +230,8 @@ if (isset($_POST['finalizaVenda'])) {
     unset($_SESSION['carrinho']);
     unset($_SESSION['valor_total']);
 
-    header("Location: products.php");
+    echo "<script> alert('Pedido realizado com sucesso') </script>";
+    echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
   }
 }
 ?>
