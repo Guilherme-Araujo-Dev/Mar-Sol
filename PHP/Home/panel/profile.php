@@ -17,13 +17,13 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-profile.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-profile.css">
     
     <!--Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
 
     <title>Mar & Sol - Painel do Administrador</title>  
 </head>

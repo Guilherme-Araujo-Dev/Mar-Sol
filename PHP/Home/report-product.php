@@ -23,13 +23,13 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
     <!-- Importando o CSS-->
-    <link rel="stylesheet" href="../../CSS/style-report-product.css">
+    <link rel="stylesheet" href="../CSS/style-report-product.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>

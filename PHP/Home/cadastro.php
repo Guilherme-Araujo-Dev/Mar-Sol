@@ -27,12 +27,12 @@ $rs = $stmt->fetchAll();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-cadastro.css">
 
-    <script type="text/javascript" src="../../JS/jquery.js"></script>
+    <script type="text/javascript" src="../JS/jquery.js"></script>
     <!-- 
         o script abaixo faz a magica de pegar os dados no primeiro select e
         chamar a rotina listaCidades.php passando o estado escolhido e gerando
@@ -136,8 +136,8 @@ $rs = $stmt->fetchAll();
         </div>
     </div>
     <!-- Importando o JS -->
-    <script src="../../JS/mask.js"></script>
-    <script src="../../JS/select-stades.js"></script>
+    <script src="../JS/mask.js"></script>
+    <script src="../JS/select-stades.js"></script>
 
     <?php include("../class/footer.php"); ?>
 

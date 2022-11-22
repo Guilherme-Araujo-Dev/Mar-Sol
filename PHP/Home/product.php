@@ -19,10 +19,10 @@ session_start();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-product.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-product.css">
 
 
     <title>Mar & Sol Salgados - Produtos</title>
@@ -67,7 +67,7 @@ session_start();
         <ul class="produtos">
             <?php foreach ($produto as $p) { ?>
                 <li class="produto">
-                    <img src="../../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>" width="300px" height="167px">
+                    <img src="../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>" width="300px" height="167px">
                     <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
                     <p class="product-text">Informações Nutricionais: <? echo $p['info']; ?> </p>
                     <h2 class="product-text">Preço: R$ <?php echo number_format($p['preco'], 2, ',', ''); ?></h2>

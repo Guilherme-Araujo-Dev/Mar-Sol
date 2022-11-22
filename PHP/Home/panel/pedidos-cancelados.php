@@ -18,16 +18,16 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
    <!-- Importando o CSS-->
-   <link rel="stylesheet" href="../../../CSS/style-pedidos-cancelados.css">
+   <link rel="stylesheet" href="../../CSS/style-pedidos-cancelados.css">
 
    <!--Importando o CSS do sidebar-->
-   <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+   <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
@@ -58,7 +58,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 
                 <td>
                     <div>
-                        <img src="../../../IMG/food/pfg.jpg" alt="imagem" width="100px" height="100px">
+                        <img src="../../IMG/food/pfg.jpg" alt="imagem" width="100px" height="100px">
                     </div>
                 </td>
 

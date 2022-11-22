@@ -22,13 +22,13 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
     <!-- Importando o CSS da pagina delet-product-->
-    <link rel="stylesheet" href="../../CSS/style-delet-product.css">
+    <link rel="stylesheet" href="../CSS/style-delet-product.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
@@ -61,7 +61,7 @@
 
                 <td>
                     <div>
-                        <img src="../../IMG/food/ccg.jpg" alt="imagem" width="100px" height="100px">
+                        <img src="../IMG/food/ccg.jpg" alt="imagem" width="100px" height="100px">
                     </div>
                 </td>
 

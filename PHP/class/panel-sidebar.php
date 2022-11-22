@@ -1,5 +1,5 @@
 <!--Importando o CSS do sidebar-->
-<link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+<link rel="stylesheet" type="text/css" href="../CSS/style-panel-sidebar.css">
 
 <div class="sidebar">
 
