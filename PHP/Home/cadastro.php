@@ -64,7 +64,7 @@ $rs = $stmt->fetchAll();
                 <div class="form-row">
                     <div class="form-group col-5">
                         <label for="nome">Nome:</label>
-                        <input id="nome" name="nomeUsuario" type="text" placeholder="Nome do operador" maxlength="100" class="">
+                        <input id="nome" name="nomeUsuario" type="text" placeholder="Insira nome do operador" maxlength="100" class="">
                     </div>
                     <div class="form-group col-5">
                         <label for="nome">Fone:</label>
@@ -235,8 +235,8 @@ if (isset($_POST['btnCadastro'])) {
         $erro = explode("'", $e->getMessage(), 2);
         if ($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";
         else echo "<script> alert('Insira os dados da maneira correta'); </script>";
-    } catch (Exception $e) {
+    } catch (Exception) {
         echo "<script> alert('Insira os dados da maneira correta'); </script>";
     }
-}   
+}
 ?>

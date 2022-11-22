@@ -38,6 +38,14 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
 
 
 <?php include("../class/adm-sidebar.php"); ?>
+<br><br><br>
+
+
+
+<div class="botao">
+    <button onclick="window.location.href = '../Home/Panel/profile.php'">Perfil do usuário</button> 
+</div>
+
 
     <div class="imagem">
         <img src="../../IMG/aii.jpg">
