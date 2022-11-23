@@ -1,6 +1,12 @@
+.bemvindo{
+    font-size: 600%;
+    padding-top: 15%;
+}
+
 @media screen and (max-width: 600px){
     .bemvindo{
-        font-size: 700%;
-        
+        font-size: 200%;
+        padding-left: 40%;   
+        padding-top: 60%;     
     }
 }
