@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Nov-2022 às 13:14
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 7.4.27
+-- Tempo de geração: 23-Nov-2022 às 21:37
+-- Versão do servidor: 10.4.21-MariaDB
+-- versão do PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -241,6 +241,13 @@ CREATE TABLE `movimentos` (
   `fk_idempresa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `movimentos`
+--
+
+INSERT INTO `movimentos` (`idmovimento`, `data`, `observacao`, `aprovado`, `entregue`, `tipo`, `fk_idfuncionario`, `fk_idempresa`) VALUES
+(1, '2022-11-23', NULL, 'N', 'N', 'S', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -252,6 +259,13 @@ CREATE TABLE `movimento_itens` (
   `fk_idmovimento` int(11) NOT NULL,
   `quantidade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `movimento_itens`
+--
+
+INSERT INTO `movimento_itens` (`fk_idproduto`, `fk_idmovimento`, `quantidade`) VALUES
+(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -426,7 +440,7 @@ ALTER TABLE `funcionarios`
 -- AUTO_INCREMENT de tabela `movimentos`
 --
 ALTER TABLE `movimentos`
-  MODIFY `idmovimento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idmovimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
