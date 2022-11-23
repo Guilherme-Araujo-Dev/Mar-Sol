@@ -23,7 +23,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     <link rel="stylesheet" type="text/css" href="../../CSS/style-profile.css">
     
     <!--Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar-profile.css">
 
     <title>Mar & Sol - Painel do Administrador</title>  
 </head>
@@ -32,11 +32,10 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 <?php include("../../Class/panel-header.php"); ?>
 <?php include("../../Class/panel-sidebar.php") ?>
 
-<div class="center">
-    <center>
-        <p class="bemvindo">Bem vindo(a)</p>
-    </center>
-</div>
+
+    <p class="bemvindo">Bem vindo(a)</p>
+    
+
 <!--Importando o bootstrap-->
 
 <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>

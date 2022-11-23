@@ -1,8 +1,3 @@
-.voltar{
-    padding-top: 70px;
-
-} 
-
 .admREPORT{
     padding-left: 6%;
     margin-left: 150px;
@@ -64,4 +59,11 @@ td a{
 
 .centralizado2{
     padding-left: 20%;
+}
+
+@media screnn and (max-width: 600px){
+    .admREPORT{
+        background-color: blue;
+
+    }
 }
