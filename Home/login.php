@@ -18,10 +18,10 @@ session_start();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-login.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-login.css">
 
     <title>Mar & Sol Salgados - Login</title>
 </head>

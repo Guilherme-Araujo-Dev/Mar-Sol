@@ -18,16 +18,16 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS dos botoes-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-button.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-button.css">
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-clientes.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-clientes.css">
 
     <!-- Importando o CSS do header-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-header.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("../Class/connection.php");

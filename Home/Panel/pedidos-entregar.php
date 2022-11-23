@@ -1,11 +1,7 @@
-
-
-<?php 
-    include_once("../class/connection.php");
-    conectar(); 
-    session_start();
+<?php
+session_start();
+if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -27,25 +23,25 @@
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
 
-    <!-- Importando o CSS da pagina delet-product-->
-    <link rel="stylesheet" href="../../CSS/style-delet-product.css">
+   <!-- Importando o CSS-->
+   <link rel="stylesheet" href="../../CSS/style-pedidos-entregar.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-</head>
+<?php include("../../Class/panel-header.php") ?>
+<?php include("../../Class/panel-sidebar.php") ?>
+
 
 <body>
-<?php include("../class/adm-sidebar.php"); ?>
 <center><br>
-        <div class="admDELET">
-        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-        </svg>
-            <h1>Deletar Produtos</h1>
+        <div class="admREPORT">
+        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+  <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+</svg>
+            <h1>Entregar</h1>
         </div>
     </center>
     <br><br>
@@ -53,9 +49,10 @@
     <div class="small-container cart-page">
         <table>
             <tr>
-                <th>Imagem</th>
+                <th>Produto</th>
+                <th class="invisivel">invisivel</th>
+                <th class="invisivel">invisivel</th>
                 <th>Nome do Produto</th>
-                <th>Excluir</th>
             </tr>
 
 
@@ -68,7 +65,7 @@
                 <td>
                     <div>
                         <p>
-                            Coxinha de Carne Grande (ccg)
+                            
                         </p>
                     </div>
                 </td>
@@ -76,16 +73,24 @@
                 <td>
                     <div>
                         <p>
-                            <a href="">Remover</a>
+                            
+                        </p>
+                    </div>
+                </td>
+
+                <td>
+                    <div>
+                        <p>
+                            Coxinha de Carne Grande
                         </p>
                     </div>
                 </td>
 
             </tr>
-<!--
-    1. O tr cria uma nova linha dentro da tabela
-    2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
--->
+            <!--
+                1. O tr cria uma nova linha dentro da tabela
+                2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
+            -->
         </table>
     </div>
 

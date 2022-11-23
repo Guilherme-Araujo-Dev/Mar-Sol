@@ -1,7 +1,11 @@
-<?php
-session_start();
-if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
+
+
+<?php 
+    include_once("../class/connection.php");
+    conectar(); 
+    session_start();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,30 +22,30 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
-   <!-- Importando o CSS-->
-   <link rel="stylesheet" href="../../../CSS/style-pedidos-cancelados.css">
-
-   <!--Importando o CSS do sidebar-->
-   <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+    <!-- Importando o CSS da pagina delet-product-->
+    <link rel="stylesheet" href="../CSS/style-delet-product.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-
-<?php include("../../Class/panel-header.php") ?>
-<?php include("../../Class/panel-sidebar.php") ?>
+</head>
 
 <body>
+<?php include("../class/adm-sidebar.php"); ?>
 <center><br>
-        <div class="admREPORT">
-            <h1>Cancelados</h1>
+        <div class="admDELET">
+        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+            <h1>Deletar Produtos</h1>
         </div>
     </center>
     <br><br>
@@ -49,23 +53,22 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     <div class="small-container cart-page">
         <table>
             <tr>
-                <th>Produto</th>
-                <th class="invisivel">invisivel</th>
-                <th class="invisivel">invisivel</th>
+                <th>Imagem</th>
                 <th>Nome do Produto</th>
+                <th>Excluir</th>
             </tr>
 
 
                 <td>
                     <div>
-                        <img src="../../../IMG/food/pfg.jpg" alt="imagem" width="100px" height="100px">
+                        <img src="../IMG/food/ccg.jpg" alt="imagem" width="100px" height="100px">
                     </div>
                 </td>
 
                 <td>
                     <div>
                         <p>
-                            
+                            Coxinha de Carne Grande (ccg)
                         </p>
                     </div>
                 </td>
@@ -73,24 +76,16 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
                 <td>
                     <div>
                         <p>
-                            
-                        </p>
-                    </div>
-                </td>
-
-                <td>
-                    <div>
-                        <p>
-                            Coxinha de Carne Grande
+                            <a href="">Remover</a>
                         </p>
                     </div>
                 </td>
 
             </tr>
-            <!--
-                1. O tr cria uma nova linha dentro da tabela
-                2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
-            -->
+<!--
+    1. O tr cria uma nova linha dentro da tabela
+    2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
+-->
         </table>
     </div>
 

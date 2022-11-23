@@ -18,13 +18,13 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm-home.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-adm-home.css">
 
     <!-- Importando o CSS do header-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-header.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style-header.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("../class/connection.php");
@@ -48,7 +48,7 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
 
 
     <div class="imagem">
-        <img src="../../IMG/aii.jpg">
+        <img src="../IMG/aii.jpg">
     </div>
 
 
@@ -56,7 +56,7 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta ht
 <div class="diaa">
     <h1 id="welcome">Bom dia</h1>
     <!--Importando o Js-->
-    <script src="../../jS/time.js"></script>
+    <script src="../JS/time.js"></script>
 </div>
 
 

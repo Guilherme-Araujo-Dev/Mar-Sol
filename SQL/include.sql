@@ -51,6 +51,9 @@ INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj)
 INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES ( 'Magna ', 'rafael.lange@twitch.com', 'Cellbit', '192623e9b1a42ddf939db21fa4f0c701', '45912454576', '01468756000125'); -- SENHA OdeioPobre123
 
 INSERT INTO endereco_empresas (cep, bairro, rua, numero, fk_idcidade, fk_idempresa) VALUES (85803280, "Santa Felicidade", "Geraldo de Oliveira", 740, 1, 11);
+INSERT INTO endereco_funcionarios (cep, bairro, rua, numero, fk_idcidade) VALUES (85810160, "Vila Tolentino", "Pio XII", 1742, 1);
+
+INSERT INTO funcionarios (nomefuncionario, email, fone, cpf, fk_idendereco) VALUES ( 'Gabriel Ferreira', 'gabriel.ferreira@gmail.com', '45912454576', '42564557831', 1);
 
 INSERT INTO categorias (nomecategoria) VALUES ('Pastel Grande');
 INSERT INTO categorias (nomecategoria) VALUES ('Pastel Mini');

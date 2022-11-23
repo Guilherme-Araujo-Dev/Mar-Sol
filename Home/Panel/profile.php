@@ -17,13 +17,13 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
 
     <!-- Importando o CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-profile.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-profile.css">
     
     <!--Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../../CSS/style-panel-sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
 
     <title>Mar & Sol - Painel do Administrador</title>  
 </head>
@@ -34,12 +34,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 
 <div class="center">
     <center>
-        <br>
-            <svg xmlns="http://www.w3.org/2000/svg" width="410" height="410" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg>
-        
-        <br><br>
+        <p class="bemvindo">Bem vindo(a)</p>
     </center>
 </div>
 <!--Importando o bootstrap-->

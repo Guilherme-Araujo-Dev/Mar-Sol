@@ -72,10 +72,10 @@ if (isset($_GET['ac'])) {
   </script>
 
   <!-- Definindo o Ícone da Página -->
-  <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
 
   <!-- Importando o CSS -->
-  <link rel="stylesheet" type="text/css" href="../../CSS/style-carrinho.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/style-carrinho.css">
 
   <title>Mar & Sol Salgados - Carrinho</title>
 </head>
@@ -135,13 +135,13 @@ if (isset($_GET['ac'])) {
                     echo '
                     
 					<tr class="valoresprodutos">
-          <td class="td-imagem"><img src="../../IMG/food/' . $dados['imagem'] . '"></a></td>
+          <td class="td-imagem"><img src="../IMG/food/' . $dados['imagem'] . '"></a></td>
           
 						<td><p>' . $produto . '</p></td>
 						<td><input type="text" style="text-align:right" size="3" name="prod[' . $id . ']" value="' . $qtd . '" /></td>
 						<td style="text-align: right; padding-top: 33px; padding-right: 48px;" >R$ ' . $preco . '</td>
 						<td style="text-align: right; padding-top: 33px; ">R$ ' . $sub . '</td>
-            <td><a href="?ac=del&id=' . $id . '"><img src="../../IMG/trash.png" class="imgtrash"></a></td>
+            <td><a href="?ac=del&id=' . $id . '"><img src="../IMG/trash.png" class="imgtrash"></a></td>
 					</tr>';
                   }
                   $total = number_format($total, 2, ',', '.');

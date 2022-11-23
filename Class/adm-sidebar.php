@@ -1,11 +1,11 @@
-<link rel="stylesheet" type="text/css" href="../../CSS/style-sidebar.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
+<link rel="stylesheet" type="text/css" href="../CSS/style-sidebar.css">
+<link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
 
 <div class="sidebar">
 
     <div class="imgSIDEBAR">
-        <img src="../../IMG/logo.png" alt="" width="150px" height="130px">
+        <img src="../IMG/logo.png" alt="" width="150px" height="130px">
     </div>
 
     <p> <?php echo $_SESSION['usuario'] ?> </p>
