@@ -91,6 +91,9 @@ INSERT INTO produtos (nomeproduto, peso, preco, imagem, fk_idcategoria) VALUES (
 INSERT INTO produtos (nomeproduto, peso, preco, imagem, fk_idcategoria) VALUES ( 'Enrolado de Salsicha Mini', '2', '36', 'esm.jpg', '10' );
 INSERT INTO produtos (nomeproduto, peso, preco, imagem, fk_idcategoria) VALUES ( 'Kibe de Carne Mini', '2', '36', 'kcm.jpg', '10' );
 
+INSERT INTO movimentos (data, fk_idfuncionario, fk_idempresa) VALUES ('2022-11-23', 1, 1);
+INSERT INTO movimento_itens VALUES (1, 1, 1);
+
 -- INSERT INTO funcionario (nomefuncionario, email, fone, cpf) VALUES ( 'Bruno Cinha Pereira', '206.917.950-88', 'bruno.pereira@trabalho.com', '4592286-4142', 'PR', 'Cascavel', 'Rua Santos Drumont, 324');
 -- INSERT INTO funcionario (nomefuncionario, email, fone, cpf) VALUES ( 'Manuela Correia Ribeiro', '098.313790-04', 'manuela.ribeiro@trabalho.com', '4592102-3528', 'PR', 'Cascavel', 'Avenida Afonso Trigo, 234');
 -- INSERT INTO funcionario (nomefuncionario, email, fone, cpf) VALUES ( 'Gabriel Goncalves Dias', '326.97761012', 'gabriel.dias@trabalho.com', '45930151871', 'PR', 'Cascavel', 'Avenida Goias, 465');
