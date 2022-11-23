@@ -21,7 +21,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
     <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
     
     <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-adm.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
 
    <!-- Importando o CSS-->
    <link rel="stylesheet" href="../../CSS/style-pedidos-entregar.css">

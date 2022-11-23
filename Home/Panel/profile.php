@@ -29,7 +29,7 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
 </head>
 <body>
 
-<?php include("../../Class/panel-header.php") ?>
+<?php include("../../Class/panel-header.php"); ?>
 <?php include("../../Class/panel-sidebar.php") ?>
 
 <div class="center">
