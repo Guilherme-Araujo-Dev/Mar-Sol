@@ -66,18 +66,22 @@ $idMovimento = $stmt->fetch();
             </tr>
 
             <?php
+
             if ($idMovimento) {
 
-            foreach ($idMovimento as $movimento) {
+                $tam = count($idMovimento) - 1;
 
-                $sql = "SELECT * FROM movimento_itens WHERE fk_idmovimento = ?";
-                $stmt = $pdo->prepare($sql);
-                $stmt->bindParam(1, $movimento);
-                $stmt->execute();
+                $x = 0;
+                while ($tam > $x) {
 
-                $itens = $stmt->fetchAll();
+                    $sql = "SELECT * FROM movimento_itens WHERE fk_idmovimento = ?";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->bindParam(1, $idMovimento[$tam - 1]);
+                    $stmt->execute();
 
-                
+                    $itens = $stmt->fetchAll();
+
+
                     foreach ($itens as $i) {
                         $sql = "SELECT * FROM produtos WHERE idproduto = ?";
                         $stmt = $pdo->prepare($sql);
@@ -88,7 +92,7 @@ $idMovimento = $stmt->fetch();
                         $produto = $produto[0];
 
             ?>
-                        <tr>
+                        <tr class="box">
                             <td>
                                 <div>
                                     <img src="../../IMG/food/<?php echo $produto['imagem'] ?> " alt="imagem" width="100px" height="100px">
@@ -120,6 +124,7 @@ $idMovimento = $stmt->fetch();
                             </td>
                 <?php
                     }
+                    $x++;
                 }
             }
                 ?>

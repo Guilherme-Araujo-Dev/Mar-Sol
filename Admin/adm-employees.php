@@ -66,7 +66,6 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
                         </svg>
                         <div>
                             <p>João da Silva</p>
-                            <a href="">Remover</a>
                         </div>
                     </div>
                 </td>
