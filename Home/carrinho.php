@@ -208,30 +208,39 @@ if (isset($_GET['ac'])) {
 if (isset($_POST['finalizaVenda'])) {
 
 
-  $stm = $pdo->prepare("INSERT INTO movimentos (tipo, fk_idempresa, fk_idfuncionario, data) values ('S',?,0,?)");
-  $stm->bindValue('1', (int) $_SESSION['idUsuario']);
-  $stm->bindValue('2', date('Y-m-d'));
-  $stm->execute();
+  $stm = $pdo->prepare("INSERT INTO movimentos (fk_idempresa, fk_idfuncionario, data) values (?,1,?)");
+  $stm->bindValue(1, (int) $_SESSION['idUsuario']);
+  $stm->bindValue(2, date('Y-m-d'));
 
-
-  $_SESSION['ultimoId'] = $_SESSION['idUsuario'];
-  //var_dump($_SESSION);
-
-  //inserindo os itens comprados 
-  foreach ($_SESSION['carrinho'] as $id => $qtd) {
-
-    $stm = $pdo->prepare("INSERT INTO movimento_itens (fk_idmovimento,fk_idproduto,quantidade) values (?,?,?)");
-    $stm->bindValue('1', $_SESSION["ultimoId"]);
-    $stm->bindValue('2', $id);
-    $stm->bindValue('3', $qtd);
+  try {
     $stm->execute();
 
+    $stm = $pdo->prepare("SELECT idmovimento FROM movimentos ORDER BY idmovimento DESC LIMIT 1");
+    $stm->execute();
 
-    unset($_SESSION['carrinho']);
-    unset($_SESSION['valor_total']);
+    $ultimoid = $stm->fetch();
 
-    echo "<script> alert('Pedido realizado com sucesso') </script>";
-    echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+    $_SESSION['ultimoId'] = $ultimoid[0];
+    //var_dump($_SESSION);
+
+    //inserindo os itens comprados 
+    foreach ($_SESSION['carrinho'] as $id => $qtd) {
+
+      $stm = $pdo->prepare("INSERT INTO movimento_itens (fk_idmovimento,fk_idproduto,quantidade) values (?,?,?)");
+      $stm->bindValue(1, $_SESSION["ultimoId"]);
+      $stm->bindValue(2, $id);
+      $stm->bindValue(3, $qtd);
+      $stm->execute();
+
+
+      unset($_SESSION['carrinho']);
+      unset($_SESSION['valor_total']);
+
+      echo "<script> alert('Pedido realizado com sucesso') </script>";
+      echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+    }
+  } catch (Exception $e) {
+    echo $e->getMessage();
   }
 }
 ?>
