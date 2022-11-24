@@ -1,9 +1,17 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
+
+include_once("../../Class/connection.php");
+$pdo = conectar();
+
+$sql = "SELECT idmovimento FROM movimentos WHERE aprovado = 'S' AND entregue = 'S' AND fk_idempresa = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(1, $_SESSION['idUsuario']);
+$stmt->execute();
+
+$idMovimento = $stmt->fetch();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -49,52 +57,80 @@ if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; U
         <br><br>
 
         <div class="small-container cart-page">
-            <table>
-                <tr>
-                    <th>Produto</th>
-                    <th class="invisivel">invisivel</th>
-                    <th class="invisivel">invisivel</th>
-                    <th>Nome do Produto</th>
-                </tr>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th class="invisivel">invisivel</th>
+                <th>Quantidade</th>
+                <th>Nome do Produto</th>
+            </tr>
 
+            <?php
+            if ($idMovimento) {
 
-                <td>
-                    <div>
-                        <img src="../../IMG/food/bbcg.jpg" alt="imagem" width="100px" height="100px">
-                    </div>
-                </td>
+            foreach ($idMovimento as $movimento) {
 
-                <td>
-                    <div>
-                        <p>
+                $sql = "SELECT * FROM movimento_itens WHERE fk_idmovimento = ?";
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindParam(1, $movimento);
+                $stmt->execute();
 
-                        </p>
-                    </div>
-                </td>
+                $itens = $stmt->fetchAll();
 
-                <td>
-                    <div>
-                        <p>
+                
+                    foreach ($itens as $i) {
+                        $sql = "SELECT * FROM produtos WHERE idproduto = ?";
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->bindParam(1, $i['fk_idproduto']);
+                        $stmt->execute();
 
-                        </p>
-                    </div>
-                </td>
+                        $produto = $stmt->fetchAll();
+                        $produto = $produto[0];
 
-                <td>
-                    <div>
-                        <p>
-                            Coxinha de Carne Grande
-                        </p>
-                    </div>
-                </td>
+            ?>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="../../IMG/food/<?php echo $produto['imagem'] ?> " alt="imagem" width="100px" height="100px">
+                                </div>
+                            </td>
 
-                </tr>
-                <!--
+                            <td>
+                                <div>
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <p>
+                                        <?php echo $i['quantidade'] ?>
+                                    </p>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <p>
+                                        <?php echo $produto['nomeproduto'] ?>
+                                    </p>
+                                </div>
+                            </td>
+                <?php
+                    }
+                }
+            }
+                ?>
+
+                        </tr>
+                        <!--
                 1. O tr cria uma nova linha dentro da tabela
                 2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
             -->
-            </table>
-        </div>
+        </table>
+    </div>
 
         <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
     </body>

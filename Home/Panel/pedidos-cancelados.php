@@ -1,8 +1,17 @@
 <?php
 session_start();
-if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
-?>
+if (!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../index.php'/>";
 
+include_once("../../Class/connection.php");
+$pdo = conectar();
+
+$sql = "SELECT idmovimento FROM movimentos WHERE aprovado = 'N' AND entregue = 'N' AND fk_idempresa = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(1, $_SESSION['idUsuario']);
+$stmt->execute();
+
+$idMovimento = $stmt->fetch();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -59,7 +68,8 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
                 <th>Nome do Produto</th>
             </tr>
 
-
+            <!--
+            <tr>
                 <td>
                     <div>
                         <img src="../../IMG/food/pfg.jpg" alt="imagem" width="100px" height="100px">
@@ -85,12 +95,13 @@ if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; UR
                 <td>
                     <div>
                         <p>
-                            Coxinha de Carne Grande
+                            
                         </p>
                     </div>
                 </td>
 
             </tr>
+-->
             <!--
                 1. O tr cria uma nova linha dentro da tabela
                 2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
