@@ -1,6 +1,15 @@
 <?php
+include('../Class/connection.php');
 session_start();
 if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+
+$pdo = conectar();
+
+$sql = "SELECT * FROM funcionarios";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$empregados = $stmt->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -54,33 +63,15 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
         <table>
             <tr>
                 <th>Nome do Empregado</th>
-                <th>Contratado em</th>
+                <th>Fone</th>
+                <th>CPF</th>
                 <th>Status</th>
             </tr>
 
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>
-                        <div>
-                            <p>João da Silva</p>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="centralizado">
-                        00/00/000
-                    </div>
-                </td>
-                <td>
-                    <div class="centralizado">
-                        A
-                    </div>
-                </td>
-            </tr>
+            <?php
+            foreach($empregados as $e) {
 
+            ?>
             <tr>
                 <td>
                     <div class="cart-info">
@@ -88,22 +79,29 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>
                         <div>
-                            <p>João da Silva</p>
-                            <a href="">Remover</a>
+                            <p><?php echo $e['nomefuncionario']; ?></p>
                         </div>
                     </div>
                 </td>
                 <td>
                     <div class="centralizado">
-                        00/00/000
+                        <?php echo $e['fone']; ?>
                     </div>
                 </td>
                 <td>
                     <div class="centralizado">
-                        I
+                        <?php echo $e['cpf']; ?>
+                    </div>
+                </td>
+                <td>
+                    <div class="centralizado">
+                        <?php echo $e['status']; ?>
                     </div>
                 </td>
             </tr>
+            <?php
+            }
+            ?>
         </table>
     </div>
 

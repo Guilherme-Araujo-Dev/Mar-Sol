@@ -235,7 +235,7 @@ if (isset($_POST['btnCadastro'])) {
         $erro = explode("'", $e->getMessage(), 2);
         if ($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";
         else echo "<script> alert('Insira os dados da maneira correta'); </script>";
-    } catch (Exception) {
+    } catch (Exception $e) {
         echo "<script> alert('Insira os dados da maneira correta'); </script>";
     }
 }

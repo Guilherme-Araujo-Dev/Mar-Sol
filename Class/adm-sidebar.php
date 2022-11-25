@@ -15,7 +15,7 @@
         </li>
 
         <li>
-            <a href="../Admin/adm-products.php"><i class="fa-solid fa-cookie-bite"></i> Produtos</a>
+            <a href="../Home/report-product.php"><i class="fa-solid fa-cookie-bite"></i> Produtos</a>
         </li>
 
         <li>
