@@ -5,9 +5,9 @@ if (!isset($_SESSION['usuario'])) $_SESSION['usuario'] = null;
 <link rel="stylesheet" type="text/css" href="../CSS/style-header.css">
 
 <header>
-    <nav class="navbar navbar-expand-lg color-header p-2">
-        <a class="navbar-brand" href="index.php">
-            <img src="" alt="" width="80" height="60">
+    <nav class="navbar p-3">
+        <a class="navbar-brand">
+            <img width="40" height="40">
         </a>
     </nav>
     <nav class="navbar navbar-expand-lg color-header fixed-top p-2">

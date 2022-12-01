@@ -59,6 +59,7 @@ $produtos = $stmt->fetchAll();
                 <th>Produto</th>
                 <th>Peso</th>
                 <th>Preço</th>  
+                <th>Estoque</th>
             </tr>
 
             <?php
@@ -77,14 +78,16 @@ $produtos = $stmt->fetchAll();
 
     <!--Produto-->
     <td>
-        <div class="centralizado">
-            <?php echo $p['nomeproduto']; ?>
+        <div>
+        <p>
+                <?php echo $p['nomeproduto']; ?>
+            </p>
         </div>
     </td>
 
     <!--Peso-->
     <td>
-        <div class="centralizado">
+        <div>
             <?php echo $p['peso']; ?> KG
         </div>
     </td>
@@ -92,11 +95,21 @@ $produtos = $stmt->fetchAll();
     <!--Preço-->
     <td>
         <div>
-            <p>
+        <p>
                 R$ <?php echo $p['preco']; ?>
             </p>
         </div>
     </td>
+
+    <!--Estoque-->
+    <td>
+        <div>
+            <p>
+                <?php echo $p['estoque']; ?>
+            </p>
+        </div>
+    </td>
+
     </tr>
 <?php
             }
