@@ -10,7 +10,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindParam(1, $_SESSION['idUsuario']);
 $stmt->execute();
 
-$idMovimento = $stmt->fetch();
+$idMovimento = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,79 +56,78 @@ $idMovimento = $stmt->fetch();
         <br><br>
 
         <div class="small-container cart-page">
-        <table>
-            <tr>
-                <th>Produto</th>
-                <th class="invisivel">invisivel</th>
-                <th>Quantidade</th>
-                <th>Nome do Produto</th>
-            </tr>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th class="invisivel">invisivel</th>
+                    <th>Quantidade</th>
+                    <th>Nome do Produto</th>
+                </tr>
 
-            <?php
-            if ($idMovimento) {
+                <?php
+                if ($idMovimento) {
 
-            foreach ($idMovimento as $movimento) {
+                    foreach ($idMovimento as $movimento) {
 
-                $sql = "SELECT * FROM movimento_itens WHERE fk_idmovimento = ?";
-                $stmt = $pdo->prepare($sql);
-                $stmt->bindParam(1, $movimento);
-                $stmt->execute();
-
-                $itens = $stmt->fetchAll();
-
-                
-                    foreach ($itens as $i) {
-                        $sql = "SELECT * FROM produtos WHERE idproduto = ?";
+                        $sql = "SELECT * FROM movimento_itens WHERE fk_idmovimento = ?";
                         $stmt = $pdo->prepare($sql);
-                        $stmt->bindParam(1, $i['fk_idproduto']);
+                        $stmt->bindParam(1, $movimento[0]);
                         $stmt->execute();
 
-                        $produto = $stmt->fetchAll();
-                        $produto = $produto[0];
+                        $itens = $stmt->fetchAll();
 
-            ?>
-                        <tr>
-                            <td>
-                                <div>
-                                    <img src="../../IMG/food/<?php echo $produto['imagem'] ?> " alt="imagem" width="100px" height="100px">
-                                </div>
-                            </td>
 
-                            <td>
-                                <div>
-                                    <p>
+                        foreach ($itens as $i) {
+                            $sql = "SELECT * FROM produtos WHERE idproduto = ?";
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->bindParam(1, $i['fk_idproduto']);
+                            $stmt->execute();
 
-                                    </p>
-                                </div>
-                            </td>
+                            $produto = $stmt->fetch();
 
-                            <td>
-                                <div>
-                                    <p>
-                                        <?php echo $i['quantidade'] ?>
-                                    </p>
-                                </div>
-                            </td>
+                ?>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <img src="../../IMG/food/<?php echo $produto['imagem'] ?> " alt="imagem" width="100px" height="100px">
+                                    </div>
+                                </td>
 
-                            <td>
-                                <div>
-                                    <p>
-                                        <?php echo $produto['nomeproduto'] ?>
-                                    </p>
-                                </div>
-                            </td>
-                <?php
+                                <td>
+                                    <div>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div>
+                                        <p>
+                                            <?php echo $i['quantidade'] ?>
+                                        </p>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div>
+                                        <p>
+                                            <?php echo $produto['nomeproduto'] ?>
+                                        </p>
+                                    </div>
+                                </td>
+                    <?php
+                        }
                     }
                 }
-            }
-                ?>
+                    ?>
 
-                        </tr>
-                        <!--
+                            </tr>
+                            <!--
                 1. O tr cria uma nova linha dentro da tabela
                 2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
             -->
-        </table>
+            </table>
         </div>
 
         <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
