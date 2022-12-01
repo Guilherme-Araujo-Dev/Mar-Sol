@@ -234,7 +234,6 @@ if (isset($_POST['finalizaVenda'])) {
   }
 
   try {
-    $stm->execute();
 
     $stm = $pdo->prepare("SELECT idmovimento FROM movimentos ORDER BY idmovimento DESC LIMIT 1");
     $stm->execute();
