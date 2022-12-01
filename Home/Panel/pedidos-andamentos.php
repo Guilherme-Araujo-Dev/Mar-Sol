@@ -10,6 +10,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindParam(1, $_SESSION['idUsuario']);
 $stmt->execute();
 
+
 $idMovimento = $stmt->fetchAll();
 ?>
 

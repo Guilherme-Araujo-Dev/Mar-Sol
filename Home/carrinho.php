@@ -207,12 +207,14 @@ if (isset($_GET['ac'])) {
 <?php
 if (isset($_POST['finalizaVenda'])) {
 
-
   $stm = $pdo->prepare("INSERT INTO movimentos (fk_idempresa, fk_idfuncionario, data) values (?,1,?)");
   $stm->bindValue(1, (int) $_SESSION['idUsuario']);
   $stm->bindValue(2, date('Y-m-d'));
+  $stm->execute();
+
 
   foreach ($_SESSION['carrinho'] as $id => $qtd) {
+    
 
     $stm = $pdo->prepare("SELECT estoque FROM produtos WHERE idproduto = ?");
     $stm->bindValue(1, $id);
@@ -240,7 +242,6 @@ if (isset($_POST['finalizaVenda'])) {
     $ultimoid = $stm->fetch();
 
     $_SESSION['ultimoId'] = $ultimoid[0];
-    //var_dump($_SESSION);
 
     //inserindo os itens comprados 
     foreach ($_SESSION['carrinho'] as $id => $qtd) {
