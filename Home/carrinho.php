@@ -212,6 +212,25 @@ if (isset($_POST['finalizaVenda'])) {
   $stm->bindValue(1, (int) $_SESSION['idUsuario']);
   $stm->bindValue(2, date('Y-m-d'));
 
+  foreach ($_SESSION['carrinho'] as $id => $qtd) {
+
+    $stm = $pdo->prepare("SELECT estoque FROM produtos WHERE idproduto = ?");
+    $stm->bindValue(1, $id);
+    $stm->execute();
+
+    $estoque =  $stm->fetch();
+    if($estoque[0] < $qtd) {
+      echo "<script> alert('Um dos pedidos não estão disponíveis na quandidade selecionada') </script>";
+      exit();
+    }
+
+    if($qtd <= 0) {
+      echo "<script> alert('Você não pode inserir produtos de valores negativos ou nulos') </script>";
+      exit();
+    }
+
+  }
+
   try {
     $stm->execute();
 
@@ -230,6 +249,11 @@ if (isset($_POST['finalizaVenda'])) {
       $stm->bindValue(1, $_SESSION["ultimoId"]);
       $stm->bindValue(2, $id);
       $stm->bindValue(3, $qtd);
+      $stm->execute();
+
+      $stm = $pdo->prepare("UPDATE produtos SET estoque = (estoque - ?) WHERE idproduto = ?");
+      $stm->bindValue(1, $qtd);
+      $stm->bindValue(2, $id);
       $stm->execute();
 
 

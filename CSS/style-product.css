@@ -41,6 +41,13 @@
 	font-size: 20px;
 }
 
+.produto h3 {
+	display: block;
+	margin: 170px 29%; /*mudar espaçamento do texto "Quantidade Disponível"*/
+	position:absolute;
+	font-size: 15px;
+}
+
 .produto h1 {
 	position: absolute;
 	margin-left: 28%; /*mudar espaçamento dos nomes do produto*/
@@ -150,6 +157,10 @@
 	}
 
 	.produto h2{
+		margin-left: 5%;
+	}
+
+	.produto h3{
 		margin-left: 5%;
 	}
 

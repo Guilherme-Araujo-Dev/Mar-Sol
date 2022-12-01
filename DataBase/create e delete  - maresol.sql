@@ -13,6 +13,7 @@ CREATE TABLE produtos (
     nomeproduto VARCHAR(100) NOT NULL,
     peso FLOAT(5,2) NOT NULL,
     preco FLOAT(5,2) NOT NULL,
+    estoque INT NOT NULL,
     imagem VARCHAR(200),                                           -- Passa local onde a imagem se hospeda
     info TEXT(500),
     fk_idcategoria INT NOT NULL,

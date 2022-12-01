@@ -65,15 +65,18 @@ session_start();
         <br><br><br><br>
 
         <ul class="produtos">
-            <?php foreach ($produto as $p) { ?>
-                <li class="produto">
-                    <img src="../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>">
-                    <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
-                    <p class="product-text">Informações Nutricionais: <? echo $p['info']; ?> </p>
-                    <h2 class="product-text">Preço: R$ <?php echo number_format($p['preco'], 2, ',', ''); ?></h2>
-                    <button class="btnComprar" name="btnComprar" type="submit" onclick="window.location.href = 'carrinho.php?ac=add&id=<?php echo $p['idproduto']; ?>'">Comprar</button>
-                </li>
-            <?php } ?>
+            <?php foreach ($produto as $p) {
+                if ($p['estoque'] > 0) { ?>
+                    <li class="produto">
+                        <img src="../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>">
+                        <h1 class="product-text"><?php echo $p['nomeproduto']; ?></h1>
+                        <p class="product-text">Informações Nutricionais: <? echo $p['info']; ?> </p>
+                        <h2 class="product-text">Preço: R$ <?php echo number_format($p['preco'], 2, ',', ''); ?></h2>
+                        <h3 class="product-text">Quantidade Disponível: <?php echo $p['estoque']; ?> </h3>
+                        <button class="btnComprar" name="btnComprar" type="submit" onclick="window.location.href = 'carrinho.php?ac=add&id=<?php echo $p['idproduto']; ?>'">Comprar</button>
+                    </li>
+            <?php }
+            } ?>
         </ul>
     </main>
 
