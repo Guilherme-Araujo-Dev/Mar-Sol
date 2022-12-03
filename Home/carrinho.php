@@ -260,9 +260,9 @@ if (isset($_POST['finalizaVenda'])) {
       unset($_SESSION['carrinho']);
       unset($_SESSION['valor_total']);
 
-      echo "<script> alert('Pedido realizado com sucesso') </script>";
-      echo "<meta http-equiv='refresh' content='0; URL=../Home/payment.php'/>";
     }
+    echo "<script> alert('Pedido realizado com sucesso') </script>";
+    echo "<meta http-equiv='refresh' content='0; URL=../Home/payment.php'/>";
   } catch (Exception $e) {
     echo $e->getMessage();
   }
