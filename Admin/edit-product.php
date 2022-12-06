@@ -8,6 +8,11 @@ $sql = "SELECT * FROM categorias WHERE status = 'A'";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $categorias = $stmt->fetchAll();
+
+$sql = "SELECT * FROM produtos WHERE status = 'A'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$produto = $stmt->fetchAll();
 ?>
 
 
@@ -51,7 +56,16 @@ $categorias = $stmt->fetchAll();
     </center>
 
     <form action="" method="post" class="botoes pt-5 espacamento">
-        <div class="pt-5">
+        <div class="pt-3">
+            <p>Selecione o Produto:</p>
+            <select type="text" name="id">
+                <?php foreach ($produto as $p) { ?>
+                    <option value="<?php echo $p['idproduto'] ?>"><?php echo $p['nomeproduto']; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <br>
+        <div>
             <p>Nome do Produto:</p>
             <input type="text" name="nome" />
         </div>
@@ -94,24 +108,26 @@ $categorias = $stmt->fetchAll();
 <?php
 
 if (isset($_POST['btnSalvar'])) {
+    $id    = isset($_POST['id']) ? $_POST['id'] : null;
     $nome    = isset($_POST['nome']) ? $_POST['nome'] : null;
     $peso       = isset($_POST['peso']) ? ($_POST['peso']) : null;
     $preco            = isset($_POST['preco']) ? ($_POST['preco']) : null;
     $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : null;
     $estoque = isset($_POST['estoque']) ? $_POST['estoque'] : null;
 
-    if (empty($nome) || empty($peso) || empty($preco) || empty($categoria)) {
+    if (empty($nome) || empty($peso) || empty($preco) || empty($categoria) || empty($id)) {
         echo "Necessário preencher todos os campos obrigatórios";
         exit();
     }
 
-    $sql = "UPDATE FROM produtos (nomeProduto, peso, preco, estoque, fk_idcategoria) VALUES (:nm, :ps, :pc, :es, :ct)";
+    $sql = "UPDATE FROM produtos (nomeProduto, peso, preco, estoque, fk_idcategoria) VALUES (:nm, :ps, :pc, :es, :ct) WHERE idproduto = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':nm', $nome);
     $stmt->bindParam(':ps', $peso);
     $stmt->bindParam(':pc', $preco);
     $stmt->bindParam(':es', $estoque);
     $stmt->bindParam(':ct', $categoria);
+    $stmt->bindParam(':id', $id);
 
     try {
         $stmt->execute();

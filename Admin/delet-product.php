@@ -1,9 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
 
+include_once("../class/connection.php");
+$pdo = conectar();
+$sql = "SELECT * FROM categorias WHERE status = 'A'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$categorias = $stmt->fetchAll();
 
-<?php 
-    include_once("../class/connection.php");
-    conectar(); 
-    session_start();
+$sql = "SELECT * FROM produtos WHERE status = 'A'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$produto = $stmt->fetchAll();
 ?>
 
 
@@ -23,72 +32,72 @@
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
-    
+
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
-    <!-- Importando o CSS da pagina delet-product-->
-    <link rel="stylesheet" href="../CSS/style-delet-product.css">
+    <!-- Importando o CSS das caixas-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style-delet-product.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-</head>
-
-<body>
-<?php include("../class/adm-sidebar.php"); ?>
-<center><br>
+    <?php include("../class/adm-sidebar.php"); ?>
+    <center><br>
         <div class="admDELET">
-        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-        </svg>
-            <h1>Deletar Produtos</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+            <h1 >Deletar Produtos</h1>
         </div>
     </center>
-    <br><br>
 
-    <div class="small-container cart-page">
-        <table>
-            <tr>
-                <th>Imagem</th>
-                <th>Nome do Produto</th>
-                <th>Excluir</th>
-            </tr>
+    <form method="post" class="botoes pt-5 espacamento">
+        <div class="pt-5">
+            <p>Selecione o Produto:</p>
+            <select type="text" name="id">
+                <?php foreach ($produto as $p) { ?>
+                    <option value="<?php echo $p['idproduto'] ?>"><?php echo $p['nomeproduto']; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <br>
+        
+        <input type="submit" value="Salvar" name="btnSalvar" class="submit">
+        <button>Cancelar</button>
+    </form>
 
-
-                <td>
-                    <div>
-                        <img src="../IMG/food/ccg.jpg" alt="imagem" width="100px" height="100px">
-                    </div>
-                </td>
-
-                <td>
-                    <div>
-                        <p>
-                            Coxinha de Carne Grande (ccg)
-                        </p>
-                    </div>
-                </td>
-
-                <td>
-                    <div>
-                        <p>
-                            <a href="">Remover</a>
-                        </p>
-                    </div>
-                </td>
-
-            </tr>
-<!--
-    1. O tr cria uma nova linha dentro da tabela
-    2. Para colocar novos textos NA MESMA LINHA tem que usar o td dentro do tr
--->
-        </table>
+    <div class="espacamento">
     </div>
 
-<script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a8239b02c3.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
+
+<?php
+
+if (isset($_POST['btnSalvar'])) {
+    $id    = isset($_POST['id']) ? $_POST['id'] : null;
+
+    if (empty($id)) {
+        echo "Necessário preencher todos os campos obrigatórios";
+        exit();
+    }
+
+    $sql = "DELETE FROM produtos WHERE idproduto = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $id);
+
+    try {
+        $stmt->execute();
+        echo "<script> alert('Produto foi deletado com sucesso') </script>";
+    } catch (PDOException $e) {
+        echo "<script> alert('Por favor insira os dados da maneira correta') </script>";
+    }
+}
+
+?>
