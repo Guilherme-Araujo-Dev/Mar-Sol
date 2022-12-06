@@ -105,7 +105,7 @@ if (isset($_POST['btnSalvar'])) {
         exit();
     }
 
-    $sql = "INSERT INTO produtos (nomeProduto, peso, preco, estoque, fk_idcategoria) VALUES (:nm, :ps, :pc, :es, :ct)";
+    $sql = "UPDATE FROM produtos (nomeProduto, peso, preco, estoque, fk_idcategoria) VALUES (:nm, :ps, :pc, :es, :ct)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':nm', $nome);
     $stmt->bindParam(':ps', $peso);
@@ -115,7 +115,7 @@ if (isset($_POST['btnSalvar'])) {
 
     try {
         $stmt->execute();
-        echo "<script> alert('Produto foi cadastrado com sucesso') </script>";
+        echo "<script> alert('Produto foi alterado com sucesso') </script>";
     } catch (PDOException $e) {
         echo "<script> alert('Por favor insira os dados da maneira correta') </script>";
     }
