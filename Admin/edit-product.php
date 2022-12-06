@@ -1,20 +1,13 @@
 <?php
 session_start();
 if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
-?>
 
-
-<?php
-    require_once ("../class/connection.php");
-    $pdo = conectar();
-
-    $sql = "SELECT * FROM categorias";
-    $stmt = $pdo->prepare($sql);
-
-    $stmt->execute();
-
-    $categorias = $stmt->fetchAll();
-
+include_once("../class/connection.php");
+$pdo = conectar();
+$sql = "SELECT * FROM categorias WHERE status = 'A'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$categorias = $stmt->fetchAll();
 ?>
 
 
@@ -34,7 +27,7 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
 
     <!-- Definindo o Ícone da Página -->
     <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
-    
+
     <!-- Importando o CSS do sidebar-->
     <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
 
@@ -46,13 +39,13 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
 
 <body>
 
-<?php include("../class/adm-sidebar.php"); ?>
+    <?php include("../class/adm-sidebar.php"); ?>
     <center><br>
         <div class="admEDIT">
-        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-        </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+            </svg>
             <h1>Editar Produto</h1>
         </div>
     </center>
@@ -73,12 +66,16 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
             <input type="text" name="preco" />
         </div>
         <br>
+        <div>
+            <p class="nomeproduto">Estoque:</p>
+            <input type="number" id="caixa" name="estoque" />
+        </div>
+        <br>
         <p class="nomeproduto">Categoria:</p>
         <select type="text" name="categoria">
             <?php foreach ($categorias as $c) { ?>
-                <option><?php echo $c['nomeCategoria']; ?></option>
+                <option value="<?php echo $c['idcategoria'] ?>"><?php echo $c['nomecategoria']; ?></option>
             <?php } ?>
-
         </select>
         <br><br>
         </div>
