@@ -90,3 +90,34 @@ $categorias = $stmt->fetchAll();
 </body>
 
 </html>
+
+<?php
+
+if (isset($_POST['btnSalvar'])) {
+    $nome    = isset($_POST['nome']) ? $_POST['nome'] : null;
+    $peso       = isset($_POST['peso']) ? ($_POST['peso']) : null;
+    $preco            = isset($_POST['preco']) ? ($_POST['preco']) : null;
+    $categoria = isset($_POST['categoria']) ? $_POST['categoria'] : null;
+    $estoque = isset($_POST['estoque']) ? $_POST['estoque'] : null;
+
+    if (empty($nome) || empty($peso) || empty($preco) || empty($categoria)) {
+        echo "Necessário preencher todos os campos obrigatórios";
+        exit();
+    }
+
+    $sql = "INSERT INTO produtos (nomeProduto, peso, preco, estoque, fk_idcategoria) VALUES (:nm, :ps, :pc, :es, :ct)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':nm', $nome);
+    $stmt->bindParam(':ps', $peso);
+    $stmt->bindParam(':pc', $preco);
+    $stmt->bindParam(':es', $estoque);
+    $stmt->bindParam(':ct', $categoria);
+
+    try {
+        $stmt->execute();
+        echo "<script> alert('Produto foi cadastrado com sucesso') </script>";
+    } catch (PDOException $e) {
+        echo "<script> alert('Por favor insira os dados da maneira correta') </script>";
+    }
+}
+?>
