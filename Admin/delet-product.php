@@ -66,7 +66,7 @@ $produto = $stmt->fetchAll();
         </div>
         <br>
         
-        <input type="submit" value="Salvar" name="btnSalvar" class="submit">
+        <input type="submit" value="Deletar" name="btnDeletar" class="submit">
         <button>Cancelar</button>
     </form>
 
@@ -80,7 +80,7 @@ $produto = $stmt->fetchAll();
 
 <?php
 
-if (isset($_POST['btnSalvar'])) {
+if (isset($_POST['btnDeletar'])) {
     $id    = isset($_POST['id']) ? $_POST['id'] : null;
 
     if (empty($id)) {
