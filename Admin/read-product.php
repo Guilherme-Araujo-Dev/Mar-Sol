@@ -5,7 +5,7 @@ if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta h
 
 $pdo = conectar();
 
-$sql = "SELECT * FROM produtos";
+$sql = "SELECT * FROM produtos WHERE status = 'A'";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $produtos = $stmt->fetchAll();

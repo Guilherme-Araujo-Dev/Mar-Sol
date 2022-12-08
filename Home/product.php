@@ -47,7 +47,7 @@ session_start();
         <?php
         if (isset($_POST['btnBusca'])) {
             $busca    = isset($_POST['busca']) ? $_POST['busca'] : ' ';
-            $sql = "SELECT * FROM produtos WHERE nomeproduto LIKE ?";
+            $sql = "SELECT * FROM produtos WHERE nomeproduto LIKE ? AND status  = 'A'";
             $stmt = $pdo->prepare($sql);
             $buscaGeral = '%' . $busca . '%';
             $stmt->bindParam(1, $buscaGeral);

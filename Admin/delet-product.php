@@ -88,7 +88,7 @@ if (isset($_POST['btnSalvar'])) {
         exit();
     }
 
-    $sql = "DELETE FROM produtos WHERE idproduto = :id";
+    $sql = "UPDATE FROM produtos (status, estoque) VALUES ('I', 0) WHERE idproduto = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $id);
 
