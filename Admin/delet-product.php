@@ -88,13 +88,14 @@ if (isset($_POST['btnDeletar'])) {
         exit();
     }
 
-    $sql = "UPDATE FROM produtos (status, estoque) VALUES ('I', 0) WHERE idproduto = :id";
+    $sql = "UPDATE produtos SET status = 'I', estoque = 0 WHERE idproduto = :id";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(":id", $id);
 
     try {
         $stmt->execute();
         echo "<script> alert('Produto foi deletado com sucesso') </script>";
+        echo "<meta http-equiv='refresh' content='0'/>";
     } catch (PDOException $e) {
         echo "<script> alert('Por favor insira os dados da maneira correta') </script>";
     }
