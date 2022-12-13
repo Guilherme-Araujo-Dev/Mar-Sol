@@ -262,7 +262,7 @@ if (isset($_POST['finalizaVenda'])) {
 
     }
     echo "<script> alert('Pedido realizado com sucesso') </script>";
-    echo "<meta http-equiv='refresh' content='0; URL=../Home/payment.php'/>";
+    echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
   } catch (Exception $e) {
     echo $e->getMessage();
   }
