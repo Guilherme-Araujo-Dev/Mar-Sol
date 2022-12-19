@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Nov-2022 às 21:37
+-- Tempo de geração: 13-Dez-2022 às 18:04
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -68,7 +68,7 @@ CREATE TABLE `cidades` (
 
 INSERT INTO `cidades` (`idcidade`, `nomecidade`, `fk_idestado`, `status`) VALUES
 (1, 'Cascavel', 1, 'A'),
-(2, 'Foz do Igua?u', 1, 'A');
+(2, 'Foz do Iguaçu', 1, 'A');
 
 -- --------------------------------------------------------
 
@@ -100,9 +100,9 @@ INSERT INTO `empresas` (`idempresa`, `nomeempresa`, `status`, `cnpj`, `nomeclien
 (5, 'MercadinhoTOP', 'A', 07046875600011, 'Eduardo Rafael', 'rafael.eduardo@mercado.com', 'U', '0af49b414fae9ffe5000f2969c1d70af', 45944787567),
 (6, 'Display', 'A', 01146875600013, 'Douglas Braga', 'display.flex@codigo.com', 'U', '687c45c4a5292c9c560079b61f47c65a', 45966881232),
 (7, 'Oscorp', 'A', 70468756000124, 'Norman Osborn', 'Corp.company@corporation.com', 'U', '5bec0f670d2112ba3302216c9881f27f', 45991209558),
-(8, 'Sirius Cibern?tica', 'A', 14468756000123, 'Luana de Melo', 'hackingcomputers@cyber.com', 'U', 'hackerman123', 45991832457),
+(8, 'Sirius Cibernética', 'A', 14468756000123, 'Luana de Melo', 'hackingcomputers@cyber.com', 'U', 'hackerman123', 45991832457),
 (9, 'VBC America', 'A', 17468756000120, 'Gon Friques', 'gon.friques@hunter.com', 'A', '569bfcd06da769ce8c26d300e5519048', 45912321444),
-(10, 'BCG Uni?o', 'A', 18468756000119, 'Naruto Uchiha', 'naruto.uchiha@folha.com', 'U', 'be877f26501edbb3727be0ebdefcafd9', 45945767668),
+(10, 'BCG União', 'A', 18468756000119, 'Naruto Uchiha', 'naruto.uchiha@folha.com', 'U', 'be877f26501edbb3727be0ebdefcafd9', 45945767668),
 (11, 'Latina', 'A', 19468756000118, 'Neymar Jr.', 'menino.ney@brasil.com', 'U', '6b652225a1746788da4fac4424f6f761', 45923547877),
 (12, 'Marcolle', 'A', 20468756000117, 'Zenitsu Agatsuma', 'zenitsu.agatsuma@slayer.com', 'U', '2089e73e08d3c4853c255f1b01aa0184', 45925362453),
 (13, 'Bacaro', 'A', 21468756000116, 'Zoro Roronoa', 'roronoa.zoro@twopiece.com', 'U', 'b99d75fbcbe864eb7bb5864bfbee13e9', 45925436245),
@@ -278,6 +278,7 @@ CREATE TABLE `produtos` (
   `nomeproduto` varchar(100) NOT NULL,
   `peso` float(5,2) NOT NULL,
   `preco` float(5,2) NOT NULL,
+  `estoque` int(11) NOT NULL,
   `imagem` varchar(200) DEFAULT NULL,
   `info` text DEFAULT NULL,
   `fk_idcategoria` int(11) NOT NULL,
@@ -288,31 +289,31 @@ CREATE TABLE `produtos` (
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produtos` (`idproduto`, `nomeproduto`, `peso`, `preco`, `imagem`, `info`, `fk_idcategoria`, `status`) VALUES
-(1, 'Pastel de Carne Mini', 1.00, 22.00, 'pcm.jpg', NULL, 2, 'A'),
-(2, 'Pastel de Frango Mini', 1.00, 22.00, 'pfm.jpg', NULL, 2, 'A'),
-(3, 'Pastel de Pizza Mini', 1.00, 22.00, 'ppm.jpg', NULL, 2, 'A'),
-(4, 'Pastel de Queijo Mini', 1.00, 22.00, 'pqm.jpg', NULL, 2, 'A'),
-(5, 'Pastel  de Carne Grande', 1.00, 22.00, 'pcg.jpg', NULL, 1, 'A'),
-(6, 'Pastel de Frango Grande', 1.00, 22.00, 'pfg.jpg', NULL, 1, 'A'),
-(7, 'Pastel de Pizza Grande', 1.00, 22.00, 'ppg.jpg', NULL, 1, 'A'),
-(8, 'Pastel de Queijo Grande', 1.00, 22.00, 'pqg.jpg', NULL, 1, 'A'),
-(9, 'Bolinho de Carne Empanado Grande', 1.30, 21.00, 'bceg.jpg', NULL, 3, 'A'),
-(10, 'Bolinho de Batata com Carne', 1.30, 21.00, 'bbcg.jpg', NULL, 4, 'A'),
-(11, 'Bolinho de Batata com Frango Grande', 1.30, 21.00, 'bbfg.jpg', NULL, 3, 'A'),
-(12, 'Coxinha de Carne Grande', 1.30, 21.00, 'ccg.jpg', NULL, 5, 'A'),
-(13, 'Coxinha de Frango Grande com Requeijao ', 1.30, 21.00, 'cfrg.jpg', NULL, 5, 'A'),
-(14, 'Coxinha de Frango Grande', 1.30, 21.00, 'cfg.jpg', NULL, 5, 'A'),
-(15, 'Enrolado de Salsicha Grande', 1.30, 21.00, 'esg.jpg', NULL, 9, 'A'),
-(16, 'Kibe de Carne Grande', 1.30, 21.00, 'kcg.jpg', NULL, 9, 'A'),
-(17, 'Risolis de Carne Grande', 1.30, 21.00, 'rcg.jpg', NULL, 7, 'A'),
-(18, 'Risolis de Frango Grande', 1.30, 21.00, 'rfg.jpg', NULL, 7, 'A'),
-(19, 'Risolis de Pizza Grande', 1.30, 21.00, 'rpg.jpg', NULL, 7, 'A'),
-(20, 'Bolinho de Queijo Mini', 2.00, 36.00, 'bqm.jpg', NULL, 4, 'A'),
-(21, 'Coxinha de Carne Mini', 2.00, 36.00, 'ccm.jpg', NULL, 6, 'A'),
-(22, 'Coxinha de Frango Mini', 2.00, 36.00, 'cfm.jpg', NULL, 6, 'A'),
-(23, 'Enrolado de Salsicha Mini', 2.00, 36.00, 'esm.jpg', NULL, 10, 'A'),
-(24, 'Kibe de Carne Mini', 2.00, 36.00, 'kcm.jpg', NULL, 10, 'A');
+INSERT INTO `produtos` (`idproduto`, `nomeproduto`, `peso`, `preco`, `estoque`, `imagem`, `info`, `fk_idcategoria`, `status`) VALUES
+(1, 'Pastel de Carne Mini', 1.00, 22.00, 200, 'pcm.jpg', NULL, 2, 'A'),
+(2, 'Pastel de Frango Mini', 1.00, 22.00, 50, 'pfm.jpg', NULL, 2, 'A'),
+(3, 'Pastel de Pizza Mini', 1.00, 22.00, 0, 'ppm.jpg', NULL, 2, 'A'),
+(4, 'Pastel de Queijo Mini', 1.00, 22.00, 100, 'pqm.jpg', NULL, 2, 'A'),
+(5, 'Pastel  de Carne Grande', 1.00, 22.00, 100, 'pcg.jpg', NULL, 1, 'A'),
+(6, 'Pastel de Frango Grande', 1.00, 22.00, 100, 'pfg.jpg', NULL, 1, 'A'),
+(7, 'Pastel de Pizza Grande', 1.00, 22.00, 100, 'ppg.jpg', NULL, 1, 'A'),
+(8, 'Pastel de Queijo Grande', 1.00, 22.00, 100, 'pqg.jpg', NULL, 1, 'A'),
+(9, 'Bolinho de Carne Empanado Grande', 1.30, 21.00, 100, 'bceg.jpg', NULL, 3, 'A'),
+(10, 'Bolinho de Batata com Carne', 1.30, 21.00, 100, 'bbcg.jpg', NULL, 4, 'A'),
+(11, 'Bolinho de Batata com Frango Grande', 1.30, 21.00, 100, 'bbfg.jpg', NULL, 3, 'A'),
+(12, 'Coxinha de Carne Grande', 1.30, 21.00, 100, 'ccg.jpg', NULL, 5, 'A'),
+(13, 'Coxinha de Frango Grande com Requeijao ', 1.30, 21.00, 100, 'cfrg.jpg', NULL, 5, 'A'),
+(14, 'Coxinha de Frango Grande', 1.30, 21.00, 100, 'cfg.jpg', NULL, 5, 'A'),
+(15, 'Enrolado de Salsicha Grande', 1.30, 21.00, 100, 'esg.jpg', NULL, 9, 'A'),
+(16, 'Kibe de Carne Grande', 1.30, 21.00, 100, 'kcg.jpg', NULL, 9, 'A'),
+(17, 'Risolis de Carne Grande', 1.30, 21.00, 100, 'rcg.jpg', NULL, 7, 'A'),
+(18, 'Risolis de Frango Grande', 1.30, 21.00, 100, 'rfg.jpg', NULL, 7, 'A'),
+(19, 'Risolis de Pizza Grande', 1.30, 21.00, 100, 'rpg.jpg', NULL, 7, 'A'),
+(20, 'Bolinho de Queijo Mini', 2.00, 36.00, 100, 'bqm.jpg', NULL, 4, 'A'),
+(21, 'Coxinha de Carne Mini', 2.00, 36.00, 100, 'ccm.jpg', NULL, 6, 'A'),
+(22, 'Coxinha de Frango Mini', 2.00, 36.00, 100, 'cfm.jpg', NULL, 6, 'A'),
+(23, 'Enrolado de Salsicha Mini', 2.00, 36.00, 100, 'esm.jpg', NULL, 10, 'A'),
+(24, 'Kibe de Carne Mini', 2.00, 36.00, 100, 'kcm.jpg', NULL, 10, 'A');
 
 --
 -- Índices para tabelas despejadas
