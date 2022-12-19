@@ -1,5 +1,6 @@
 <?php
 include_once("../class/connection.php");
+include_once("../class/redirect.php");
 $pdo = conectar();
 session_start();
 ?>
@@ -109,7 +110,7 @@ if (isset($_POST['btnLogin'])) {
             if ($emp[0]['tipo'] == 'A') $_SESSION['acesso'] = "Admin";
             else $_SESSION['acesso'] = "User";
 
-            echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+            redirecionar("../Home/index.php");
         } else {
             echo "<script> alert('O usuário escolhido está destivado') </script>";
         }

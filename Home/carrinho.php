@@ -1,8 +1,9 @@
 <?php
-include_once("../class/connection.php");
+include_once('../class/redirect.php');
+include_once "../class/connection.php";
 $pdo = conectar();
 session_start();
-if ($_SESSION['usuario'] == null) echo "<meta http-equiv='refresh' content='0; URL=login.php'/>";
+if ($_SESSION['usuario'] == null) redirecionar("login.php");
 
 
 // Consulta os dados da produto 
@@ -214,23 +215,22 @@ if (isset($_POST['finalizaVenda'])) {
 
 
   foreach ($_SESSION['carrinho'] as $id => $qtd) {
-    
+
 
     $stm = $pdo->prepare("SELECT estoque FROM produtos WHERE idproduto = ?");
     $stm->bindValue(1, $id);
     $stm->execute();
 
     $estoque =  $stm->fetch();
-    if($estoque[0] < $qtd) {
+    if ($estoque[0] < $qtd) {
       echo "<script> alert('Um dos pedidos não estão disponíveis na quandidade selecionada') </script>";
       exit();
     }
 
-    if($qtd <= 0) {
+    if ($qtd <= 0) {
       echo "<script> alert('Você não pode inserir produtos de valores negativos ou nulos') </script>";
       exit();
     }
-
   }
 
   try {
@@ -259,7 +259,6 @@ if (isset($_POST['finalizaVenda'])) {
 
       unset($_SESSION['carrinho']);
       unset($_SESSION['valor_total']);
-
     }
     echo "<script> alert('Pedido realizado com sucesso') </script>";
     echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";

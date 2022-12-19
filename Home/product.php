@@ -1,4 +1,5 @@
 <?php
+include_once('../class/redirect.php');
 require_once("../class/connection.php");
 $pdo = conectar();
 session_start();
@@ -43,7 +44,6 @@ session_start();
                 </form>
             </div>
         </div>
-
         <?php
         if (isset($_POST['btnBusca'])) {
             $busca    = isset($_POST['busca']) ? $_POST['busca'] : ' ';
@@ -57,6 +57,10 @@ session_start();
         }
         // preparando o sql para não aceitar sql injection
         $stmt->execute();
+        if($stmt->rowCount() == 0) {
+            echo '<script> alert("Nenhum produto encontrado!") </script>';
+            redirecionar();
+        }
 
         // pegando todos os dados da tabela
         $produto = $stmt->fetchAll();
@@ -65,7 +69,8 @@ session_start();
         <br><br><br><br>
 
         <ul class="produtos">
-            <?php foreach ($produto as $p) {
+            <?php 
+            foreach ($produto as $p) {
                 if ($p['estoque'] > 0) { ?>
                     <li class="produto">
                         <img src="../IMG/food/<?php echo $p['imagem']; ?>" alt="<?php echo $p['nomeproduto']; ?>">

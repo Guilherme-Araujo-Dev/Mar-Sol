@@ -1,5 +1,6 @@
 <!-- Importando a Conexão com o Banco de Dados -->
 <?php
+include_once('../class/redirect.php');
 include_once "../class/connection.php";
 $pdo = conectar();
 session_start();
@@ -180,18 +181,18 @@ if (isset($_POST['btnCadastro'])) {
     // Tirando os Caracteres especiais do Fone
     $fone = explode("(", $fone, 2);
     $fone = $fone[0] . $fone[1];
-    
+
     $fone = explode(")", $fone, 2);
     $fone = $fone[0] . $fone[1];
-    
+
     $fone = explode("-", $fone, 2);
     $fone = $fone[0] . $fone[1];
-    
+
     $fone = explode(" ", $fone, 2);
     $fone = $fone[0] . $fone[1];
-    
+
     $fone = explode(" ", $fone, 2);
-    if(isset($fone[1])) $fone = $fone[0] . $fone[1]; // Caso for número de Celular
+    if (isset($fone[1])) $fone = $fone[0] . $fone[1]; // Caso for número de Celular
     else $fone = $fone[0]; // Caso for número fixo
 
     $sql = "INSERT INTO empresas (nomeempresa, emailcliente, nomecliente, senha, fone, cnpj) VALUES (:ne, :ec, :nc, :s, :f, :cj)";
@@ -230,7 +231,7 @@ if (isset($_POST['btnCadastro'])) {
         $stmt->execute();
 
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
-        echo "<meta http-equiv='refresh' content='0; URL=../Home/login.php'/>";
+        redirecionar("../Home/login.php");
     } catch (PDOException $e) {
         $erro = explode("'", $e->getMessage(), 2);
         if ($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";

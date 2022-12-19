@@ -1,6 +1,7 @@
 <?php
+include_once('../Class/redirect.php');
 session_start();
-if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') echo "<meta http-equiv='refresh' content='0; URL=../Home/index.php'/>";
+if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../Home/index.php");
 
 include_once("../class/connection.php");
 $pdo = conectar();

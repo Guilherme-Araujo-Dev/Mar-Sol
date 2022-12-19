@@ -1,6 +1,7 @@
 <?php
+include_once('../../Class/redirect.php');
 session_start();
-if(!isset($_SESSION['usuario'])) echo "<meta http-equiv='refresh' content='0; URL=../profile.php'/>";
+if (!isset($_SESSION['usuario'])) redirecionar("../index.php");
 ?>
 
 <!DOCTYPE html>
