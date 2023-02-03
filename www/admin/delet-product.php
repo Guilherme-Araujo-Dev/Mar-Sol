@@ -1,7 +1,7 @@
 <?php
-include_once('../Class/redirect.php');
+include_once('../class/redirect.php');
 session_start();
-if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../Home/index.php");
+if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../home/index.php");
 
 include_once("../class/connection.php");
 $pdo = conectar();
@@ -32,13 +32,13 @@ $produto = $stmt->fetchAll();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-adm.css">
+    <!-- Importando o css do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../css/style-adm.css">
 
-    <!-- Importando o CSS das caixas-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-delet-product.css">
+    <!-- Importando o css das caixas-->
+    <link rel="stylesheet" type="text/css" href="../css/style-delet-product.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>

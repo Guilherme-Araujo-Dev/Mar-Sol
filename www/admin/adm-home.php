@@ -1,8 +1,8 @@
 <?php
-include_once('../Class/redirect.php');
+include_once('../class/redirect.php');
 
 session_start();
-if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../Home/index.php");
+if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../home/index.php");
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +20,13 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     
-    <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-adm-home.css">
+    <!-- Importando o css do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../css/style-adm-home.css">
 
-    <!-- Importando o CSS do header-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-header.css">
+    <!-- Importando o css do header-->
+    <link rel="stylesheet" type="text/css" href="../css/style-header.css">
 
     <!-- Importando a Conexão com o Banco de Dados -->
     <?php include_once("../class/connection.php");
@@ -45,12 +45,12 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("
 
 
 <div class="botao">
-    <button onclick="window.location.href = '../Home/Panel/profile.php'">Perfil do usuário</button> 
+    <button onclick="window.location.href = '../home/panel/profile.php'">Perfil do usuário</button> 
 </div>
 
 
     <div class="imagem">
-        <img src="../IMG/aii.jpg">
+        <img src="../img/aii.jpg">
     </div>
 
 
@@ -58,7 +58,7 @@ if(!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("
 <div class="diaa">
     <h1 id="welcome">Bom dia</h1>
     <!--Importando o Js-->
-    <script src="../JS/time.js"></script>
+    <script src="../js/time.js"></script>
 </div>
 
 

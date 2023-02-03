@@ -1,9 +1,9 @@
 <?php
-include_once('../../Class/redirect.php');
+include_once('../../class/redirect.php');
 session_start();
 if (!isset($_SESSION['usuario'])) redirecionar("../index.php");
 
-include_once("../../Class/connection.php");
+include_once("../../class/connection.php");
 $pdo = conectar();
 
 $sql = "SELECT idmovimento FROM movimentos WHERE aprovado = 'S' AND entregue = 'N' AND fk_idempresa = ?";
@@ -28,21 +28,21 @@ $idMovimento = $stmt->fetchAll();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
 
-    <!-- Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
+    <!-- Importando o css do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../../css/style-panel-sidebar.css">
 
-    <!-- Importando o CSS-->
-    <link rel="stylesheet" href="../../CSS/style-pedidos-entregar.css">
+    <!-- Importando o css-->
+    <link rel="stylesheet" href="../../css/style-pedidos-entregar.css">
 
     <title>Mar & Sol - Painel do Administrador</title>
 </head>
 
 <body>
 
-    <?php include("../../Class/panel-header.php") ?>
-    <?php include("../../Class/panel-sidebar.php") ?>
+    <?php include("../../class/panel-header.php") ?>
+    <?php include("../../class/panel-sidebar.php") ?>
 
 
     <body>
@@ -90,7 +90,7 @@ $idMovimento = $stmt->fetchAll();
                             <tr>
                                 <td>
                                     <div>
-                                        <img src="../../IMG/food/<?php echo $produto['imagem'] ?> " alt="imagem" width="100px" height="100px">
+                                        <img src="../../img/food/<?php echo $produto['imagem'] ?> " alt="imagem" width="100px" height="100px">
                                     </div>
                                 </td>
 

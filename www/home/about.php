@@ -21,10 +21,10 @@
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-about.css">
+    <!-- Importando o css -->
+    <link rel="stylesheet" type="text/css" href="../css/style-about.css">
 
     <title>Mar & Sol Salgados - Sobre</title>
 </head>
@@ -48,7 +48,7 @@
         
 
         <div class="img-pessoa">
-            <img src="../IMG/pessoa.png" alt="img-pessoa">
+            <img src="../img/pessoa.png" alt="img-pessoa">
         </div>
     </div>
 

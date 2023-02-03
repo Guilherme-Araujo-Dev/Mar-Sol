@@ -21,11 +21,11 @@
     <!-- Importando a Fonte "Pacifico" -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 
-    <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-home.css">
+    <!-- Importando o css -->
+    <link rel="stylesheet" type="text/css" href="../css/style-home.css">
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -44,21 +44,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active limit-carousel" data-bs-interval="5000">
-                    <img src="../IMG/banner-home1.jpg" class="d-block w-100" alt="Salgados">
+                    <img src="../img/banner-home1.jpg" class="d-block w-100" alt="Salgados">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="text-carousel">Salgados Deliciosos</h1>
                         <p class="fs-5">Mar & Sol Salgados - O Momento do Sabor.</p>
                     </div>
                 </div>
                 <div class="carousel-item limit-carousel" data-bs-interval="5000">
-                    <img src="../IMG/banner-home2.jpg" class="d-block w-100" alt="Serviço">
+                    <img src="../img/banner-home2.jpg" class="d-block w-100" alt="Serviço">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="text-carousel">Qualidade e Higiene</h1>
                         <p class="fs-5">Sempre prezando pela qualidade e a higiene dos nossos produtos.</p>
                     </div>
                 </div>
                 <div class="carousel-item limit-carousel" data-bs-interval="5000">
-                    <img src="../IMG/banner-home3.jpg" class="d-block w-100" alt="Transporte">
+                    <img src="../img/banner-home3.jpg" class="d-block w-100" alt="Transporte">
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="text-carousel">Transporte e Segurança</h1>
                         <p class="fs-5">Transporte para toda a Região Oeste do Paraná</p>

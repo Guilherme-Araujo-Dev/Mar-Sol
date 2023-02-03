@@ -1,10 +1,10 @@
-<!--Importando o CSS do sidebar-->
-<link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar.css">
+<!--Importando o css do sidebar-->
+<link rel="stylesheet" type="text/css" href="../../css/style-panel-sidebar.css">
 
 <div class="sidebar">
 
     <div class="perfil">
-        <a href="../Panel/profile.php">
+        <a href="../panel/profile.php">
             <p><?php echo $_SESSION['usuario'] ?></p>
         </a>
     </div>

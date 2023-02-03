@@ -1,5 +1,5 @@
 <?php
-include_once('../../Class/redirect.php');
+include_once('../../class/redirect.php');
 session_start();
 if (!isset($_SESSION['usuario'])) redirecionar("../index.php");
 ?>
@@ -18,20 +18,20 @@ if (!isset($_SESSION['usuario'])) redirecionar("../index.php");
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
 
-    <!-- Importando o CSS-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-profile.css">
+    <!-- Importando o css-->
+    <link rel="stylesheet" type="text/css" href="../../css/style-profile.css">
     
-    <!--Importando o CSS do sidebar-->
-    <link rel="stylesheet" type="text/css" href="../../CSS/style-panel-sidebar-profile.css">
+    <!--Importando o css do sidebar-->
+    <link rel="stylesheet" type="text/css" href="../../css/style-panel-sidebar-profile.css">
 
     <title>Mar & Sol - Painel do Administrador</title>  
 </head>
 <body>
 
-<?php include("../../Class/panel-header.php"); ?>
-<?php include("../../Class/panel-sidebar.php") ?>
+<?php include("../../class/panel-header.php"); ?>
+<?php include("../../class/panel-sidebar.php") ?>
 
 
     <p class="bemvindo">Bem vindo(a)</p>

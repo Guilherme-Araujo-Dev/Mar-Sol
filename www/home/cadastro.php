@@ -28,12 +28,12 @@ $rs = $stmt->fetchAll();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-cadastro.css">
+    <!-- Importando o css -->
+    <link rel="stylesheet" type="text/css" href="../css/style-cadastro.css">
 
-    <script type="text/javascript" src="../JS/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
     <!-- 
         o script abaixo faz a magica de pegar os dados no primeiro select e
         chamar a rotina listaCidades.php passando o estado escolhido e gerando
@@ -136,9 +136,9 @@ $rs = $stmt->fetchAll();
             </form>
         </div>
     </div>
-    <!-- Importando o JS -->
-    <script src="../JS/mask.js"></script>
-    <script src="../JS/select-stades.js"></script>
+    <!-- Importando o js -->
+    <script src="../js/mask.js"></script>
+    <script src="../js/select-stades.js"></script>
 
     <?php include("../class/footer.php"); ?>
 
@@ -231,7 +231,7 @@ if (isset($_POST['btnCadastro'])) {
         $stmt->execute();
 
         echo "<script> alert('Você foi cadastrado com sucesso'); </script>";
-        redirecionar("../Home/login.php");
+        redirecionar("../home/login.php");
     } catch (PDOException $e) {
         $erro = explode("'", $e->getMessage(), 2);
         if ($erro[0] == "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry ") echo "<script> alert('Um usuário com esse CNPJ já foi registrado'); </script>";

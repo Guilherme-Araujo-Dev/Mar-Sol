@@ -1,11 +1,11 @@
-<link rel="stylesheet" type="text/css" href="../CSS/style-footer.css">
+<link rel="stylesheet" type="text/css" href="../css/style-footer.css">
 
 <footer class="rodape">
         <div class="container-footer">
             <div class="row pt-3 w-100">
                 <div class="col-sm-2">
                     <a class="navbar-brand logo-f" href="index.php">
-                        <img src="../IMG/logo.png" alt="Logo">
+                        <img src="../img/logo.png" alt="Logo">
                     </a>
                 </div>
                 <div class="col-sm-3 font-f">

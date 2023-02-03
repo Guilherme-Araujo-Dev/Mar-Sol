@@ -19,10 +19,10 @@ session_start();
     </script>
 
     <!-- Definindo o Ícone da Página -->
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- Importando o CSS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/style-login.css">
+    <!-- Importando o css -->
+    <link rel="stylesheet" type="text/css" href="../css/style-login.css">
 
     <title>Mar & Sol Salgados - Login</title>
 </head>
@@ -110,7 +110,7 @@ if (isset($_POST['btnLogin'])) {
             if ($emp[0]['tipo'] == 'A') $_SESSION['acesso'] = "Admin";
             else $_SESSION['acesso'] = "User";
 
-            redirecionar("../Home/index.php");
+            redirecionar("../home/index.php");
         } else {
             echo "<script> alert('O usuário escolhido está destivado') </script>";
         }
