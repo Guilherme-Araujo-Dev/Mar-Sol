@@ -1,8 +1,8 @@
 <?php
+session_start();
 include_once('../class/redirect.php');
 include_once "../class/connection.php";
 $pdo = conectar();
-session_start();
 if ($_SESSION['usuario'] == null) redirecionar("login.php");
 
 

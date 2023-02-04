@@ -1,8 +1,7 @@
-
 <?php 
-    include_once("../class/connection.php");
-    conectar(); 
     session_start();
+    include_once("../class/connection.php");
+    $pdo = conectar(); 
 ?>
 
 <!DOCTYPE html>

@@ -1,9 +1,9 @@
-<!-- Importando a Conexão com o Banco de Dados -->
 <?php
+session_start();
 include_once('../class/redirect.php');
 include_once "../class/connection.php";
 $pdo = conectar();
-session_start();
+echo var_dump($pdo);
 
 $stmt = $pdo->prepare("SELECT * FROM estados ORDER BY nomeestado");
 $stmt->execute();

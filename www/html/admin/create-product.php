@@ -1,6 +1,6 @@
 <?php
-include_once('../class/redirect.php');
 session_start();
+include_once('../class/redirect.php');
 if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../home/index.php");
 
 include_once("../class/connection.php");

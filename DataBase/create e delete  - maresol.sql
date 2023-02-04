@@ -1,6 +1,6 @@
-DROP DATABASE marESol;
-CREATE DATABASE marESol;
-USE marESol;
+DROP DATABASE maresol;
+CREATE DATABASE maresol;
+USE maresol;
 
 CREATE TABLE categorias (
     idcategoria INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

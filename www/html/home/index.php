@@ -1,7 +1,7 @@
 <?php 
+    session_start();
     include_once ("../class/connection.php");
     $pdo = conectar();
-    session_start();
 ?>
 
 <!DOCTYPE html>

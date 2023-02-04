@@ -1,7 +1,7 @@
 <?php
+session_start();
 include('../class/connection.php');
 include_once('../class/redirect.php');
-session_start();
 if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] != 'Admin') redirecionar("../home/index.php");
 
 $pdo = conectar();

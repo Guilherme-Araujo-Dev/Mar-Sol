@@ -1,8 +1,8 @@
 <?php
+session_start();
 include_once("../class/connection.php");
 include_once("../class/redirect.php");
 $pdo = conectar();
-session_start();
 ?>
 
 <!DOCTYPE html>
