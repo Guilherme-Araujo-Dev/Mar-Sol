@@ -18,3 +18,4 @@ db:
     - var/lib/mysql
   environment:
     - MYSQL_ROOT_PASSWORD=root
+    
